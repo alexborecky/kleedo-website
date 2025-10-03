@@ -1,0 +1,41 @@
+# Query: .py
+# ContextLines: 1
+
+9 results - 1 file
+
+.next/static/css/app/layout.css:
+  1182  }
+  1183: .py-1{
+  1184    padding-top: 0.25rem;
+
+  1186  }
+  1187: .py-12{
+  1188    padding-top: 3rem;
+
+  1190  }
+  1191: .py-2{
+  1192    padding-top: 0.5rem;
+
+  1194  }
+  1195: .py-20{
+  1196    padding-top: 5rem;
+
+  1198  }
+  1199: .py-24{
+  1200    padding-top: 6rem;
+
+  1202  }
+  1203: .py-28{
+  1204    padding-top: 7rem;
+
+  1206  }
+  1207: .py-3{
+  1208    padding-top: 0.75rem;
+
+  1210  }
+  1211: .py-4{
+  1212    padding-top: 1rem;
+
+  1214  }
+  1215: .py-8{
+  1216    padding-top: 2rem;

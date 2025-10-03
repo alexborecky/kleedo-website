@@ -1,0 +1,203 @@
+{
+  "firmy": {
+    "hero": {
+      "badge": "AI recepční pro firmy",
+      "badgeIcon": "Building",
+      "headline": "Konec zmeškaných příležitostí",
+      "headlineHighlight": "příležitostí",
+      "subline": "Telefon zvoní. Kleedo zvedá, domlouvá a posílá potvrzení. Vy jednáte, makáte a nic vás netahá od stolu."
+    },
+    "painPoint": {
+      "headline": "Každý nezvednutý hovor bolí v peněžence",
+      "headlineHighlight": "bolí",
+      "description": "Buď přerušíte jednání, nebo přijdete o lead. Špatná volba v obou případech — a opakuje se celý den.",
+      "points": [
+        "Zmeškané hovory = zmeškané zakázky",
+        "Vyrušení uprostřed meetingu = naštvaní klienti",
+        "Stres a chaos místo klidu na práci"
+      ],
+      "emoji": "😵‍💫",
+      "emojiLabel": "Typický den bez Kleeda"
+    },
+    "solution": {
+      "emoji": "😌",
+      "emojiLabel": "S Kleedo",
+      "headline": "AI recepční, co drží linku i nervy",
+      "headlineHighlight": "drž í linku",
+      "description": "Kleedo zvedne do pár vteřin, zeptá se, navrhne termín, zapíše do kalendáře a pošle potvrzení. Vy si udržíte flow.",
+      "points": [
+        "Každý hovor obsloužen bleskově",
+        "Žádné přerušování práce",
+        "Více soustředění = víc vyhraných dealů"
+      ]
+    },
+    "benefits": {
+      "headline": "Proč si firmy vybírají Kleedo",
+      "cards": [
+        {"icon": "TrendingUp", "title": "Více klientů", "description": "1–2 nové leady týdně dokážou udělat měsíční rozdíl. Kleedo žádný nenechá spadnout pod stůl."},
+        {"icon": "Building", "title": "Méně vyrušení", "description": "Telefony nehoníte. Jednání běží plynule a profesionálně."},
+        {"icon": "Clock", "title": "Vždy dostupní", "description": "Česky i anglicky, klidně i mimo pracovní dobu — podle pravidel, která si nastavíte."},
+        {"icon": "MessageSquare", "title": "Chytré připomínky", "description": "SMS/WhatsApp připomínky snižují no‑show a šetří čas i nervy."},
+        {"icon": "Globe", "title": "Bez bariér", "description": "Volající cizinec? Asistent přepne do angličtiny a zařídí vše stejně hladce."},
+        {"icon": "Users", "title": "Škáluje se s vámi", "description": "Zvládne více linek zároveň. Nikdo nečeká, nikdo neodchází."}
+      ]
+    },
+    "testimonials": {
+      "headline": "Co říkají majitelé firem",
+      "cards": [
+        {"quote": "Telefon už nás neřídí. Klienti se dovolají hned a já dokončím meeting v klidu.", "author": "Majitel autoservisu"},
+        {"quote": "Mimo pracovní dobu máme klid a přesto nic nepropásneme. Časy, které nabízíme, mám plně pod kontrolou.", "author": "Majitel fitness centra"},
+        {"quote": "Angličtina bez problému. Cizinci si u nás rezervují stejně snadno jako Češi.", "author": "Majitelka kosmetického studia"}
+      ]
+    },
+    "faq": {
+      "headline": "Často kladené otázky",
+      "items": [
+        {"question": "Jak AI ví, co má nabízet?", "answer": "V administraci nastavíte služby, ceny, délky i pracovní dobu. Kleedo se tím řídí a nabídky drží vašich pravidel."},
+        {"question": "Umí měnit a rušit schůzky?", "answer": "Ano. Přesuny, rušení i potvrzení řeší samo a vše zapisuje přímo do vašeho kalendáře."},
+        {"question": "Můžu si přizpůsobit styl komunikace?", "answer": "Jasně. Tón, fráze i slovník si nastavíte tak, aby odpovídal vaší značce."},
+        {"question": "Co když si nebude jisté?", "answer": "Raději se doptá. A když je to potřeba, přesměruje hovor na člověka."},
+        {"question": "Kolik to stojí?", "answer": "Základ od 990 Kč/měs. Pro firmy doporučujeme plán Pro (2 490 Kč) se vším, co budete potřebovat."}
+      ]
+    },
+    "cta": {
+      "headline": "Přestanete zvedat všechno. Začněte zvedat výsledky.",
+      "description": "Připojte se do pilotu — míst je omezeně.",
+      "button": "Vyzkoušet demo pro firmy"
+    }
+  },
+  "salony": {
+    "hero": {
+      "badge": "AI recepční pro salony",
+      "badgeIcon": "Scissors",
+      "headline": "Žádné odbíhání od střihu",
+      "headlineHighlight": "střihu",
+      "subline": "Kleedo zvedá telefon, domluví termín a pošle potvrzení. Vy děláte krásu, ne administrativu."
+    },
+    "painPoint": {
+      "headline": "Zmeškaný hovor = zmeškaná klientka",
+      "headlineHighlight": "zmeškaná klientka",
+      "description": "Když zvednete během barvení, práce stojí. Když nezvednete, klientka jde jinam. Bludný kruh každý den.",
+      "points": [
+        "Ztracené termíny = ztracené příjmy",
+        "Přerušování práce kazí servis",
+        "Stres z věčného zvonění"
+      ],
+      "emoji": "🙃",
+      "emojiLabel": "Den bez recepční"
+    },
+    "solution": {
+      "emoji": "💅",
+      "emojiLabel": "S Kleedo",
+      "headline": "AI recepční, která neutíká pro gumičky",
+      "headlineHighlight": "neutíká",
+      "description": "Termíny nabídne, zapíše, připomene. A vy se v klidu věnujete klientkám.",
+      "points": [
+        "Hovor zvednut do pár vteřin",
+        "Žádné odbíhání od židle",
+        "Lepší služby = lepší tržby"
+      ]
+    },
+    "benefits": {
+      "headline": "Proč si salony vybírají Kleedo",
+      "cards": [
+        {"icon": "TrendingUp", "title": "Více rezervací", "description": "1–2 nové týdně = tisíce Kč navíc. Nenechte klientky proklouznout konkurenci."},
+        {"icon": "Scissors", "title": "Čistá hlava", "description": "Střiháte, barvíte, pečujete. Telefony řeší asistent."},
+        {"icon": "Clock", "title": "Kdykoli podle pravidel", "description": "Dostupnost i mimo otvíračku, ale jen když chcete. Plná kontrola."},
+        {"icon": "MessageSquare", "title": "WhatsApp připomínky", "description": "Automatické připomínky snižují no‑show a šetří náklady."},
+        {"icon": "Globe", "title": "Čeština i angličtina", "description": "Cizinky se dovolají bez bariér, rezervace proběhne hladce."},
+        {"icon": "Users", "title": "Bez čekání", "description": "Zvládne více hovorů najednou. Každá klientka má okamžitou odpověď."}
+      ]
+    },
+    "testimonials": {
+      "headline": "Co říkají majitelky",
+      "cards": [
+        {"quote": "Od té doby, co máme Kleedo, nestojím s mokrou hlavou u telefonu.", "author": "Majitelka kadeřnictví"},
+        {"quote": "Termíny se plní i večer, ale já jsem doma v klidu. Nastavím limity a hotovo.", "author": "Majitelka kosmetického salonu"},
+        {"quote": "Cizinky si rezervují bez volání kamarádky překladatelky. Super.", "author": "Majitelka nehtového studia"}
+      ]
+    },
+    "faq": {
+      "headline": "Často kladené otázky",
+      "items": [
+        {"question": "Jak AI zná mé služby?", "answer": "Vyplníte ceník, služby a délky úkonů. Asistent pak nabízí termíny, které dávají smysl."},
+        {"question": "Zvládne přesuny a storna?", "answer": "Ano, vše automaticky zapíše do vašeho kalendáře a dá vědět klientce."},
+        {"question": "Můžu si nastavit styl mluvy?", "answer": "Ano. Vyberete tón i slovník, aby to sedělo vaší značce."},
+        {"question": "Co když si nebude rozumět s klientkou?", "answer": "Doptá se nebo hovor předá vám. Raději bezpečně než špatně."},
+        {"question": "Kolik to stojí?", "answer": "Start od 990 Kč/měs. Pro salony doporučujeme plán Pro (2 490 Kč)."}
+      ]
+    },
+    "cta": {
+      "headline": "Zaplněný diář bez nervů",
+      "description": "Buďte mezi prvními salonky v pilotu.",
+      "button": "Vyzkoušet demo pro salony"
+    }
+  },
+  "zubari": {
+    "hero": {
+      "badge": "AI recepční pro zubaře",
+      "badgeIcon": "Stethoscope",
+      "headline": "Pacienti už neuslyší obsazeno",
+      "headlineHighlight": "obsazeno",
+      "subline": "Žádné plné schránky, žádné ‚zkuste to později‘. Kleedo zvedá, třídí požadavky, zapisuje termíny a posílá připomínky. Ordinace zní dostupně a profesionálně."
+    },
+    "painPoint": {
+      "headline": "Nezvednutý hovor = ztracený pacient",
+      "headlineHighlight": "ztracený pacient",
+      "description": "Během ošetření telefon nepatří do ruky. Jenže když nezvednete, pacient odejde. A často už se nevrátí.",
+      "points": [
+        "Zmeškané hovory = prázdná okna v diáři",
+        "Přerušování ošetření = nespokojení pacienti",
+        "Zbytečný stres pro celý tým"
+      ],
+      "emoji": "🦷",
+      "emojiLabel": "Realita bez recepční"
+    },
+    "solution": {
+      "emoji": "🧑‍⚕️",
+      "emojiLabel": "S Kleedo",
+      "headline": "AI recepční s trpělivostí mnicha",
+      "headlineHighlight": "trpělivostí",
+      "description": "Okamžitě zvedne, nabídne správný typ vyšetření, zapíše do kalendáře a pošle SMS/WhatsApp připomínku.",
+      "points": [
+        "Žádné propadlé hovory",
+        "Žádné vyrušování během výkonu",
+        "Více času na péči, méně administrativy"
+      ]
+    },
+    "benefits": {
+      "headline": "Proč si zubaři vybírají Kleedo",
+      "cards": [
+        {"icon": "TrendingUp", "title": "Plnější diář", "description": "1–2 noví pacienti týdně dělají rozdíl. Kleedo je nenechá čekat ani odejít."},
+        {"icon": "Stethoscope", "title": "Méně chaosu", "description": "Telefony neřeší lékař ani sestra. Ordinace běží v klidu."},
+        {"icon": "Clock", "title": "Dostupnost podle plánu", "description": "Můžete obsluhovat i mimo ordinační dobu – ale jen v oknech, která povolíte."},
+        {"icon": "MessageSquare", "title": "Chytré připomínky", "description": "Automatické upomínky snižují no‑show a hlídají dochvilnost."},
+        {"icon": "Globe", "title": "Čeština i angličtina", "description": "Cizinci se dovolají bez bariér, triáž proběhne srozumitelně."},
+        {"icon": "Users", "title": "Paralelní linky", "description": "Zvládne více hovorů najednou, žádné čekání na lince."}
+      ]
+    },
+    "testimonials": {
+      "headline": "Z ordinací",
+      "cards": [
+        {"quote": "Pacienti se dovolají hned. My máme klid na výkon a méně rutinního volání.", "author": "Soukromá ordinace"},
+        {"quote": "Nastavila jsem pravidla a hlídám jen výjimky. Ostatní běží samo.", "author": "Praktická zubní lékařka"},
+        {"quote": "Anglicky mluvící pacienti si rezervují bez asistence. Ušetří to čas sestře.", "author": "Majitelka ordinace"}
+      ]
+    },
+    "faq": {
+      "headline": "Často kladené otázky",
+      "items": [
+        {"question": "Může AI udělat chybu při rezervaci?", "answer": "Je navržené jako profesionální recepční. Pracuje s vaším kalendářem a drží se pravidel, která nastavíte. Když si není jisté, doptá se nebo předá hovor."},
+        {"question": "Rozpozná různé požadavky pacientů?", "answer": "Ano. Typy vyšetření, triáž, poznámky k bolesti – vše jde nastavit tak, aby nabídky dávaly smysl."},
+        {"question": "Kolik to stojí?", "answer": "Základ od 990 Kč/měs. Pro ordinace doporučujeme plán Pro (2 490 Kč)."},
+        {"question": "Jak je to s ochranou dat?", "answer": "Data jsou šifrovaná, uložená v EU a v souladu s GDPR. Nad svými daty máte plnou kontrolu."},
+        {"question": "Můžu upravit styl komunikace?", "answer": "Ano. Tón i používané fráze si přizpůsobíte značce ordinace."}
+      ]
+    },
+    "cta": {
+      "headline": "Ať ordinace zní dostupně, ne obsazeno",
+      "description": "Přidejte se do pilotu pro zubaře — kapacita je omezená.",
+      "button": "Vyzkoušet demo pro zubaře"
+    }
+  }
+}
