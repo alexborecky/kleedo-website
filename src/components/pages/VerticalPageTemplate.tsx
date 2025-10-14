@@ -1,5 +1,6 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { 
   Building, Clock, Users, TrendingUp, CheckCircle, Star, Shield, 
@@ -142,7 +143,7 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
           {/* Hero Blobs - Full width containers */}
           <div className="absolute inset-0 w-full h-full -z-50">
             <InteractiveBlob 
-              className="absolute bottom-0 left-0" 
+              className="absolute bottom-0 left-0 mobile-blob" 
               widthPercent={120} 
               heightPercent={70}
               leftPercent={-30}
@@ -162,7 +163,7 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
               blurAmount={80}
             />
             <InteractiveBlob 
-              className="absolute" 
+              className="absolute mobile-blob" 
               widthPercent={100} 
               heightPercent={40}
               rightPercent={-40}
@@ -189,7 +190,7 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
         <div className="container">
           {/* <div className="absolute inset-0 w-full h-full -z-50">
             <InteractiveBlob 
-              className="absolute"
+              className="absolute mobile-blob"
               widthPercent={180} 
               heightPercent={120}
               leftPercent={-50}
@@ -307,7 +308,7 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
             {/* Blob behind headline - no clipping */}
             <div className="absolute inset-0 w-full h-full -z-50" style={{ overflow: 'visible' }}>
               <InteractiveBlob
-                className="absolute"
+                className="absolute mobile-blob"
                 widthPercent={180} 
                 heightPercent={120}
                 leftPercent={-50}
@@ -411,6 +412,11 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
         </div>
       </section>
 
+      <LeadCaptureSection 
+        title="Vyzkoušet zdarma"
+        subtitle="14denní zkušební verze bez závazků."
+      />
+
       {/* Final CTA */}
       <section className="py-20 page-section cta-section cta-section-big">
         <div className="container text-center mask-container">
@@ -426,7 +432,7 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
           </a>
           <div className="absolute inset-0 w-full h-full -z-50">
             <InteractiveBlob 
-              className="absolute top-0 right-0" 
+              className="absolute top-0 right-0 mobile-blob" 
               width={800} 
               height={600}
               fill="#D1EE9E0D"
@@ -445,7 +451,7 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
               blurAmount={200}
             />
             <InteractiveBlob 
-              className="absolute bottom-0 left-0" 
+              className="absolute bottom-0 left-0 mobile-blob" 
               width={650} 
               height={500}
               fill="#D1EE9E0D"

@@ -1,20 +1,20 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion } from 'framer-motion'
-import { CheckCircle, Loader2 } from 'lucide-react'
+import { CheckCircle, Loader2, Check } from 'lucide-react'
+import { trackFormSubmit, trackFormStart, trackLeadGeneration } from '@/lib/analytics'
 
 const leadFormSchema = z.object({
   businessType: z.string().min(1, 'Vyberte typ podniku'),
-  companySize: z.string().min(1, 'Vyberte velikost firmy'),
-  callVolume: z.string().min(1, 'Vyberte objem hovorů'),
+  callVolume: z.string().optional(),
   name: z.string().min(2, 'Jméno musí mít alespoň 2 znaky'),
   email: z.string().email('Neplatná emailová adresa'),
   phone: z.string().min(9, 'Telefon musí mít alespoň 9 číslic'),
-  company: z.string().min(2, 'Název firmy musí mít alespoň 2 znaky'),
+  company: z.string().optional(),
   message: z.string().optional()
 })
 
@@ -35,25 +35,73 @@ export function LeadCaptureForm({
 }: LeadCaptureFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formStarted, setFormStarted] = useState(false)
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, touchedFields },
     setValue
   } = useForm<LeadFormData>({
-    resolver: zodResolver(leadFormSchema)
+    resolver: zodResolver(leadFormSchema),
+    mode: 'onBlur'
   })
+
+  // Track when user starts filling the form
+  const handleFormStart = () => {
+    if (!formStarted) {
+      setFormStarted(true)
+      const source = businessType ? `landing-${businessType}` : 'main-landing'
+      trackFormStart(`lead-capture-${source}`)
+    }
+  }
 
   // Set business type if provided
   if (businessType) {
     setValue('businessType', businessType)
   }
 
+  // Field wrapper component for consistent styling and validation feedback
+  const FieldWrapper = ({ 
+    children, 
+    fieldName, 
+    label, 
+    required = false
+  }: { 
+    children: React.ReactNode
+    fieldName: keyof LeadFormData
+    label: string
+    required?: boolean
+  }) => {
+    const hasError = errors[fieldName]
+    const isTouched = touchedFields[fieldName]
+    
+    return (
+      <div className="relative">
+        <label className="block text-sm font-medium text-white/90 mb-2">
+          {label} {required && '*'}
+        </label>
+        <div className="relative">
+          {children}
+          {!hasError && isTouched && (
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <Check className="h-4 w-4 text-green-400" />
+            </div>
+          )}
+        </div>
+        {hasError && isTouched && (
+          <p className="form-error mt-1">{errors[fieldName]?.message}</p>
+        )}
+      </div>
+    )
+  }
+
   const onSubmit = async (data: LeadFormData) => {
     setIsSubmitting(true)
     
     try {
+      const source = businessType ? `landing-${businessType}` : 'main-landing'
+      
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: {
@@ -61,21 +109,27 @@ export function LeadCaptureForm({
         },
         body: JSON.stringify({
           ...data,
-          source: businessType ? `landing-${businessType}` : 'main-landing',
+          source,
           timestamp: new Date().toISOString()
         }),
       })
 
       if (response.ok) {
         setIsSubmitted(true)
-        // Track conversion
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'lead_capture', {
-            event_category: 'conversion',
-            event_label: data.businessType,
-            value: 1
-          })
-        }
+        
+        // Track conversion with new analytics helper
+        trackFormSubmit('lead-capture', {
+          businessType: data.businessType,
+          callVolume: data.callVolume,
+          source
+        })
+        
+        // Track lead generation
+        trackLeadGeneration({
+          businessType: data.businessType,
+          companySize: data.callVolume || 'not-specified',
+          source
+        })
       } else {
         throw new Error('Failed to submit form')
       }
@@ -111,178 +165,108 @@ export function LeadCaptureForm({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`card ${className}`}
+      className={`form-banner items-start ${className}`}
     >
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300">{subtitle}</p>
+      {/* Left side - Promotional text */}
+      <div className="text-left">
+        <h2 className="feature-section-h2">
+          Už žádný
+          <br/>zmeškaný klient.
+        </h2>
+        <p className="text-left opacity-80 text-small">
+          AI recepční s lidským hlasem okamžitě zvedne telefon a postará se o klienta tak, jak byste to udělali vy. Žádné obsazené linky, žádné hlasové schránky.
+        </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        {/* Business Type */}
-        <div>
-          <label className="block text-sm font-medium text-white mb-2">
-            Typ podniku *
-          </label>
-          <select
-            {...register('businessType')}
-            className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            disabled={!!businessType}
-          >
-            <option value="">Vyberte typ podniku</option>
-            <option value="salon">Salon / Kadeřnictví</option>
-            <option value="medical">Ordinace / Klinika</option>
-            <option value="auto">Autoservis / Služby</option>
-            <option value="fitness">Fitness / Wellness</option>
-            <option value="restaurant">Restaurace</option>
-            <option value="real-estate">Realitní kancelář</option>
-            <option value="law">Právní kancelář</option>
-            <option value="other">Jiné</option>
-          </select>
-          {errors.businessType && (
-            <p className="text-red-400 text-sm mt-1">{errors.businessType.message}</p>
-          )}
+      {/* Right side - Form */}
+      <div>
+        <div className="relative">
+          <div className="stroke"></div>
+           <form 
+             onSubmit={handleSubmit(onSubmit)} 
+             onFocus={handleFormStart}
+             className="space-y-6 lead-form"
+           >
+             {/* Name */}
+             <FieldWrapper fieldName="name" label="Jméno a příjmení" required>
+               <input
+                 type="text"
+                 {...register('name')}
+                 className="lead-input glass text-white border-gray-700"
+                 placeholder="Vaše jméno a příjmení"
+               />
+             </FieldWrapper>
+
+             {/* Email */}
+             <FieldWrapper fieldName="email" label="Email" required>
+               <input
+                 type="email"
+                 {...register('email')}
+                 className="lead-input glass text-white border-gray-700"
+                 placeholder="vas@email.cz"
+               />
+             </FieldWrapper>
+
+             {/* Phone */}
+             <FieldWrapper fieldName="phone" label="Telefon" required>
+               <input
+                 type="tel"
+                 {...register('phone')}
+                 className="lead-input glass text-white border-gray-700"
+                 placeholder="+420 123 456 789"
+               />
+             </FieldWrapper>
+
+             {/* Business Type - moved to bottom */}
+             <FieldWrapper fieldName="businessType" label="Typ podniku" required>
+               <select
+                 {...register('businessType')}
+                 className="lead-input appearance-none pr-10 glass border-gray-700"
+                 disabled={!!businessType}
+               >
+                 <option value="">Vyberte typ podniku</option>
+                 <option value="salon">Salon / Kadeřnictví</option>
+                 <option value="medical">Ordinace / Klinika</option>
+                 <option value="auto">Autoservis / Služby</option>
+                 <option value="fitness">Fitness / Wellness</option>
+                 <option value="restaurant">Restaurace</option>
+                 <option value="real-estate">Realitní kancelář</option>
+                 <option value="law">Právní kancelář</option>
+                 <option value="other">Jiné</option>
+               </select>
+             </FieldWrapper>
+
+             {/* Company Name - optional */}
+             <FieldWrapper fieldName="company" label="Název firmy">
+               <input
+                 type="text"
+                 {...register('company')}
+                 className="lead-input glass text-white border-gray-700"
+                 placeholder="Název vaší firmy"
+               />
+             </FieldWrapper>
+
+            {/* Privacy Policy */}
+            <p className="text-xs /70 leading-relaxed">
+              Odesláním formuláře souhlasíte se zpracováním osobních údajů podle našich{' '}
+              <a href="/ochrana-osobnich-udaju" className="underline hover:no-underline">zásad ochrany osobních údajů</a>.
+            </p>
+
+            {/* Submit Button */}
+            <div className="pt-2">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="btn-primary h-12 rounded-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed circular-primary circular"
+              >
+                <span>{isSubmitting ? (<><Loader2 className="h-5 w-5 animate-spin" /> Odesílám...</>) : ('Objednat si demo')}</span>
+                <span className="btn-fill"></span>
+                
+              </button>
+            </div>
+          </form>
         </div>
-
-        {/* Company Size */}
-        <div>
-          <label className="block text-sm font-medium text-white mb-2">
-            Velikost firmy *
-          </label>
-          <select
-            {...register('companySize')}
-            className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-          >
-            <option value="">Vyberte velikost firmy</option>
-            <option value="solo">Solo podnikatel</option>
-            <option value="2-5">2-5 zaměstnanců</option>
-            <option value="5-10">5-10 zaměstnanců</option>
-            <option value="10+">Více než 10 zaměstnanců</option>
-          </select>
-          {errors.companySize && (
-            <p className="text-red-400 text-sm mt-1">{errors.companySize.message}</p>
-          )}
-        </div>
-
-        {/* Call Volume */}
-        <div>
-          <label className="block text-sm font-medium text-white mb-2">
-            Průměrný počet hovorů denně *
-          </label>
-          <select
-            {...register('callVolume')}
-            className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-          >
-            <option value="">Vyberte objem hovorů</option>
-            <option value="0-5">0-5 hovorů</option>
-            <option value="5-15">5-15 hovorů</option>
-            <option value="15-30">15-30 hovorů</option>
-            <option value="30+">Více než 30 hovorů</option>
-          </select>
-          {errors.callVolume && (
-            <p className="text-red-400 text-sm mt-1">{errors.callVolume.message}</p>
-          )}
-        </div>
-
-        {/* Contact Information */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-white mb-2">
-              Jméno a příjmení *
-            </label>
-            <input
-              type="text"
-              {...register('name')}
-              className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              placeholder="Vaše jméno"
-            />
-            {errors.name && (
-              <p className="text-red-400 text-sm mt-1">{errors.name.message}</p>
-            )}
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-white mb-2">
-              Název firmy *
-            </label>
-            <input
-              type="text"
-              {...register('company')}
-              className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              placeholder="Název vaší firmy"
-            />
-            {errors.company && (
-              <p className="text-red-400 text-sm mt-1">{errors.company.message}</p>
-            )}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-white mb-2">
-              Email *
-            </label>
-            <input
-              type="email"
-              {...register('email')}
-              className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              placeholder="vas@email.cz"
-            />
-            {errors.email && (
-              <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
-            )}
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-white mb-2">
-              Telefon *
-            </label>
-            <input
-              type="tel"
-              {...register('phone')}
-              className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              placeholder="+420 123 456 789"
-            />
-            {errors.phone && (
-              <p className="text-red-400 text-sm mt-1">{errors.phone.message}</p>
-            )}
-          </div>
-        </div>
-
-        {/* Message */}
-        <div>
-          <label className="block text-sm font-medium text-white mb-2">
-            Dodatečné informace
-          </label>
-          <textarea
-            {...register('message')}
-            rows={4}
-            className="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
-            placeholder="Napište nám cokoli dalšího, co by nás mohlo zajímat..."
-          />
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full btn-primary py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-              Odesílám...
-            </>
-          ) : (
-            'Chci AI recepční zdarma'
-          )}
-        </button>
-
-        <p className="text-xs text-gray-400 text-center">
-          Odesláním formuláře souhlasíte se zpracováním osobních údajů podle našich 
-          <a href="/privacy" className="text-primary-500 hover:underline ml-1">zásad ochrany osobních údajů</a>.
-        </p>
-      </form>
+      </div>
     </motion.div>
   )
 }

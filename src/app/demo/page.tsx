@@ -1,15 +1,21 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
+import InteractiveBlob from '@/components/visuals/InteractiveBlob'
+import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import { CheckCircle, Star, ArrowRight, Play } from 'lucide-react'
 
 export default function DemoPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen demo">
       <Header />
+
+      <LeadCaptureSection 
+        title="Vyzkoušet zdarma"
+        subtitle="14denní zkušební verze bez závazků."
+      />
       
       {/* Hero Section */}
-      <section className="gradient-bg py-20">
+      {/* <section className="gradient-bg py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -62,10 +68,10 @@ export default function DemoPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Demo Video Section */}
-      <section className="py-20 bg-dark-800">
+      {/* <section className="py-20 bg-dark-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -91,10 +97,10 @@ export default function DemoPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
-      <section className="py-20 bg-dark-900">
+      {/* <section className="py-20 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -134,10 +140,10 @@ export default function DemoPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
-      <section className="py-20 bg-dark-800">
+      {/* <section className="py-20 bg-dark-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -207,10 +213,10 @@ export default function DemoPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA */}
-      <section className="py-20 gradient-bg">
+      {/* <section className="py-20 gradient-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Připraveni začít?
@@ -226,7 +232,7 @@ export default function DemoPage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

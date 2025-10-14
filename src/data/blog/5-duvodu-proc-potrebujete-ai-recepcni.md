@@ -3,6 +3,8 @@ title: "5 důvodů, proč potřebujete AI recepční"
 excerpt: "Objevte hlavní výhody AI recepční a jak může transformovat váš podnik. Od úspory času po zvýšení tržeb."
 date: "2024-01-10"
 tags: ["AI", "automatizace", "podnikání", "efektivita"]
+image: "/images/five-reasons.jpg"
+imageAlt: "AI recepční v akci - moderní technologie pro váš podnik"
 ---
 
 # 5 důvodů, proč potřebujete AI recepční

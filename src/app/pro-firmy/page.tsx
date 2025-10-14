@@ -1,8 +1,8 @@
 import VerticalPageTemplate from '@/components/pages/VerticalPageTemplate'
 import { getVerticalContent } from '@/lib/verticals'
 
-export default function ZubariPage() {
-  const content = getVerticalContent('zubari')
+export default function ProFirmyPage() {
+  const content = getVerticalContent('firmy')
 
   if (!content) {
     return <div>Content not found</div>

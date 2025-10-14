@@ -1,8 +1,9 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
+import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+import { Check, Star, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 const pricingPlans = [
@@ -13,12 +14,11 @@ const pricingPlans = [
     period: "měsíc",
     popular: false,
     features: [
-      "Základní telefonní linka",
-      "Přesměrování hovorů",
+      "1 linka, základní AI recepční",
+      "Okamžitá odpověď na hovory",
       "Integrace do Google kalendáře",
       "SMS upozornění",
-      "24/7 podpora",
-      "Základní statistiky"
+      "GDPR ready"
     ],
     cta: "Chci to vyzkoušet",
     ctaLink: "/demo?plan=starter"
@@ -26,17 +26,17 @@ const pricingPlans = [
   {
     name: "Pro",
     description: "Pro střední a větší podniky",
-    price: "2 490",
+    price: "1 990",
     period: "měsíc",
     popular: true,
     features: [
       "Vše ze Starteru",
-      "Virtuální asistentka",
-      "Pokročilá správa hovorů",
-      "Prioritní podpora (24/7)",
-      "Statistiky a reporty",
-      "Vlastní telefonní číslo",
-      "Pouze pro firmy s IČO"
+      "Více linek současně",
+      "WhatsApp zprávy & připomínky",
+      "No-gap scheduling",
+      "Podpora více jazyků (CZ + EN)",
+      "Statistiky & reporty",
+      "Vlastní pravidla a automatizace",
     ],
     cta: "Chci být Pro",
     ctaLink: "/demo?plan=pro"
@@ -44,17 +44,15 @@ const pricingPlans = [
   {
     name: "Business",
     description: "Pro velké podniky a korporace",
-    price: "4 990",
+    price: "2 990",
     period: "měsíc",
     popular: false,
     features: [
-      "Vše z Pro",
-      "Zákaznická linka & Account management",
-      "Integrace do CRM systémů",
-      "Školení a implementace",
-      "Dedikovaný tým",
-      "Vlastní branding",
-      "API přístup"
+      "Vše z Pro +",
+      "Čekací listina & dropout management",
+      "Pokročilé integrace (další rezervační systémy)",
+      "Prioritní podpora",
+      "Custom nastavení hlasu a brandu",
     ],
     cta: "Chci Business",
     ctaLink: "/demo?plan=business"
@@ -114,7 +112,7 @@ export default function PricingPage() {
             <span className="text-primary-500">ztracená zakázka</span>
           </h1>
           
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-small mb-8 max-w-3xl mx-auto">
             Vyberte si plán, který sedí vám. Všechny plány obsahují 14denní zkušební verzi zdarma.
           </p>
           </div>
@@ -165,141 +163,141 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-20 bg-dark-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 pricing-plans page-section">
+        <div className="max-w-7xl mx-auto pxsm:px-6 container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`card relative ${
+                className={`feature-card glass relative ${
                   plan.popular 
-                    ? 'border-primary-500 ring-2 ring-primary-500/20' 
+                    ? 'border-primary-500' 
                     : 'hover:border-primary-500/50'
                 } transition-all duration-300`}
               >
+                <div className="stroke"></div>
+                
+                {/* InteractiveBlob for each card */}
+                <div className="absolute inset-0 w-full h-full -z-50">
+                  <InteractiveBlob 
+                    className="absolute"
+                    widthPercent={120} 
+                    heightPercent={80}
+                    leftPercent={-10}
+                    topPercent={-10}
+                    baseRadius={100}
+                    noiseAmplitude={60}
+                    noiseSpeed={0.08}
+                    mouseStrength={20}
+                    mouseRadius={120}
+                    relax={0.8}
+                    pointsCount={16}
+                    gradientStart={plan.popular ? "#D1EE9E" : "#EFC5A8"}
+                    gradientEnd={plan.popular ? "#4ECDC4" : "#717377"}
+                    gradientDirection="45deg"
+                    gradientStartOpacity={0.3}
+                    gradientEndOpacity={0.1}
+                    blurAmount={60}
+                  />
+                </div>
+
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                     <span className="bg-primary-500 text-dark-900 px-4 py-1 rounded-full text-sm font-medium">
                       Nejoblíbenější
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">od {plan.price} Kč</span>
-                    <span className="text-gray-400 ml-2">/ {plan.period}</span>
+                <div className="feature-card-content relative z-10">
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4 text-small">{plan.description}</p>
+                    
+                    <div className="mb-6 price-amount">
+                      <span>od {plan.price} Kč</span>
+                      <span>/ {plan.period}</span>
+                    </div>
                   </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <Check className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href={plan.ctaLink}
+                    className={`py-4 px-6 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center button circular button-secondary circular-secondary ${
+                      plan.popular
+                        ? 'btn btn-primary inline-flex items-center justify-center button circular circular-primary'
+                        : 'border border-white text-white'
+                    }`}
+                  >
+                    <span>{plan.cta}</span>
+                    <span className="btn-fill"></span>
+                    {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
+                  </Link>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href={plan.ctaLink}
-                  className={`w-full py-4 px-6 rounded-lg font-semibold text-center transition-colors duration-200 inline-flex items-center justify-center ${
-                    plan.popular
-                      ? 'bg-primary-500 hover:bg-primary-600 text-dark-900'
-                      : 'border border-white text-white hover:bg-white hover:text-dark-900'
-                  }`}
-                >
-                  {plan.cta}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-gray-400 mb-4">
+          <div className="mt-12 creed-section">
+            <p className=" mb-4 text-center">
               Všechny plány obsahují 14denní zkušební verzi zdarma
             </p>
-            <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
+            <div className="flex items-center justify-center space-x-6 text-sm">
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                <Check className="h-4 w-4 text-green-500 mr-2" />
                 Bez závazků
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                <Check className="h-4 w-4 text-green-500 mr-2" />
                 Okamžité spuštění
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              {/* <div className="flex items-center">
+                <Check className="h-4 w-4 text-green-500 mr-2" />
                 24/7 podpora
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-dark-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left side - Title */}
-            <div className="flex items-center">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Často kladené otázky
-                </h2>
-                <p className="text-xl text-gray-300 leading-relaxed">
-                  Máte další otázky? Neváhejte nás kontaktovat. 
-                  Rádi vám pomůžeme najít řešení, které bude vyhovovat vašemu podniku.
-                </p>
-              </div>
-            </div>
+      <section className="py-24 faq-section">
+        <div className="container px-4">
+          <div className="faq-wrap">
+            <h2 className="faq-title">Často kladené<br/>otázky</h2>
 
-            {/* Right side - FAQ Items */}
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="border border-dark-700 rounded-lg overflow-hidden">
-                  <details className="group">
-                    <summary className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-dark-700/50 transition-colors cursor-pointer">
-                      <span className="text-white font-medium pr-4">{faq.question}</span>
-                      <div className="flex-shrink-0">
-                        <ArrowRight className="h-5 w-5 text-primary-500 group-open:rotate-90 transition-transform" />
-                      </div>
-                    </summary>
-                    
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </details>
-                </div>
-              ))}
+            <div className="faq-panel glass">
+              <div className="stroke"></div>
+              <div className="faq-list">
+                {faqs.map((faq, i) => (
+                  <div className="faq-item" key={i}>
+                    <input id={`pricing-faq-${i}`} type="checkbox" className="faq-check" />
+                    <label htmlFor={`pricing-faq-${i}`} className="faq-summary">
+                      <span className="faq-question">{faq.question}</span>
+                      <span className="faq-toggle"><span className="plus">+</span><span className="minus">−</span></span>
+                    </label>
+                    <div className="faq-content">{faq.answer}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 gradient-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Už žádný zmeškaný klient
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            AI recepční s lidským mozkem okamžitě zvedne telefon a postará se o klienta 
-            tak, jak byste to udělali vy. Žádné otravné linky, žádné neschopné schránky.
-          </p>
-          
-          <div className="max-w-md mx-auto">
-            <LeadCaptureForm
-              title="Vyzkoušet zdarma"
-              subtitle="14denní zkušební verze bez závazků."
-            />
-          </div>
-        </div>
-      </section>
+      <LeadCaptureSection 
+        title="Vyzkoušet zdarma"
+        subtitle="14denní zkušební verze bez závazků."
+      />
 
       <Footer />
     </main>

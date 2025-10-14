@@ -38,7 +38,7 @@ export function CookieBanner() {
         <div className="flex-1">
           <p className="text-sm text-gray-300">
             Tento web používá cookies k analýze návštěvnosti a zlepšení uživatelského zážitku. 
-            <a href="/privacy" className="text-primary-400 hover:underline ml-1">
+            <a href="/ochrana-osobnich-udaju" className="text-primary-400 hover:underline ml-1">
               Více informací
             </a>
           </p>

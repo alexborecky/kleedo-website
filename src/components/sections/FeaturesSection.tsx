@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Calendar, FileText, MessageSquare, Settings, Globe, Users } from 'lucide-react'
+import { Phone, Calendar, FileText, MessageSquare, Settings, Globe, Users, Clock, RefreshCw, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const features = [
@@ -16,8 +16,8 @@ const features = [
   },
   {
     icon: MessageSquare,
-    title: "WhatsApp a SMS komunikace",
-    description: "Komunikuje s klienty přes všechny kanály, které používají."
+    title: "WhatsApp komunikace & připomínky",
+    description: "Všechny rezervace, potvrzení a připomínky fungují automaticky přes WhatsApp i SMS."
   },
   {
     icon: Settings,
@@ -30,9 +30,14 @@ const features = [
     description: "Mluví česky, slovensky a dalšími jazyky podle potřeby."
   },
   {
-    icon: Users,
-    title: "Více linek najednou",
-    description: "Zvládne více hovorů současně bez čekání."
+    icon: Clock,
+    title: "No-gap scheduling",
+    description: "Inteligentně plánuje termíny tak, aby mezi schůzkami nebyly mezery. Maximální využití času."
+  },
+  {
+    icon: RefreshCw,
+    title: "Dropout management",
+    description: "Když někdo zruší, automaticky kontaktuje čekající na waitlistě a zaplní uvolněný termín."
   }
 ]
 

@@ -1,6 +1,6 @@
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
+import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import { Stethoscope, Clock, Users, TrendingUp, CheckCircle, Star, Shield, Calendar } from 'lucide-react'
 
 export default function MedicalPage() {
@@ -59,12 +59,16 @@ export default function MedicalPage() {
               </div>
             </div>
 
-            <div className="lg:order-first">
-              <LeadCaptureForm
-                title="Získejte AI recepční pro vaši ordinaci"
-                subtitle="Vyplňte formulář a my vás budeme kontaktovat do 24 hodin s nabídkou na míru."
-                businessType="medical"
-              />
+            <div className="lg:order-first flex items-center justify-center">
+              <div className="w-full max-w-md">
+                <div className="bg-dark-800/50 backdrop-blur-lg border border-dark-700 rounded-2xl p-8 text-center">
+                  <h3 className="text-2xl font-bold text-white mb-4">Získejte AI recepční pro vaši ordinaci</h3>
+                  <p className="text-gray-300 mb-6">14denní zkušební verze zdarma</p>
+                  <a href="#form" className="btn btn-primary inline-flex items-center justify-center w-full">
+                    Vyzkoušet zdarma
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -201,23 +205,13 @@ export default function MedicalPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 gradient-bg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Začněte s AI recepční ještě dnes
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Vyplňte formulář a my vás budeme kontaktovat do 24 hodin s nabídkou na míru pro vaši ordinaci.
-          </p>
-          <div className="max-w-md mx-auto">
-            <LeadCaptureForm
-              title="Získejte nabídku na míru"
-              subtitle="Kontaktujeme vás do 24 hodin."
-              businessType="medical"
-            />
-          </div>
-        </div>
-      </section>
+      <div id="form">
+        <LeadCaptureSection 
+          title="Získejte nabídku na míru"
+          subtitle="Kontaktujeme vás do 24 hodin."
+          businessType="medical"
+        />
+      </div>
 
       <Footer />
     </main>

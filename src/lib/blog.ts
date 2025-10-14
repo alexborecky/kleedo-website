@@ -12,6 +12,8 @@ export interface BlogPost {
   date: string
   tags: string[]
   readTime: number
+  image?: string
+  imageAlt?: string
 }
 
 export async function getAllPosts(): Promise<BlogPost[]> {
@@ -42,6 +44,8 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           date: data.date || new Date().toISOString(),
           tags: data.tags || [],
           readTime,
+          image: data.image,
+          imageAlt: data.imageAlt,
         }
       })
 
@@ -78,6 +82,8 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       date: data.date || new Date().toISOString(),
       tags: data.tags || [],
       readTime,
+      image: data.image,
+      imageAlt: data.imageAlt,
     }
   } catch (error) {
     console.error('Error reading blog post:', error)

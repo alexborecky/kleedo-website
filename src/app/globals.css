@@ -77,6 +77,15 @@ h2 {
       color: var(--brand-color);
     }
   }
+
+  @media (max-width: 768px) {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    max-width: 100%;
+    .nav {
+      width: 100%;
+    }
+  }
 }
 
 .chip {
@@ -169,6 +178,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0px;
   }
 
   .hero-container {
@@ -182,6 +192,7 @@ h2 {
     width: 100%;
     max-width: 1800px;
     max-height: 1000px;
+    margin-top: 112px !important;
     margin: 80px 24px;
     background-image: url('/images/mask-background.png');
     background-size: cover;
@@ -196,10 +207,14 @@ h2 {
       justify-content: center;
       max-width: 1000px;
       padding: 48px 0; /* py-20 px-4 */
+      animation: slideIn 1s forwards cubic-bezier(0.25,0.1,0.25,1);
     }
     .hero-illustration {
       height: 400px;
       width: auto;
+      animation: slideIn 1s forwards cubic-bezier(0.25,0.1,0.25,1);
+      animation-delay: .4s;
+      opacity: 0;
       img {
         height: 100%;
         width: 100%;
@@ -265,7 +280,7 @@ h2 {
       }
       h3 {
         color: #E3F0D3;
-        text-align: center;
+        /* text-align: center; */
         font-family: "DM Sans";
         font-size: 20px;
         font-style: normal;
@@ -312,13 +327,83 @@ h2 {
     height: 100%;
     color: white;
   }
-     .hero-blob-2 {
-       top: -20%;
-       left: -80%;
-       opacity: .4;
-       transform: rotate(180deg);
-       z-index: 1; /* Behind content */
-     }
+
+/* === Lead form unified inputs matching glass style === */
+.lead-form .lead-input,
+.lead-form .lead-input-select {
+  width: 100%;
+  padding: 16px 16px;
+  border-radius: 12px;
+  height: 56px;
+  background: rgba(36, 36, 36, 0.64);
+  color: #fff;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+  color: rgba(227, 240, 211, 0.64);
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+.lead-form .lead-input::placeholder{ 
+  color: rgba(227, 240, 211, 0.64);
+}
+.lead-form .lead-input:focus{
+  border-color: #D1EE9E;
+  /* box-shadow: 0 0 0 3px rgba(209,238,158,0.20); */
+  background: rgba(255,255,255,0.06);
+  color: rgba(255, 255, 255, 0.8);
+}
+.lead-form .form-error{ color:#F9BBBB; font-size:12px; margin-top:4px; }
+
+.lead-input:valid { 
+  border-color:#D1EE9E; 
+  color: white;
+}
+.lead-form label {
+  color: #E3F0D3;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+}
+
+.form-section {
+  .container {
+    max-width: 1800px;
+    display: flex;
+    justify-content: center;
+  }
+  .mask-container {
+    padding: 80px 0;
+    margin: 0 24px
+  }
+  h2 {
+    background: linear-gradient(90deg, #FFF 0%, #D1EE9E 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "DM Sans";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 88px; /* 110% */
+  }
+  .form-banner {
+    display: flex;
+    gap: 80px;
+    max-width: 1200px;
+  }
+  .form-banner .text-left {
+    width: 100%;
+    max-width: 640px;
+  }
+  p {
+    margin-top: 24px;
+  }
+}
+
 
 .features-section .sticky-col {
   position: -webkit-sticky; /* Safari */
@@ -401,6 +486,12 @@ h2 {
     @apply bg-dark-800 border border-dark-700 rounded-lg p-6;
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.05);
+  }
+
+  .image-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .gradient-bg {
@@ -1080,6 +1171,18 @@ canvas[class*="InteractiveBlob"] {
   justify-content: center;
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .vertical-hero-section .hero-content h1, .vertical-hero-section .hero-content p {
   text-align: left;
 }
@@ -1132,7 +1235,6 @@ canvas[class*="InteractiveBlob"] {
 
 .pricing {
   height: calc(480px + 112px) !important;
-  max-width: 1800px;
 }
 
 .pricing .hero-container {
@@ -1145,6 +1247,10 @@ canvas[class*="InteractiveBlob"] {
 
 .pricing .hero-content h1, .pricing .hero-content p {
   text-align: center;
+}
+
+.creed-section {
+  margin-top: 80px;
 }
 
 
@@ -1211,6 +1317,69 @@ canvas[class*="InteractiveBlob"] {
   color: #131313;
 }
 
+/* ========= Pricing Plans ========= */
+
+.pricing-plans .feature-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.pricing-plans .feature-card:nth-child(2) {
+  text-align: left;
+  border: 1px solid #D1EE9E !important;
+}
+
+.pricing-plans .feature-card a {
+  border: 1px solid #E3F0D3;
+  max-width: 200px;
+}
+
+.pricing-plans .feature-card:nth-child(2) a:hover .btn-fill {
+  background-color: #131313;
+}
+
+.pricing-plans .feature-card-content {
+  text-align: left;
+  width: 100%;
+}
+
+.pricing-plans .feature-card-content h3 {
+  color: #E3F0D3;
+  font-family: "DM Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 125% */
+}
+
+.pricing-plans .feature-card-content ul li {
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFF;
+  opacity: 0.64;
+}
+
+.pricing-plans .feature-card-content ul li svg {
+  width: 16px;
+  height: 16px;
+  color: #E3F0D3;
+  opacity: 0.64;
+}
+
+.pricing-plans .feature-card-content .price-amount {
+  color: #E3F0D3;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 137.5% */
+  margin: 40px 0
+}
 
 /* ================== Footer ================== */
 
@@ -1265,4 +1434,830 @@ footer .copyright p {
 
 footer, footer .border-t {
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ========= Demo Page ========= */
+
+.demo .page-section {
+  padding-top: 112px;
+}
+
+/* ========= Text Page ========= */
+
+.text-page {
+  padding-top: 160px;
+}
+
+/* ========= Blog Page ========= */
+
+.blog-page {
+  padding-top: 112px;
+}
+
+.blog-header {
+  margin-top: 112px;
+  margin-bottom: 40px;
+}
+
+.blog-header .container {
+  height: 480px;
+  border-radius: 16px;  
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.blog-header-content {
+  padding-bottom: 48px;
+  max-width: 720px;
+}
+
+.blog-content .container {
+  max-width: 720px;
+}
+
+.blog-image-cover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.blog-page .card {
+  border: none !important; 
+  padding: 0 !important;
+  background-color: transparent !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+}
+
+.blog-image {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 240px !important;
+  margin-bottom: 16px !important;
+}
+
+.featured-post-content {
+  max-width: 700px !important;
+}
+
+.featured-posts {
+  height: 480px !important;
+  margin-bottom: 24px !important;
+}
+
+.featured-posts .card {
+  border-radius: 16px !important;
+}
+
+.blog-page .grid {
+  gap: 24px !important;
+}
+
+/* ========= MOBILE RESPONSIVE STYLES ========= */
+
+/* ===== TABLET BREAKPOINT (769px - 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Container padding */
+  .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  
+  /* Keep desktop layout for features sections */
+  .features-section .container {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 40px !important;
+  }
+  
+  .features-section .sticky-col {
+    position: sticky !important;
+    top: 30vh !important;
+  }
+  
+  .features-section .feature-cards {
+    display: grid !important;
+    grid-auto-rows: minmax(240px, auto) !important;
+    gap: 16px !important;
+  }
+  
+  /* Form banner spacing */
+  .form-banner {
+    padding: 0 40px !important;
+    gap: 40px !important;
+  }
+  .cta-section, .industries-section, .problem-section {
+    padding: 40px 24px !important;
+  }
+
+  .industries-section .industry-tiles {
+    margin-top: 24px !important;
+  }
+
+  .footer-container {
+    padding: 40px 24px !important;
+  }
+}
+
+/* ===== Mobile Navigation & Header ===== */
+@media (max-width: 768px) {
+  /* Hide desktop navigation elements on mobile */
+  .nav .links {
+    display: none;
+  }
+  
+  .nav .cta {
+    display: none;
+  }
+  
+  /* Show mobile CTA button */
+  .mobile-cta {
+    display: flex !important;
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    height: 36px !important;
+  }
+  
+  /* Hamburger menu button */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+    padding: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .hamburger:hover {
+    color: var(--brand-color);
+  }
+  
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    border-radius: 16px;
+    z-index: 2;
+    animation: slideDown 0.3s ease-out;
+    margin: 0 16px !important;
+  }
+
+  .background-layer {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  .mobile-menu-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mobile-menu-link {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .mobile-menu-link:hover {
+    color: var(--brand-color);
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Hide mobile elements on desktop */
+@media (min-width: 769px) {
+  .mobile-cta {
+    display: none !important;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* ===== Mobile Typography Scales ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+  
+  h2 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+  
+  h3 {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+  
+  .text-large {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  
+  .text-medium {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  
+  .feature-section-h2 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+  
+  .faq-title {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+  
+  .testimonials-title h2 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+  
+  .problem-section h2 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+  
+  h2 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+  
+  .feature-section-h2 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+}
+
+/* ===== Mobile Hero Section ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+  
+  .hero-content {
+    padding: 32px 20px !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px !important;
+    line-height: 38px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .hero-content p {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .hero-illustration {
+    height: 250px !important;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+  
+  .hero-illustration {
+    height: 200px !important;
+  }
+}
+
+/* ===== Mobile Features Sections ===== */
+@media (max-width: 768px) {
+  .features-section .container {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .features-section .sticky-col {
+    position: static !important;
+    margin-bottom: 0;
+  }
+  
+  .features-section .feature-cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  
+  .feature-section-h2 {
+    margin-bottom: 24px !important;
+  }
+
+  .feature-cards {
+    width: 100%;
+  }
+
+  .feature-card {
+    width: 100%;
+    height: auto;
+  }
+  
+  .feature-card h3 {
+    font-size: 18px !important;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== Mobile Problem Section ===== */
+@media (max-width: 768px) {
+  .problem-section .mask-container {
+    padding: 40px 24px !important;
+  }
+  
+  .problem-section-content {
+    margin-bottom: 24px !important;
+    gap: 8px !important;
+  }
+  
+  .problem-section h2 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+    margin-bottom: 16px;
+  }
+  
+  .problem-section .text-large {
+    font-size: 16px !important;
+    margin-bottom: 16px;
+  }
+  
+  .problem-section .text-medium {
+    font-size: 14px !important;
+  }
+}
+
+/* ===== Mobile Industry Tiles ===== */
+@media (max-width: 768px) {
+  .industry-tiles {
+    flex-direction: column !important;
+    margin-top: 40px !important;
+  }
+
+  .industry-tiles .feature-card-content {
+    align-items: center !important;
+    p {
+      text-align: center !important;
+    }
+  }
+  
+  .industries-section .container {
+    padding: 40px 16px !important;
+  }
+
+  .salon .mobile-blob {
+    top: -20% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .dentist .mobile-blob {
+    top: -20% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+}
+
+/* ===== Mobile Testimonials ===== */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 0 !important;
+  }
+
+  .testimonials-section .container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+
+  .testimonials-title h2 {
+    text-align: left !important;
+  }
+  
+  .testimonials-title {
+    margin-bottom: 32px;
+  }
+  
+  .testimonial-card {
+    min-height: auto !important;
+    padding: 24px !important;
+  }
+
+  .testimonials-section .testimonials-grid {
+    margin-top: 0 !important;
+  }
+}
+
+/* ===== Mobile FAQ Section ===== */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 40px 0 !important;
+  }
+  
+  .faq-wrap {
+    gap: 24px !important;
+  }
+  
+  .faq-title {
+    margin-bottom: 0 !important;
+    text-align: center;
+  }
+  
+  .faq-question {
+    font-size: 16px !important;
+  }
+  
+  .faq-content {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+
+/* ===== Mobile CTA Sections ===== */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 40px 0 !important;
+    .chip {
+      margin-bottom: 16px !important;
+    }
+  }
+  
+  .cta-section .mask-container {
+    padding: 40px 24px !important;
+  }
+  
+  .cta-section h2 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .cta-section p {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .cta-section-content h2 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+}
+
+/* ===== Mobile Spacing & Containers ===== */
+@media (max-width: 768px) {
+  .page-section {
+    padding: 20px 0 !important;
+  }
+  
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .mask-container {
+    padding: 40px 24px !important;
+    margin: 0 16px !important;
+  }
+  
+  .section-header {
+    gap: 12px !important;
+  }
+}
+
+/* ===== Mobile Buttons ===== */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+  }
+  
+  .button {
+    font-size: 14px !important;
+  }
+}
+
+/* ===== Mobile Chip/Badge ===== */
+@media (max-width: 768px) {
+  .chip {
+    font-size: 11px !important;
+    padding: 0 10px !important;
+    height: 22px !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ===== Mobile Mobile Blob ===== */
+@media (max-width: 1024px) {
+  .mobile-blob {
+    max-width: 100% !important;
+    height: auto !important;
+    top: 0;
+    z-index: -100;
+  }
+  .mb-16 {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ===== Footer ===== */
+
+@media (max-width: 768px) {
+  footer {
+    .footer-container {
+      padding: 40px 24px !important;
+    }
+  }
+}
+
+/* ===== Blog Page Mobile ===== */
+
+@media (max-width: 768px) {
+  .blog-page {
+    padding-top: 80px !important;
+  }
+  
+  .blog-page .container {
+    padding: 0 16px !important;
+    margin-top: 16px !important;
+  }
+  
+  /* Featured posts - force column on mobile */
+  .featured-posts {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    height: auto !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .featured-posts .lg\:col-span-2,
+  .featured-posts .lg\:col-span-1 {
+    grid-column: span 1 !important;
+  }
+  
+  /* Change featured posts to match regular post layout on mobile */
+  .featured-posts article {
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+  }
+  
+  /* Remove background image overlay style, show as top image */
+  .featured-posts article > div:first-of-type {
+    position: relative !important;
+    height: 240px !important;
+    width: 100% !important;
+    inset: auto !important;
+    margin-bottom: 16px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  .featured-posts article > div:first-of-type > div {
+    border-radius: 16px !important;
+  }
+  
+  /* Remove dark overlay on mobile */
+  .featured-posts article > div:first-of-type > div.bg-black\/60 {
+    display: none !important;
+  }
+  
+  /* Content should be positioned normally, not at bottom */
+  .featured-posts article > div:last-of-type {
+    position: relative !important;
+    z-index: 1 !important;
+    height: auto !important;
+    display: block !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+  }
+  
+  .featured-posts .featured-post-content {
+    max-width: 100% !important;
+  }
+  
+  /* Regular blog grid - force column on mobile */
+  .blog-page .grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  /* Blog card styling - uniform for all */
+  .blog-page .card {
+    margin-bottom: 0 !important;
+  }
+  
+  .blog-page h2 {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+  
+  /* Make featured post text colors match regular posts */
+  .featured-posts .text-gray-300 {
+    color: rgb(156 163 175) !important;
+  }
+  
+  .featured-posts .text-gray-200 {
+    color: rgb(156 163 175) !important;
+  }
+
+  .blog-header {
+    margin-top: 96px !important;
+    padding: 0 16px !important;
+  }
+  
+  /* Restructure blog header layout on mobile */
+  .blog-header .container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  
+  /* Image container - make it non-absolute and set height */
+  .blog-header .container > div:first-of-type {
+    position: relative !important;
+    height: 240px !important;
+    width: 100% !important;
+    inset: auto !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    order: 1 !important;
+  }
+  
+  /* Remove dark overlay on mobile */
+  .blog-header .blog-image-cover {
+    display: none !important;
+  }
+  
+  /* Content below image */
+  .blog-header-content {
+    position: relative !important;
+    z-index: 1 !important;
+    order: 2 !important;
+    padding: 24px 0px !important;
+    max-width: 100% !important;
+  }
+  
+  .blog-header-content h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+  
+  .blog-header-content p {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  .blog-content h2 {
+    font-size: 24px !important;
+  }
+}
+
+/* ===== Nav ===== */
+
+@media (max-width: 768px) {
+  .nav {
+    .mobile-cta {
+      color: #131313 !important;
+      margin-right: 0 !important;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile-cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ===== Hero ===== */
+
+@media (max-width: 768px) {
+  .hero {
+    .hero-container {
+      margin-top: 16px !important;
+    }
+    .hero-content {
+      width: 100% !important;
+      p {
+        width: 100% !important;
+      }
+    }
+    img {
+      width: 80% !important;
+      height: auto !important;
+      margin-top: -20px !important;
+    }
+    .chip {
+      margin-bottom: 8px !important;
+    }
+  }
+
+  .vertical-hero-section {
+    height: calc(400px + 96px) !important;
+    margin-top: 16px !important;
+  }
+
+  .vertical-hero-section .hero-container {
+    height: 100%;
+  }
+
+  .vertical-hero-section .vertical-hero-section-buttons {
+    margin: 0 !important;
+  }
+}
+
+/* ===== Pain Point Section ===== */
+
+@media (max-width: 768px) {
+  .pain-point-section {
+    padding: 40px 0 !important;
+  }
+  
+  .pain-point-cards {
+    flex-direction: column !important;
+  }
+}
+
+/* ======= Form Section ===== */
+
+@media screen and (max-width: 768px) {
+  .form-banner {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .lead-form div {
+    margin-top: 16px !important;
+  }
+}
+
+/* ===== Pricing Page ===== */ 
+
+@media screen and (max-width: 768px) {
+  .pricing-plans .creed-section {
+    margin-top: 24px !important;
+  }
 }

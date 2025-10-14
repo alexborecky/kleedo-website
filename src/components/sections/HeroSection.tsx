@@ -73,7 +73,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Incoming call interface */}
-                <div className="px-6 py-8 text-center text-white">
+                {/* <div className="px-6 py-8 text-center text-white">
                   <div className="w-24 h-24 bg-primary-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <Phone className="h-12 w-12" />
                   </div>
@@ -89,7 +89,7 @@ export function HeroSection() {
                       Odmítnout
                     </button>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Chat bubbles overlay */}
                 <div className="absolute top-20 left-4 space-y-2">

@@ -1,7 +1,7 @@
 import VerticalPageTemplate from '@/components/pages/VerticalPageTemplate'
 import { getVerticalContent } from '@/lib/verticals'
 
-export default function SalonyPage() {
+export default function ProSalonyPage() {
   const content = getVerticalContent('salony')
 
   if (!content) {

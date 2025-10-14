@@ -30,23 +30,23 @@ export function Footer() {
                 </Link>
               </li> */}
               <li>
-                <Link href="/firmy" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/pro-firmy" className="text-gray-400 hover:text-white transition-colors">
                   Pro firmy
                 </Link>
               </li>
               <li>
-                <Link href="/salony" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/pro-salony" className="text-gray-400 hover:text-white transition-colors">
                   Pro salony
                 </Link>
               </li>
               <li>
-                <Link href="/zubari" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/pro-zubare" className="text-gray-400 hover:text-white transition-colors">
                   Pro zubaře
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
-                  Ceny
+                <Link href="/cenik" className="text-gray-400 hover:text-white transition-colors">
+                  Ceník
                 </Link>
               </li>
             </ul>
@@ -57,12 +57,12 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Právní informace</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/ochrana-osobnich-udaju" className="text-gray-400 hover:text-white transition-colors">
                   Ochrana údajů
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/obchodni-podminky" className="text-gray-400 hover:text-white transition-colors">
                   Obchodní podmínky
                 </Link>
               </li>
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="border-t text-center copyright">
           <p className="text-gray-400 text-small">
-            © 2024 Kleedo. Všechna práva vyhrazena.
+            © 2025 Kleedo. Všechna práva vyhrazena.
           </p>
         </div>
       </div>

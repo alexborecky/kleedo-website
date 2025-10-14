@@ -4,7 +4,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
-import { Phone, Calendar, FileText, MessageSquare, Settings, Globe, Users, DollarSign, Clock, Shield, CheckCircle, Star, ArrowRight, AlertTriangle, TrendingDown, Building, Scissors, Stethoscope } from 'lucide-react'
+import { Phone, Calendar, FileText, MessageSquare, Settings, Globe, Users, DollarSign, Clock, Shield, CheckCircle, Star, ArrowRight, AlertTriangle, TrendingDown, Building, Scissors, Stethoscope, RefreshCw } from 'lucide-react'
 export default function HomePage() {
   return (
     <main className="min-h-screen">
@@ -53,7 +53,7 @@ export default function HomePage() {
             {/* Hero Blobs - Full width containers */}
           <div className="absolute inset-0 w-full h-full -z-50">
             <InteractiveBlob 
-              className="absolute bottom-0 left-0" 
+              className="absolute bottom-0 left-0 mobile-blob" 
               widthPercent={120} 
               heightPercent={70}
               leftPercent={-30}
@@ -73,7 +73,7 @@ export default function HomePage() {
               blurAmount={80}
             />
             <InteractiveBlob 
-              className="absolute" 
+              className="absolute mobile-blob" 
               widthPercent={100} 
               heightPercent={40}
               rightPercent={-40}
@@ -102,7 +102,7 @@ export default function HomePage() {
             {/* Blob behind headline - no clipping */}
             <div className="absolute inset-0 w-full h-full z-0" style={{ overflow: 'visible' }}>
               <InteractiveBlob
-                className="absolute"
+                className="absolute mobile-blob"
                 widthPercent={180} 
                 heightPercent={120}
                 leftPercent={-50}
@@ -143,38 +143,39 @@ export default function HomePage() {
               </div>
             </div>
 
+
+            
+            <div className="feature-card glass">
+              <div className="flex flex-col items-start">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
+                  <Clock className="h-6 w-6 text-primary-500" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Plynulý den, bez mezer</h3>
+                <p className="text-gray-400 text-sm">
+                  Inteligentně plánuje termíny tak, aby mezi schůzkami nebyly mezery. Maximální využití času a více zakázek.
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-card glass">
+              <div className="flex flex-col items-start">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
+                  <RefreshCw className="h-6 w-6 text-primary-500" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Záchrana termínu</h3>
+                <p className="text-gray-400 text-sm">
+                  Když někdo zruší, automaticky kontaktuje čekající na waitlistě a zaplní uvolněný termín. Žádné mezery v kalendáři.
+                </p>
+              </div>
+            </div>
             <div className="feature-card glass">
               <div className="flex flex-col items-start">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
                   <Calendar className="h-6 w-6 text-primary-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Volné termíny najde a potvrdí za vás</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">WhatsApp komunikace & automatické potvrzení</h3>
                 <p className="text-gray-400 text-sm">
-                  Automaticky najde volné termíny ve vašem kalendáři a zarezervuje je za vás.
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-card glass">
-              <div className="flex flex-col items-start">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
-                  <FileText className="h-6 w-6 text-primary-500" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Vždy víte, kde volal a proč</h3>
-                <p className="text-gray-400 text-sm">
-                  Každý hovor je zaznamenán s detaily o tom, kdo volal a co potřeboval.
-                </p>
-              </div>
-            </div>
-
-            <div className="feature-card glass">
-              <div className="flex flex-col items-start">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
-                  <FileText className="h-6 w-6 text-primary-500" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Vždy víte, kde volal a proč</h3>
-                <p className="text-gray-400 text-sm">
-                  Každý hovor je zaznamenán s detaily o tom, kdo volal a co potřeboval.
+                  Všechny rezervace, potvrzení a připomínky fungují automaticky přes WhatsApp i SMS. Klienti dostanou potvrzení okamžitě.
                 </p>
               </div>
             </div>
@@ -187,7 +188,7 @@ export default function HomePage() {
         <div className="container mask-container">
             <div className="absolute inset-0 w-full h-full -z-50">
               <InteractiveBlob 
-                className="absolute"
+                className="absolute mobile-blob"
                 widthPercent={80} 
                 heightPercent={60}
                 leftPercent={-20}
@@ -207,7 +208,7 @@ export default function HomePage() {
                 blurAmount={120}
               />
               <InteractiveBlob 
-                className="absolute bottom-0 right-0" 
+                className="absolute bottom-0 right-0 mobile-blob" 
                 widthPercent={100} 
                 heightPercent={60}
                 rightPercent={-40}
@@ -288,7 +289,7 @@ export default function HomePage() {
             {/* Blob behind headline - inside sticky column */}
             <div className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
                 <InteractiveBlob 
-                  className="absolute"
+                  className="absolute mobile-blob"
                   widthPercent={140} 
                   heightPercent={100}
                   leftPercent={-20}
@@ -375,7 +376,7 @@ export default function HomePage() {
         <div className="container mask-container">
         {/* <div className="absolute inset-0 w-full h-full -z-50">
               <InteractiveBlob 
-                className="absolute"
+                className="absolute mobile-blob"
                 widthPercent={60} 
                 heightPercent={40}
                 rightPercent={-20}
@@ -395,7 +396,7 @@ export default function HomePage() {
                 blurAmount={120}
               />
               <InteractiveBlob 
-                className="absolute bottom-0 right-0" 
+                className="absolute bottom-0 right-0 mobile-blob" 
                 widthPercent={100} 
                 heightPercent={100}
                 leftPercent={-30}
@@ -429,9 +430,9 @@ export default function HomePage() {
  
            <div className="group dentist">
                <div className="feature-card glass hover:border-primary-500/50 transition-all duration-300">
-                <div className="absolute inset-0 w-full h-full -z-50">
+                <div className="absolute inset-0 w-full h-full -z-50 mobile-blob">
                     <InteractiveBlob 
-                      className="absolute"
+                      className="absolute mobile-blob"
                       widthPercent={160} 
                       heightPercent={80}
                       leftPercent={-80}
@@ -461,7 +462,7 @@ export default function HomePage() {
                     Pacienti už nikdy neuslyší obsazeno. AI recepční 
                     zvládne více hovorů současně.
                   </p>
-                  <a href="/zubari" className="mt-4 btn btn-secondary button circular circular-secondary">
+                  <a href="/pro-zubare" className="mt-4 btn btn-secondary button circular circular-secondary">
                     <span>Zjistit více</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -471,9 +472,9 @@ export default function HomePage() {
 
              <div className="group salon">
                <div className="feature-card glass hover:border-primary-500/50 transition-all duration-300">
-                <div className="absolute inset-0 w-full h-full -z-50">
+                <div className="absolute inset-0 w-full h-full -z-50 mobile-blob">
                   <InteractiveBlob 
-                    className="absolute"
+                    className="absolute mobile-blob"
                     widthPercent={200} 
                     heightPercent={100}
                     rightPercent={-100}
@@ -503,7 +504,7 @@ export default function HomePage() {
                     Žádné odbíhání od střihu. AI recepční zvedne telefon, 
                     domluví termín a pošle potvrzení.
                   </p>
-                  <a href="/salony" className="mt-4 btn btn-secondary button circular circular-secondary">
+                  <a href="/pro-salony" className="mt-4 btn btn-secondary button circular circular-secondary">
                     <span>Zjistit více</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -513,7 +514,7 @@ export default function HomePage() {
 
              <div className="group smb">
                <div className="feature-card glass">
-               <div className="absolute inset-0 w-full h-full -z-50">
+               <div className="absolute inset-0 w-full h-full -z-50 mobile-blob">
                     <InteractiveBlob 
                       className="absolute"
                       widthPercent={180} 
@@ -544,7 +545,7 @@ export default function HomePage() {
                     Žádné zmeškané příležitosti. AI recepční zvedne telefon, 
                     domluví schůzku a pošle potvrzení.
                   </p>
-                  <a href="/firmy" className="mt-4 btn btn-secondary button circular circular-secondary">
+                  <a href="/pro-firmy" className="mt-4 btn btn-secondary button circular circular-secondary">
                     <span>Zjistit více</span>
                     <span className="btn-fill"></span>
                   </a>

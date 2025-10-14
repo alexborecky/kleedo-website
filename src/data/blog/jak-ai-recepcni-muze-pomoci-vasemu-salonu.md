@@ -1,13 +1,15 @@
 ---
-title: "Jak AI recepční může pomoci vašemu salonu růst"
+title: "Jak AI recepční pomáhá vašemu podnikání růst"
 excerpt: "Objevte, jak AI recepční může zvýšit počet rezervací, zlepšit spokojenost klientů a ušetřit váš čas."
 date: "2024-01-15"
 tags: ["salony", "AI", "automatizace", "růst"]
+image: "/images/grow.jpg"
+imageAlt: "Moderní salon s AI recepční - efektivní rezervace a komunikace"
 ---
 
-# Jak AI recepční může pomoci vašemu salonu růst
 
-V dnešní době, kdy je konkurence v oblasti kadeřnictví a kosmetiky stále větší, je důležité najít způsoby, jak se odlišit a poskytnout klientům nejlepší možnou službu. Jedním z nejefektivnějších způsobů je implementace AI recepční, která může výrazně zlepšit fungování vašeho salonu.
+
+### **V dnešní době, kdy je konkurence v oblasti kadeřnictví a kosmetiky stále větší, je důležité najít způsoby, jak se odlišit a poskytnout klientům nejlepší možnou službu. Jedním z nejefektivnějších způsobů je implementace AI recepční, která může výrazně zlepšit fungování vašeho salonu.**
 
 ## Proč je AI recepční důležitá pro salony?
 

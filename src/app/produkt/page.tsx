@@ -362,7 +362,7 @@ export default function ProductPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a href="/salony" className="group">
+            <a href="/pro-salony" className="group">
               <div className="feature-card glass hover:border-primary-500/50 transition-all duration-300">
                 <div className="stroke"></div>
                 <div className="flex items-center">
@@ -379,7 +379,7 @@ export default function ProductPage() {
               </div>
             </a>
 
-            <a href="/zubari" className="group">
+            <a href="/pro-zubare" className="group">
               <div className="feature-card glass hover:border-primary-500/50 transition-all duration-300">
                 <div className="stroke"></div>
                 <div className="flex items-center">
@@ -400,58 +400,50 @@ export default function ProductPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-dark-800">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Často kladené otázky
-              </h2>
-            </div>
+      <section className="py-24 faq-section">
+        <div className="container px-4">
+          <div className="faq-wrap">
+            <h2 className="faq-title">Často kladené<br/>otázky</h2>
 
-            <div className="space-y-4">
-              {[
-                {
-                  question: "Může AI udělat chybu při rezervaci?",
-                  answer: "AI je navrženo tak, aby se chovalo jako profesionální recepční. Má přístup k vašemu kalendáři a dokáže se učit z každé konverzace. Navíc je vždy zdvořilé a nikdy nezapomene na žádný detail."
-                },
-                {
-                  question: "Kolik to stojí?",
-                  answer: "Ceny začínají od 990 Kč měsíčně za základní plán. Máme tři úrovně: Starter (990 Kč), Pro (2 490 Kč) a Business (4 990 Kč). Každý plán obsahuje jiné funkce podle velikosti vaší firmy."
-                },
-                {
-                  question: "Jak je to s ochranou dat?",
-                  answer: "Ochrana dat je pro nás prioritou. Všechna data jsou šifrována, ukládána v EU a plně v souladu s GDPR. Máte plnou kontrolu nad svými daty a můžete je kdykoli smazat."
-                },
-                {
-                  question: "Můžu si nastavit, jak AI mluví s mými klienty?",
-                  answer: "Ano, máte plnou kontrolu nad tím, jak AI komunikuje. Můžete nastavit tón komunikace, fráze, které má používat, a dokonce i to, jaké služby má nabízet."
-                },
-                {
-                  question: "Co když nemám Google Kalendář?",
-                  answer: "Kleedo se propojí s jakýmkoli kalendářem - Google, Outlook, Apple iCal nebo jiným. Můžete také použít naše vlastní kalendářové řešení."
-                },
-                {
-                  question: "Kolik hovorů zvládne současně?",
-                  answer: "AI recepční zvládne neomezený počet hovorů současně. Každý klient se dočká okamžité odpovědi bez čekání."
-                }
-              ].map((faq, index) => (
-                <div key={index} className="border border-dark-700 rounded-lg overflow-hidden">
-                  <details className="group">
-                    <summary className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-dark-700/50 transition-colors cursor-pointer">
-                      <span className="text-white font-medium pr-4">{faq.question}</span>
-                      <div className="flex-shrink-0">
-                        <span className="text-primary-500 group-open:hidden">+</span>
-                        <span className="text-primary-500 group-open:block hidden">−</span>
-                      </div>
-                    </summary>
-                    
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  </details>
-                </div>
-              ))}
+            <div className="faq-panel glass">
+              <div className="stroke"></div>
+              <div className="faq-list">
+                {[
+                  {
+                    question: "Může AI udělat chybu při rezervaci?",
+                    answer: "AI je navrženo tak, aby se chovalo jako profesionální recepční. Má přístup k vašemu kalendáři a dokáže se učit z každé konverzace. Navíc je vždy zdvořilé a nikdy nezapomene na žádný detail."
+                  },
+                  {
+                    question: "Kolik to stojí?",
+                    answer: "Ceny začínají od 990 Kč měsíčně za základní plán. Máme tři úrovně: Starter (990 Kč), Pro (1 990 Kč) a Business (2 990 Kč). Každý plán obsahuje jiné funkce podle velikosti vaší firmy."
+                  },
+                  {
+                    question: "Jak je to s ochranou dat?",
+                    answer: "Ochrana dat je pro nás prioritou. Všechna data jsou šifrována, ukládána v EU a plně v souladu s GDPR. Máte plnou kontrolu nad svými daty a můžete je kdykoli smazat."
+                  },
+                  {
+                    question: "Můžu si nastavit, jak AI mluví s mými klienty?",
+                    answer: "Ano, máte plnou kontrolu nad tím, jak AI komunikuje. Můžete nastavit tón komunikace, fráze, které má používat, a dokonce i to, jaké služby má nabízet."
+                  },
+                  {
+                    question: "Co když nemám Google Kalendář?",
+                    answer: "Kleedo se propojí s jakýmkoli kalendářem - Google, Outlook, Apple iCal nebo jiným. Můžete také použít naše vlastní kalendářové řešení."
+                  },
+                  {
+                    question: "Kolik hovorů zvládne současně?",
+                    answer: "AI recepční zvládne neomezený počet hovorů současně. Každý klient se dočká okamžité odpovědi bez čekání."
+                  }
+                ].map((faq, i) => (
+                  <div className="faq-item" key={i}>
+                    <input id={`produkt-faq-${i}`} type="checkbox" className="faq-check" />
+                    <label htmlFor={`produkt-faq-${i}`} className="faq-summary">
+                      <span className="faq-question">{faq.question}</span>
+                      <span className="faq-toggle"><span className="plus">+</span><span className="minus">−</span></span>
+                    </label>
+                    <div className="faq-content">{faq.answer}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -28,6 +28,15 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAnalytics />
         <Leadinfo />
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PH4JKMXM"
+            height="0" 
+            width="0" 
+            style={{display: 'none', visibility: 'hidden'}}
+          />
+        </noscript>
         <CookieBanner />
         {children}
       </body>
