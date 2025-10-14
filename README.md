@@ -138,3 +138,4 @@ npm start
 ## Kontakt
 
 Pro otázky ohledně projektu kontaktujte: info@kleedo.app
+# kleedo-website
