@@ -89,9 +89,9 @@ export default function InteractiveBlob({
         const x2=x0-1+2*G, y2=y0-1+2*G
         const ii=i&255, jj=j&255
         let n0=0,n1=0,n2=0
-        let t0=0.5 - x0*x0 - y0*y0; if (t0>0){ t0*=t0; n0 = t0*t0*dot(grad3[perm[ii+perm[jj]]%8], x0,y0) }
-        let t1=0.5 - x1*x1 - y1*y1; if (t1>0){ t1*=t1; n1 = t1*t1*dot(grad3[perm[ii+i1+perm[jj+j1]]%8], x1,y1) }
-        let t2=0.5 - x2*x2 - y2*y2; if (t2>0){ t2*=t2; n2 = t2*t2*dot(grad3[perm[ii+1+perm[jj+1]]%8], x2,y2) }
+        let t0=0.5 - x0*x0 - y0*y0; if (t0>0){ t0*=t0; n0 = t0*t0*dot(grad3[perm[ii+perm[jj]]%8] as [number,number], x0,y0) }
+        let t1=0.5 - x1*x1 - y1*y1; if (t1>0){ t1*=t1; n1 = t1*t1*dot(grad3[perm[ii+i1+perm[jj+j1]]%8] as [number,number], x1,y1) }
+        let t2=0.5 - x2*x2 - y2*y2; if (t2>0){ t2*=t2; n2 = t2*t2*dot(grad3[perm[ii+1+perm[jj+1]]%8] as [number,number], x2,y2) }
         return 70*(n0+n1+n2)
       }
       return (x:number,y:number)=>snoise(x,y)
