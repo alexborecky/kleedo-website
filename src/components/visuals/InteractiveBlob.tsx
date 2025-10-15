@@ -69,9 +69,9 @@ export default function InteractiveBlob({
   const noise = useRef(
     (() => {
       // Simplex-ish noise adapted for small blobs (fast, good enough)
-      const grad3 = [
+      const grad3: [number, number][] = [
         [1,1],[-1,1],[1,-1],[-1,-1],[1,0],[-1,0],[0,1],[0,-1]
-      ] as const
+      ]
       const p = new Uint8Array(256)
       for (let i=0;i<256;i++) p[i]=i
       for (let i=255;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [p[i],p[j]]=[p[j],p[i]] }
