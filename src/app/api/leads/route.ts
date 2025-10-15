@@ -41,14 +41,12 @@ export async function POST(request: NextRequest) {
     const emailHtml = `
       <h2>Nový lead z Kleedo webu</h2>
       <p><strong>Zdroj:</strong> ${data.source}</p>
-      <p><strong>Čas:</strong> ${new Date(data.timestamp).toLocaleString('cs-CZ')}</p>
+      <p><strong>Čas:</strong> ${data.timestamp ? new Date(data.timestamp).toLocaleString('cs-CZ') : new Date().toLocaleString('cs-CZ')}</p>
       
       <h3>Informace o firmě:</h3>
       <ul>
         <li><strong>Typ podniku:</strong> ${data.businessType}</li>
-        <li><strong>Velikost firmy:</strong> ${data.companySize}</li>
-        <li><strong>Objem hovorů:</strong> ${data.callVolume}</li>
-        <li><strong>Název firmy:</strong> ${data.company}</li>
+        <li><strong>Název firmy:</strong> ${data.company || 'Neuvedeno'}</li>
       </ul>
       
       <h3>Kontaktní údaje:</h3>

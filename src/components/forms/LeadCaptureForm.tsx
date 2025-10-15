@@ -10,7 +10,6 @@ import { trackFormSubmit, trackFormStart, trackLeadGeneration } from '@/lib/anal
 
 const leadFormSchema = z.object({
   businessType: z.string().min(1, 'Vyberte typ podniku'),
-  callVolume: z.string().optional(),
   name: z.string().min(2, 'Jméno musí mít alespoň 2 znaky'),
   email: z.string().email('Neplatná emailová adresa'),
   phone: z.string().min(9, 'Telefon musí mít alespoň 9 číslic'),
@@ -114,20 +113,21 @@ export function LeadCaptureForm({
         }),
       })
 
-      if (response.ok) {
+      const result = await response.json()
+      
+      if (response.ok && result.success) {
         setIsSubmitted(true)
         
         // Track conversion with new analytics helper
         trackFormSubmit('lead-capture', {
           businessType: data.businessType,
-          callVolume: data.callVolume,
           source
         })
         
         // Track lead generation
         trackLeadGeneration({
           businessType: data.businessType,
-          companySize: data.callVolume || 'not-specified',
+          companySize: 'not-specified',
           source
         })
       } else {
