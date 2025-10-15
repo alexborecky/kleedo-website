@@ -116,7 +116,7 @@ export function LeadCaptureForm({
       const result = await response.json()
       
       if (response.ok && result.success) {
-        setIsSubmitted(true)
+        setIsSubmitted(true) // Fixed form success handling
         
         // Track conversion with new analytics helper
         trackFormSubmit('lead-capture', {
