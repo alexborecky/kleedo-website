@@ -114,6 +114,7 @@ export function LeadCaptureForm({
       })
 
       const result = await response.json()
+      console.log('Form response:', response.status, result)
       
       if (response.ok && result.success) {
         setIsSubmitted(true) // Fixed form success handling
