@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -13,8 +13,8 @@ const leadFormSchema = z.object({
   name: z.string().min(2, 'Jméno musí mít alespoň 2 znaky'),
   email: z.string().email('Neplatná emailová adresa'),
   phone: z.string().min(9, 'Telefon musí mít alespoň 9 číslic'),
-  company: z.string().optional(),
-  message: z.string().optional()
+  company: z.string().optional().or(z.literal('')),
+  message: z.string().optional().or(z.literal(''))
 })
 
 type LeadFormData = z.infer<typeof leadFormSchema>
@@ -34,7 +34,8 @@ export function LeadCaptureForm({
 }: LeadCaptureFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [formStarted, setFormStarted] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
+  const formStartedRef = useRef(false)
 
   const {
     register,
@@ -46,14 +47,15 @@ export function LeadCaptureForm({
     mode: 'onBlur'
   })
 
-  // Track when user starts filling the form
+  // Track when user starts filling the form - using ref to avoid re-renders
   const handleFormStart = () => {
-    if (!formStarted) {
-      setFormStarted(true)
+    if (!formStartedRef.current) {
+      formStartedRef.current = true
       const source = businessType ? `landing-${businessType}` : 'main-landing'
       trackFormStart(`lead-capture-${source}`)
     }
   }
+
 
   // Set business type if provided
   if (businessType) {
@@ -83,7 +85,7 @@ export function LeadCaptureForm({
         <div className="relative">
           {children}
           {!hasError && isTouched && (
-            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
               <Check className="h-4 w-4 text-green-400" />
             </div>
           )}
@@ -181,18 +183,18 @@ export function LeadCaptureForm({
 
       {/* Right side - Form */}
       <div>
-        <div className="relative">
-          <div className="stroke"></div>
-           <form 
-             onSubmit={handleSubmit(onSubmit)} 
-             onFocus={handleFormStart}
-             className="space-y-6 lead-form"
-           >
+        <form 
+          ref={formRef}
+          onSubmit={handleSubmit(onSubmit)} 
+          className="space-y-6 lead-form"
+        >
              {/* Name */}
              <FieldWrapper fieldName="name" label="Jméno a příjmení" required>
                <input
                  type="text"
                  {...register('name')}
+                 autoComplete="name"
+                 onFocus={handleFormStart}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="Vaše jméno a příjmení"
                />
@@ -203,6 +205,7 @@ export function LeadCaptureForm({
                <input
                  type="email"
                  {...register('email')}
+                 onFocus={handleFormStart}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="vas@email.cz"
                />
@@ -213,6 +216,7 @@ export function LeadCaptureForm({
                <input
                  type="tel"
                  {...register('phone')}
+                 onFocus={handleFormStart}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="+420 123 456 789"
                />
@@ -222,6 +226,7 @@ export function LeadCaptureForm({
              <FieldWrapper fieldName="businessType" label="Typ podniku" required>
                <select
                  {...register('businessType')}
+                 onFocus={handleFormStart}
                  className="lead-input appearance-none pr-10 glass border-gray-700"
                  disabled={!!businessType}
                >
@@ -242,6 +247,7 @@ export function LeadCaptureForm({
                <input
                  type="text"
                  {...register('company')}
+                 onFocus={handleFormStart}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="Název vaší firmy"
                />
@@ -265,8 +271,7 @@ export function LeadCaptureForm({
                 
               </button>
             </div>
-          </form>
-        </div>
+        </form>
       </div>
     </motion.div>
   )
