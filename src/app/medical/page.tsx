@@ -24,7 +24,7 @@ export default function MedicalPage() {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Profesionální AI recepční, která zvedne každý hovor, objedná pacienta 
+                Profesionální AI recepční, která zvedne hovory podle vašich pravidel, objedná pacienta 
                 a připomene mu termín. Více času na léčbu, méně administrativy.
               </p>
 
@@ -55,7 +55,7 @@ export default function MedicalPage() {
                   <span className="ml-2 text-white font-medium">4.9/5</span>
                 </div>
                 <span className="text-gray-400">•</span>
-                <span className="text-gray-400">150+ ordinací už používá Kleedo</span>
+                <span className="text-gray-400">Pilotní provoz s vybranými ordinacemi</span>
               </div>
             </div>
 
@@ -63,9 +63,9 @@ export default function MedicalPage() {
               <div className="w-full max-w-md">
                 <div className="bg-dark-800/50 backdrop-blur-lg border border-dark-700 rounded-2xl p-8 text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">Získejte AI recepční pro vaši ordinaci</h3>
-                  <p className="text-gray-300 mb-6">14denní zkušební verze zdarma</p>
+                  <p className="text-gray-300 mb-6">Připojte se k pilotnímu provozu</p>
                   <a href="#form" className="btn btn-primary inline-flex items-center justify-center w-full">
-                    Vyzkoušet zdarma
+                    Připojit se k pilotu
                   </a>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export default function MedicalPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Zatímco vy léčíte, váš pacient volá jinou ordinaci. 
-              AI recepční zvedne telefon i během nejrušnějších dnů.
+              AI recepční zvedne telefon podle vašich nastavení i během nejrušnějších dnů.
             </p>
           </div>
 
@@ -207,8 +207,8 @@ export default function MedicalPage() {
       {/* Final CTA */}
       <div id="form">
         <LeadCaptureSection 
-          title="Získejte nabídku na míru"
-          subtitle="Kontaktujeme vás do 24 hodin."
+          title="Připojte se k pilotnímu provozu"
+          subtitle="Probíhá pilotní provoz s omezenou kapacitou. Kontaktujeme vás do 24 hodin."
           businessType="medical"
         />
       </div>

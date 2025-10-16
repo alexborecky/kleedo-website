@@ -112,8 +112,8 @@ export const trackDemoRequest = (source: string) => {
  */
 export const trackLeadGeneration = (leadData: {
   businessType: string;
-  companySize: string;
   source: string;
+  companySize?: string;
 }) => {
   trackEvent('generate_lead', {
     ...leadData,

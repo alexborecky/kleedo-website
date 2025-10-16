@@ -3,6 +3,14 @@
 import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 
+// Extend Window interface for analytics
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void
+    leadinfo?: (...args: any[]) => void
+  }
+}
+
 export function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
 
@@ -17,17 +25,54 @@ export function CookieBanner() {
     localStorage.setItem('cookie-consent', 'accepted')
     setShowBanner(false)
     
-    // Enable analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'granted'
-      })
+    // Enable analytics and ads
+    if (typeof window !== 'undefined') {
+      // Enable Google Analytics
+      if (window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted'
+        })
+      }
+      
+      // Enable Leadinfo
+      if (window.leadinfo && typeof window.leadinfo === 'function') {
+        try {
+          window.leadinfo('consent', 'granted')
+        } catch (e) {
+          console.log('Leadinfo consent setting failed:', e)
+        }
+      }
     }
   }
 
   const declineCookies = () => {
     localStorage.setItem('cookie-consent', 'declined')
     setShowBanner(false)
+    
+    // Explicitly deny analytics and ads
+    if (typeof window !== 'undefined') {
+      // Deny Google Analytics
+      if (window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        })
+      }
+      
+      // Deny Leadinfo
+      if (window.leadinfo && typeof window.leadinfo === 'function') {
+        try {
+          window.leadinfo('consent', 'denied')
+        } catch (e) {
+          console.log('Leadinfo consent setting failed:', e)
+        }
+      }
+    }
   }
 
   if (!showBanner) return null

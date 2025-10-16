@@ -14,12 +14,10 @@ const transporter = nodemailer.createTransport({
 
 interface LeadData {
   businessType: string
-  companySize: string
-  callVolume: string
   name: string
   email: string
   phone: string
-  company: string
+  company?: string
   message?: string
   source: string
   timestamp: string
@@ -30,7 +28,7 @@ export async function POST(request: NextRequest) {
     const data: LeadData = await request.json()
 
     // Validate required fields
-    if (!data.name || !data.email || !data.phone || !data.company || !data.businessType) {
+    if (!data.name || !data.email || !data.phone || !data.businessType) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -68,23 +66,26 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: process.env.LEAD_EMAIL || process.env.SMTP_USER,
-      subject: `Nový lead: ${data.company} (${data.businessType})`,
+      subject: `Nový lead: ${data.company || 'Bez názvu firmy'} (${data.businessType})`,
       html: emailHtml,
     })
 
     // Send confirmation email to lead
     const confirmationHtml = `
       <h2>Děkujeme za váš zájem o Kleedo!</h2>
+      
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://kleedo.cz/images/email-thumbnail.png" alt="Kleedo - AI Recepční" style="max-width: 200px; height: auto; border-radius: 8px;">
+      </div>
+      
       <p>Vážený/á ${data.name},</p>
       
       <p>děkujeme za vyplnění formuláře. Váš požadavek byl úspěšně odeslán a náš tým vás bude kontaktovat do 24 hodin.</p>
       
       <h3>Shrnutí vašeho požadavku:</h3>
       <ul>
-        <li><strong>Firma:</strong> ${data.company}</li>
+        <li><strong>Firma:</strong> ${data.company || 'Neuvedeno'}</li>
         <li><strong>Typ podniku:</strong> ${data.businessType}</li>
-        <li><strong>Velikost firmy:</strong> ${data.companySize}</li>
-        <li><strong>Objem hovorů:</strong> ${data.callVolume}</li>
       </ul>
       
       <p>Mezitím si můžete prohlédnout naše ceny nebo se podívat na často kladené otázky.</p>

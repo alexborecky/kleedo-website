@@ -124,7 +124,7 @@ export default function HomePage() {
             </div>
             <div className="mb-16">
               <h2 className="feature-section-h2">
-                Když někdo volá, vždycky to zvedne.
+                Když někdo volá, vždycky to někdo zvedne.
               </h2>
             </div>
           </div>
@@ -344,7 +344,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="">Firma, která je vždy k dispozici</h3>
                 <p className="text-gray-400">
-                  Klienti se dovolají okamžitě. V češtině, angličtině a brzy třeba i v maďarštině. Vypadejte jako profi hráč, co má vždy čas, rozumí všem jazykům i když jste zrovna offline. 
+                  Klienti se dovolají okamžitě. V češtině, angličtině a další jazyky přidáváme postupně. Vypadejte jako profi hráč, co má vždy čas a rozumí více jazykům i když jste zrovna offline. 
                 </p>
               </div>
             </div>
@@ -418,10 +418,10 @@ export default function HomePage() {
             </div> */}
           <div className="text-center mb-16 section-header">
             <h2 className="">
-              Vyberte si svůj obor
+              Pro koho je Kleedo
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Kleedo funguje ve všech odvětvích. Klikněte na svůj obor a zjistěte, 
+              Kleedo funguje ve více odvětvích. Klikněte na svůj obor a zjistěte, 
               jak vám AI recepční pomůže.
             </p>
           </div>
@@ -722,7 +722,7 @@ export default function HomePage() {
                 Přidejte se mezi první, kteří získají AI recepční
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Počet míst v pilotu je omezený. Zajistěte si místo hned.
+                Probíhá pilotní provoz s omezenou kapacitou. Zajistěte si místo včas.
               </p>
               <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary" tabIndex={-1}>
                 <span>Objednat demo</span>
@@ -744,19 +744,19 @@ export default function HomePage() {
                 {[
                   {
                     q: "Může AI udělat chybu při rezervaci?",
-                    a: "AI je navrženo tak, aby se chovalo jako profesionální recepční. Má přístup k vašemu kalendáři a dokáže se učit z každé konverzace. Navíc je vždy zdvořilé a nikdy nezapomene na žádný detail."
+                    a: "AI je navrženo tak, aby se chovalo jako profesionální recepční. Má přístup k vašemu kalendáři a učí se z každé konverzace. Můžete si nastavit pravidla pro přepojení hovoru na vás v případě nejasností."
                   },
                   {
                     q: "Rozpozná AI různé požadavky klientů?",
                     a: "Ano, AI dokáže rozpoznat různé typy služeb a požadavky. Můžete si nastavit pravidla, jak má AI reagovat na různé situace a typy klientů."
                   },
-                  { q: "Kolik to stojí?", a: "Ceny začínají od 990 Kč měsíčně za základní plán. Máme tři úrovně: Starter (990 Kč), Pro (2 490 Kč) a Business (4 990 Kč). Každý plán obsahuje jiné funkce podle velikosti vaší firmy." },
-                  { q: "Jak je to s ochranou dat?", a: "Ochrana dat je pro nás prioritou. Všechna data jsou šifrována, ukládána v EU a plně v souladu s GDPR. Máte plnou kontrolu nad svými daty a můžete je kdykoli smazat." },
+                  { q: "Kolik to stojí?", a: "Ceny jsou orientační a laděné během pilotu. Máme tři úrovně: Starter (990 Kč), Pro (2 490 Kč) a Business (4 990 Kč). Každý plán obsahuje jiné funkce podle velikosti vaší firmy." },
+                  { q: "Jak je to s ochranou dat?", a: "Ochrana dat je pro nás prioritou. Všechna data jsou šifrována, ukládána v EU a plně v souladu s GDPR. Máte plná práva subjektu údajů podle našich Zásad ochrany osobních údajů." },
                   { q: "Můžu si nastavit, jak AI mluví s mými klienty?", a: "Ano, máte plnou kontrolu nad tím, jak AI komunikuje. Můžete nastavit tón komunikace, fráze, které má používat, a dokonce i to, jaké služby má nabízet." },
-                  { q: "Co když nemám Google Kalendář?", a: "Kleedo se propojí s jakýmkoli kalendářem - Google, Outlook, Apple iCal nebo jiným. Můžete také použít naše vlastní kalendářové řešení." },
-                  { q: "Kolik hovorů zvládne současně?", a: "AI recepční zvládne neomezený počet hovorů současně. Každý klient se dočká okamžité odpovědi bez čekání." },
-                  { q: "Může Kleedo fungovat 24/7?", a: "Ano, Kleedo je dostupné 24 hodin denně, 7 dní v týdnu. Nikdy nebere dovolenou, nemá nemoc a vždy zvedne telefon." },
-                  { q: "Co když AI nerozumí klientovi?", a: "AI je navrženo tak, aby rozumělo přirozené řeči. Pokud si není jisté, zeptá se na upřesnění nebo přesměruje hovor na vás." },
+                  { q: "Co když nemám Google Kalendář?", a: "Kleedo se v budoucnu propojí s více kalendářovými systémy - Google, Outlook, Apple iCal nebo jinými. Průběžně přidáváme další kalendářové a rezervační systémy. Můžete také použít naše vlastní kalendářové řešení." },
+                  { q: "Kolik hovorů zvládne současně?", a: "AI recepční zvládne více hovorů současně. Můžete si nastavit pravidla pro přepojení hovorů na vás podle vašich potřeb." },
+                  { q: "Může Kleedo fungovat 24/7?", a: "Kleedo je dostupné podle vašich nastavení. Můžete si určit pracovní dobu, kdy má AI přijímat hovory, a kdy má přesměrovávat na vás." },
+                  { q: "Co když AI nerozumí klientovi?", a: "AI je navrženo tak, aby rozumělo přirozené řeči. Pokud si není jisté, zeptá se na upřesnění nebo přesměruje hovor na vás podle vašich nastavení." },
                   { q: "Musím něco instalovat?", a: "Ne, Kleedo funguje přes internetové připojení. Nepotřebujete žádnou instalaci ani speciální vybavení. Stačí se zaregistrovat a začít používat." }
                 ].map((item, i) => (
                   <div className="faq-item" key={i}>
@@ -786,8 +786,8 @@ export default function HomePage() {
           </h2>
           
           <p className="text-small text-gray-300 mb-8 leading-relaxed">
-            AI recepční s lidským hlasem okamžitě zvedne telefon a postará se o klienta 
-            tak, jak byste to udělali vy. Žádné obsazené linky, žádné hlasové schránky.
+            AI recepční s lidským hlasem zvedne telefon a postará se o klienta 
+            podle vašich pravidel. Žádné zbytečné čekání, žádné záznamníky.
           </p>
 
           <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary" tabIndex={-1}>

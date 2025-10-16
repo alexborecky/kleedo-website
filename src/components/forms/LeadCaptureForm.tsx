@@ -13,8 +13,8 @@ const leadFormSchema = z.object({
   name: z.string().min(2, 'Jméno musí mít alespoň 2 znaky'),
   email: z.string().email('Neplatná emailová adresa'),
   phone: z.string().min(9, 'Telefon musí mít alespoň 9 číslic'),
-  company: z.string().optional(),
-  message: z.string().optional()
+  company: z.string().optional().or(z.literal('')).transform(val => val === '' ? undefined : val),
+  message: z.string().optional().or(z.literal('')).transform(val => val === '' ? undefined : val)
 })
 
 type LeadFormData = z.infer<typeof leadFormSchema>
@@ -103,16 +103,28 @@ export function LeadCaptureForm({
     try {
       const source = businessType ? `landing-${businessType}` : 'main-landing'
       
+      // Clean up the data - remove undefined values and empty strings
+      const cleanedData = {
+        businessType: data.businessType,
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        // Only include company if it has a value
+        ...(data.company && data.company.trim() !== '' ? { company: data.company.trim() } : {}),
+        // Only include message if it has a value
+        ...(data.message && data.message.trim() !== '' ? { message: data.message.trim() } : {}),
+        source,
+        timestamp: new Date().toISOString()
+      }
+      
+      console.log('Sending cleaned data:', cleanedData)
+      
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...data,
-          source,
-          timestamp: new Date().toISOString()
-        }),
+        body: JSON.stringify(cleanedData),
       })
 
       const result = await response.json()
@@ -130,7 +142,6 @@ export function LeadCaptureForm({
         // Track lead generation
         trackLeadGeneration({
           businessType: data.businessType,
-          companySize: 'not-specified',
           source
         })
       } else {
@@ -260,8 +271,9 @@ export function LeadCaptureForm({
 
             {/* Privacy Policy */}
             <p className="text-xs /70 leading-relaxed">
-              Odesláním formuláře souhlasíte se zpracováním osobních údajů podle našich{' '}
-              <a href="/ochrana-osobnich-udaju" className="underline hover:no-underline">zásad ochrany osobních údajů</a>.
+              Odesláním formuláře souhlasíte se zpracováním osobních údajů. Data jsou šifrována a ukládána v EU. 
+              Máte plná práva subjektu údajů podle našich{' '}
+              <a href="/ochrana-osobnich-udaju" className="underline hover:no-underline">Zásad ochrany osobních údajů</a>.
             </p>
 
             {/* Submit Button */}

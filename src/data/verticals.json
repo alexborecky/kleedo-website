@@ -39,7 +39,7 @@
         {"icon": "Clock", "title": "Vždy dostupní", "description": "Česky i anglicky, klidně i mimo pracovní dobu — podle pravidel, která si nastavíte."},
         {"icon": "MessageSquare", "title": "Chytré připomínky", "description": "SMS/WhatsApp připomínky snižují no‑show a šetří čas i nervy."},
         {"icon": "Globe", "title": "Bez bariér", "description": "Volající cizinec? Asistent přepne do angličtiny a zařídí vše stejně hladce."},
-        {"icon": "Users", "title": "Škáluje se s vámi", "description": "Zvládne více linek zároveň. Nikdo nečeká, nikdo neodchází."}
+        {"icon": "Users", "title": "Škáluje se s vámi", "description": "Zvládne více linek zároveň podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
       ]
     },
     "testimonials": {
@@ -57,12 +57,12 @@
         {"question": "Umí měnit a rušit schůzky?", "answer": "Ano. Přesuny, rušení i potvrzení řeší samo a vše zapisuje přímo do vašeho kalendáře."},
         {"question": "Můžu si přizpůsobit styl komunikace?", "answer": "Jasně. Tón, fráze i slovník si nastavíte tak, aby odpovídal vaší značce."},
         {"question": "Co když si nebude jisté?", "answer": "Raději se doptá. A když je to potřeba, přesměruje hovor na člověka."},
-        {"question": "Kolik to stojí?", "answer": "Základ od 990 Kč/měs. Pro firmy doporučujeme plán Pro (2 490 Kč) se vším, co budete potřebovat."}
+        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro firmy doporučujeme plán Pro (2 490 Kč) se vším, co budete potřebovat."}
       ]
     },
     "cta": {
       "headline": "Přestanete zvedat všechno. Začněte zvedat výsledky.",
-      "description": "Připojte se do pilotu — míst je omezeně.",
+      "description": "Probíhá pilotní provoz s omezenou kapacitou. Připojte se včas.",
       "button": "Vyzkoušet demo pro firmy"
     }
   },
@@ -106,7 +106,7 @@
         {"icon": "Clock", "title": "Kdykoli podle pravidel", "description": "Dostupnost i mimo otvíračku, ale jen když chcete. Plná kontrola."},
         {"icon": "MessageSquare", "title": "WhatsApp připomínky", "description": "Automatické připomínky snižují no‑show a šetří náklady."},
         {"icon": "Globe", "title": "Čeština i angličtina", "description": "Cizinky se dovolají bez bariér, rezervace proběhne hladce."},
-        {"icon": "Users", "title": "Bez čekání", "description": "Zvládne více hovorů najednou. Každá klientka má okamžitou odpověď."}
+        {"icon": "Users", "title": "Bez čekání", "description": "Zvládne více hovorů najednou podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
       ]
     },
     "testimonials": {
@@ -124,12 +124,12 @@
         {"question": "Zvládne přesuny a storna?", "answer": "Ano, vše automaticky zapíše do vašeho kalendáře a dá vědět klientce."},
         {"question": "Můžu si nastavit styl mluvy?", "answer": "Ano. Vyberete tón i slovník, aby to sedělo vaší značce."},
         {"question": "Co když si nebude rozumět s klientkou?", "answer": "Doptá se nebo hovor předá vám. Raději bezpečně než špatně."},
-        {"question": "Kolik to stojí?", "answer": "Start od 990 Kč/měs. Pro salony doporučujeme plán Pro (2 490 Kč)."}
+        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Start od 990 Kč/měs. Pro salony doporučujeme plán Pro (2 490 Kč)."}
       ]
     },
     "cta": {
       "headline": "Zaplněný diář bez nervů",
-      "description": "Buďte mezi prvními salonky v pilotu.",
+      "description": "Probíhá pilotní provoz s omezenou kapacitou. Připojte se včas.",
       "button": "Vyzkoušet demo pro salony"
     }
   },
@@ -173,7 +173,7 @@
         {"icon": "Clock", "title": "Dostupnost podle plánu", "description": "Můžete obsluhovat i mimo ordinační dobu – ale jen v oknech, která povolíte."},
         {"icon": "MessageSquare", "title": "Chytré připomínky", "description": "Automatické upomínky snižují no‑show a hlídají dochvilnost."},
         {"icon": "Globe", "title": "Čeština i angličtina", "description": "Cizinci se dovolají bez bariér, triáž proběhne srozumitelně."},
-        {"icon": "Users", "title": "Paralelní linky", "description": "Zvládne více hovorů najednou, žádné čekání na lince."}
+        {"icon": "Users", "title": "Paralelní linky", "description": "Zvládne více hovorů najednou podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
       ]
     },
     "testimonials": {
@@ -189,14 +189,14 @@
       "items": [
         {"question": "Může AI udělat chybu při rezervaci?", "answer": "Je navržené jako profesionální recepční. Pracuje s vaším kalendářem a drží se pravidel, která nastavíte. Když si není jisté, doptá se nebo předá hovor."},
         {"question": "Rozpozná různé požadavky pacientů?", "answer": "Ano. Typy vyšetření, triáž, poznámky k bolesti – vše jde nastavit tak, aby nabídky dávaly smysl."},
-        {"question": "Kolik to stojí?", "answer": "Základ od 990 Kč/měs. Pro ordinace doporučujeme plán Pro (2 490 Kč)."},
+        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro ordinace doporučujeme plán Pro (2 490 Kč)."},
         {"question": "Jak je to s ochranou dat?", "answer": "Data jsou šifrovaná, uložená v EU a v souladu s GDPR. Nad svými daty máte plnou kontrolu."},
         {"question": "Můžu upravit styl komunikace?", "answer": "Ano. Tón i používané fráze si přizpůsobíte značce ordinace."}
       ]
     },
     "cta": {
       "headline": "Ať ordinace zní dostupně, ne obsazeno",
-      "description": "Přidejte se do pilotu pro zubaře — kapacita je omezená.",
+      "description": "Probíhá pilotní provoz s omezenou kapacitou. Připojte se včas.",
       "button": "Vyzkoušet demo pro zubaře"
     }
   }
