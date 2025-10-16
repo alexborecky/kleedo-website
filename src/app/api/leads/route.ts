@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
       <h2>Děkujeme za váš zájem o Kleedo!</h2>
       
       <div style="text-align: center; margin: 20px 0;">
-        <img src="https://kleedo-website.vercel.app/images/email-thumbnail.jpg" alt="Kleedo - AI Recepční" style="max-width: 200px; height: auto; border-radius: 8px;">
+        <img src="https://kleedo-website.vercel.app/images/email-thumbnail.jpg" alt="Kleedo - AI Recepční" style="max-width: 400px; height: auto; border-radius: 8px;">
       </div>
       
       <p>Vážený/á ${data.name},</p>
