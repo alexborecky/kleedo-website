@@ -16,7 +16,7 @@ export function Header() {
           <div className="stroke"></div>
           
           {/* Logo */}
-          <Link href="/" className="brand">
+          <Link href="/" className="brand" tabIndex={-1}>
             <Image 
               src="/images/kleedo-logo.svg" 
               alt="Kleedo" 
@@ -28,32 +28,32 @@ export function Header() {
 
           {/* Navigation Links - Desktop */}
           <div className="links">
-            <Link href="/pro-zubare" className="hover:text-white transition-colors">
+            <Link href="/pro-zubare" className="hover:text-white transition-colors" tabIndex={-1}>
               Pro zubaře
             </Link>
-            <Link href="/pro-salony" className="hover:text-white transition-colors">
+            <Link href="/pro-salony" className="hover:text-white transition-colors" tabIndex={-1}>
               Pro salony
             </Link>
-            <Link href="/pro-firmy" className="hover:text-white transition-colors">
+            <Link href="/pro-firmy" className="hover:text-white transition-colors" tabIndex={-1}>
               Pro firmy
             </Link>
-            <Link href="/cenik" className="hover:text-white transition-colors">
+            <Link href="/cenik" className="hover:text-white transition-colors" tabIndex={-1}>
               Ceník
             </Link>
-            <Link href="/blog" className="hover:text-white transition-colors">
+            <Link href="/blog" className="hover:text-white transition-colors" tabIndex={-1}>
               Blog
             </Link>
           </div>
 
           {/* CTA Button - Desktop */}
-          <Link href="/demo" className="cta button btn btn-primary circular circular-primary">
+          <Link href="/demo" className="cta button btn btn-primary circular circular-primary" tabIndex={-1}>
             <span>Vyzkoušet zdarma</span>
             <span className="btn-fill"></span>
           </Link>
 
           <div className="mobile-cta-container">
             {/* Mobile CTA Button */}
-            <Link href="/demo" className="mobile-cta button btn btn-primary circular circular-primary">
+            <Link href="/demo" className="mobile-cta button btn btn-primary circular circular-primary" tabIndex={-1}>
               <span>Demo</span>
               <span className="btn-fill"></span>
             </Link>
@@ -63,6 +63,7 @@ export function Header() {
               className="hamburger"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
+              tabIndex={-1}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -80,6 +81,7 @@ export function Header() {
                   href="/pro-zubare" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
+                  tabIndex={-1}
                 >
                   Pro zubaře
                 </Link>
@@ -87,6 +89,7 @@ export function Header() {
                   href="/pro-salony" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
+                  tabIndex={-1}
                 >
                   Pro salony
                 </Link>
@@ -94,6 +97,7 @@ export function Header() {
                   href="/pro-firmy" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
+                  tabIndex={-1}
                 >
                   Pro firmy
                 </Link>
@@ -101,6 +105,7 @@ export function Header() {
                   href="/cenik" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
+                  tabIndex={-1}
                 >
                   Ceník
                 </Link>
@@ -108,6 +113,7 @@ export function Header() {
                   href="/blog" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
+                  tabIndex={-1}
                 >
                   Blog
                 </Link>

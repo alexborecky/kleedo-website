@@ -13,8 +13,8 @@ const leadFormSchema = z.object({
   name: z.string().min(2, 'Jméno musí mít alespoň 2 znaky'),
   email: z.string().email('Neplatná emailová adresa'),
   phone: z.string().min(9, 'Telefon musí mít alespoň 9 číslic'),
-  company: z.string().optional().or(z.literal('')),
-  message: z.string().optional().or(z.literal(''))
+  company: z.string().optional(),
+  message: z.string().optional()
 })
 
 type LeadFormData = z.infer<typeof leadFormSchema>
@@ -195,6 +195,7 @@ export function LeadCaptureForm({
                  {...register('name')}
                  autoComplete="name"
                  onFocus={handleFormStart}
+                 tabIndex={1}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="Vaše jméno a příjmení"
                />
@@ -206,6 +207,7 @@ export function LeadCaptureForm({
                  type="email"
                  {...register('email')}
                  onFocus={handleFormStart}
+                 tabIndex={2}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="vas@email.cz"
                />
@@ -217,6 +219,7 @@ export function LeadCaptureForm({
                  type="tel"
                  {...register('phone')}
                  onFocus={handleFormStart}
+                 tabIndex={3}
                  className="lead-input glass text-white border-gray-700"
                  placeholder="+420 123 456 789"
                />
@@ -227,6 +230,7 @@ export function LeadCaptureForm({
                <select
                  {...register('businessType')}
                  onFocus={handleFormStart}
+                 tabIndex={4}
                  className="lead-input appearance-none pr-10 glass border-gray-700"
                  disabled={!!businessType}
                >
@@ -248,8 +252,9 @@ export function LeadCaptureForm({
                  type="text"
                  {...register('company')}
                  onFocus={handleFormStart}
+                 tabIndex={5}
                  className="lead-input glass text-white border-gray-700"
-                 placeholder="Název vaší firmy"
+                 placeholder="Název vaší firmy (volitelné)"
                />
              </FieldWrapper>
 
@@ -264,6 +269,7 @@ export function LeadCaptureForm({
               <button
                 type="submit"
                 disabled={isSubmitting}
+                tabIndex={6}
                 className="btn-primary h-12 rounded-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed circular-primary circular"
               >
                 <span>{isSubmitting ? (<><Loader2 className="h-5 w-5 animate-spin" /> Odesílám...</>) : ('Objednat si demo')}</span>

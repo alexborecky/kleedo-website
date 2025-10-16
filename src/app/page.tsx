@@ -33,10 +33,10 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="btn btn-primary inline-flex items-center justify-center button circular circular-primary">
+            <a href="/demo" className="btn btn-primary inline-flex items-center justify-center button circular circular-primary" tabIndex={-1}>
               <span>Chci Kleedo na svém telefonu</span>
               <span className="btn-fill"></span>
-            </button>
+            </a>
             {/* <button className="btn btn-secondary inline-flex items-center justify-center button circular circular-secondary">
               <span>Chci se přidat do pilotu</span>
               <span className="btn-fill"></span>
@@ -462,7 +462,7 @@ export default function HomePage() {
                     Pacienti už nikdy neuslyší obsazeno. AI recepční 
                     zvládne více hovorů současně.
                   </p>
-                  <a href="/pro-zubare" className="mt-4 btn btn-secondary button circular circular-secondary">
+                  <a href="/pro-zubare" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
                     <span>Zjistit více</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -504,7 +504,7 @@ export default function HomePage() {
                     Žádné odbíhání od střihu. AI recepční zvedne telefon, 
                     domluví termín a pošle potvrzení.
                   </p>
-                  <a href="/pro-salony" className="mt-4 btn btn-secondary button circular circular-secondary">
+                  <a href="/pro-salony" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
                     <span>Zjistit více</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -545,7 +545,7 @@ export default function HomePage() {
                     Žádné zmeškané příležitosti. AI recepční zvedne telefon, 
                     domluví schůzku a pošle potvrzení.
                   </p>
-                  <a href="/pro-firmy" className="mt-4 btn btn-secondary button circular circular-secondary">
+                  <a href="/pro-firmy" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
                     <span>Zjistit více</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -724,7 +724,7 @@ export default function HomePage() {
               <p className="text-xl text-gray-300 mb-8">
                 Počet míst v pilotu je omezený. Zajistěte si místo hned.
               </p>
-              <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary">
+              <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary" tabIndex={-1}>
                 <span>Objednat demo</span>
                 <span className="btn-fill"></span>
               </a>
@@ -790,7 +790,7 @@ export default function HomePage() {
             tak, jak byste to udělali vy. Žádné obsazené linky, žádné hlasové schránky.
           </p>
 
-          <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary">
+          <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary" tabIndex={-1}>
             <span>Objednat demo</span>
             <span className="btn-fill"></span>
           </a>
