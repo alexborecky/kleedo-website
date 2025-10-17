@@ -16,7 +16,7 @@ export function BlogHeader() {
           <div className="stroke"></div>
           
           {/* Logo */}
-          <Link href="/cs" className="brand" tabIndex={-1}>
+          <Link href="/" className="brand" tabIndex={-1}>
             <Image 
               src="/images/kleedo-logo.svg" 
               alt="Kleedo" 
@@ -28,16 +28,16 @@ export function BlogHeader() {
 
           {/* Navigation Links - Desktop */}
           <div className="links">
-            <Link href="/cs/pro-zubare" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href="/pro-zubare" className="hover:text-white transition-colors" tabIndex={-1}>
               Pro zubaře
             </Link>
-            <Link href="/cs/pro-salony" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href="/pro-salony" className="hover:text-white transition-colors" tabIndex={-1}>
               Pro salony
             </Link>
-            <Link href="/cs/pro-firmy" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href="/pro-firmy" className="hover:text-white transition-colors" tabIndex={-1}>
               Pro firmy
             </Link>
-            <Link href="/cs/cenik" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href="/cenik" className="hover:text-white transition-colors" tabIndex={-1}>
               Ceník
             </Link>
             <Link href="/blog" className="hover:text-white transition-colors" tabIndex={-1}>
@@ -46,14 +46,14 @@ export function BlogHeader() {
           </div>
 
           {/* CTA Button - Desktop */}
-          <Link href="/cs/demo" className="cta button btn btn-primary circular circular-primary" tabIndex={-1}>
+          <Link href="/demo" className="cta button btn btn-primary circular circular-primary" tabIndex={-1}>
             <span>Vyzkoušet zdarma</span>
             <span className="btn-fill"></span>
           </Link>
 
           <div className="mobile-cta-container">
             {/* Mobile CTA Button */}
-            <Link href="/cs/demo" className="mobile-cta button btn btn-primary circular circular-primary" tabIndex={-1}>
+            <Link href="/demo" className="mobile-cta button btn btn-primary circular circular-primary" tabIndex={-1}>
               <span>Demo</span>
               <span className="btn-fill"></span>
             </Link>
@@ -78,7 +78,7 @@ export function BlogHeader() {
               <div className="stroke"></div>
               <div className="mobile-menu-content">
                 <Link 
-                  href="/cs/pro-zubare" 
+                  href="/pro-zubare" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -86,7 +86,7 @@ export function BlogHeader() {
                   Pro zubaře
                 </Link>
                 <Link 
-                  href="/cs/pro-salony" 
+                  href="/pro-salony" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -94,7 +94,7 @@ export function BlogHeader() {
                   Pro salony
                 </Link>
                 <Link 
-                  href="/cs/pro-firmy" 
+                  href="/pro-firmy" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -102,7 +102,7 @@ export function BlogHeader() {
                   Pro firmy
                 </Link>
                 <Link 
-                  href="/cs/cenik" 
+                  href="/cenik" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
