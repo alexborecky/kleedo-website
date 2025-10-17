@@ -46,7 +46,7 @@ const pricingPlans = [
   {
     name: "Business",
     description: "Pro velké podniky a korporace",
-    price: "2 990",
+    price: "3 990",
     period: "měsíc",
     popular: false,
     features: [
