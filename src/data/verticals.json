@@ -23,7 +23,7 @@
       "emoji": "😌",
       "emojiLabel": "S Kleedo",
       "headline": "AI recepční, co drží linku i nervy",
-      "headlineHighlight": "drž í linku",
+      "headlineHighlight": "drží linku",
       "description": "Kleedo zvedne do pár vteřin, zeptá se, navrhne termín, zapíše do kalendáře a pošle potvrzení. Vy si udržíte flow.",
       "points": [
         "Každý hovor obsloužen bleskově",
@@ -34,12 +34,12 @@
     "benefits": {
       "headline": "Proč si firmy vybírají Kleedo",
       "cards": [
-        {"icon": "TrendingUp", "title": "Více klientů", "description": "1–2 nové leady týdně dokážou udělat měsíční rozdíl. Kleedo žádný nenechá spadnout pod stůl."},
+        {"icon": "TrendingUp", "title": "Více klientů", "description": "1–2 nové leady týdně často znamenají měsíční rozdíl. Kleedo žádný nenechá spadnout pod stůl."},
         {"icon": "Building", "title": "Méně vyrušení", "description": "Telefony nehoníte. Jednání běží plynule a profesionálně."},
         {"icon": "Clock", "title": "Vždy dostupní", "description": "Česky i anglicky, klidně i mimo pracovní dobu — podle pravidel, která si nastavíte."},
         {"icon": "MessageSquare", "title": "Chytré připomínky", "description": "SMS/WhatsApp připomínky snižují no‑show a šetří čas i nervy."},
         {"icon": "Globe", "title": "Bez bariér", "description": "Volající cizinec? Asistent přepne do angličtiny a zařídí vše stejně hladce."},
-        {"icon": "Users", "title": "Škáluje se s vámi", "description": "Zvládne více linek zároveň podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
+        {"icon": "Users", "title": "Škáluje se s vámi", "description": "Zvládne více linek zároveň a přepojí podle vašich pravidel."}
       ]
     },
     "testimonials": {
@@ -57,12 +57,14 @@
         {"question": "Umí měnit a rušit schůzky?", "answer": "Ano. Přesuny, rušení i potvrzení řeší samo a vše zapisuje přímo do vašeho kalendáře."},
         {"question": "Můžu si přizpůsobit styl komunikace?", "answer": "Jasně. Tón, fráze i slovník si nastavíte tak, aby odpovídal vaší značce."},
         {"question": "Co když si nebude jisté?", "answer": "Raději se doptá. A když je to potřeba, přesměruje hovor na člověka."},
-        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro firmy doporučujeme plán Pro (2 490 Kč) se vším, co budete potřebovat."}
+        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro firmy doporučujeme plán Pro (2 490 Kč) se vším, co budete potřebovat."},
+        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí (GDPR)."}
       ]
     },
     "cta": {
+      "preheadline": "Pilotní provoz běží. Místa se rychle plní.",
       "headline": "Přestanete zvedat všechno. Začněte zvedat výsledky.",
-      "description": "Probíhá pilotní provoz s omezenou kapacitou. Připojte se včas.",
+      "description": "Probíhá pilotní provoz s omezenou kapacitou. Přidejte se, než se zaplní.",
       "button": "Vyzkoušet demo pro firmy"
     }
   },
@@ -104,9 +106,10 @@
         {"icon": "TrendingUp", "title": "Více rezervací", "description": "1–2 nové týdně = tisíce Kč navíc. Nenechte klientky proklouznout konkurenci."},
         {"icon": "Scissors", "title": "Čistá hlava", "description": "Střiháte, barvíte, pečujete. Telefony řeší asistent."},
         {"icon": "Clock", "title": "Kdykoli podle pravidel", "description": "Dostupnost i mimo otvíračku, ale jen když chcete. Plná kontrola."},
-        {"icon": "MessageSquare", "title": "WhatsApp připomínky", "description": "Automatické připomínky snižují no‑show a šetří náklady."},
+        {"icon": "MessageSquare", "title": "SMS/WhatsApp připomínky", "description": "Automatické připomínky snižují no‑show a šetří čas i náklady."},
         {"icon": "Globe", "title": "Čeština i angličtina", "description": "Cizinky se dovolají bez bariér, rezervace proběhne hladce."},
-        {"icon": "Users", "title": "Bez čekání", "description": "Zvládne více hovorů najednou podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
+        {"icon": "Users", "title": "Bez čekání", "description": "Zvládne více hovorů najednou, takže klientky nečekají. Pravidla přepojení máte plně pod kontrolou."},
+        {"icon": "Heart", "title": "Klidnější den", "description": "Více klidu, méně stresu. Kleedo hlídá telefon, vy se soustředíte na klientku."}
       ]
     },
     "testimonials": {
@@ -124,10 +127,12 @@
         {"question": "Zvládne přesuny a storna?", "answer": "Ano, vše automaticky zapíše do vašeho kalendáře a dá vědět klientce."},
         {"question": "Můžu si nastavit styl mluvy?", "answer": "Ano. Vyberete tón i slovník, aby to sedělo vaší značce."},
         {"question": "Co když si nebude rozumět s klientkou?", "answer": "Doptá se nebo hovor předá vám. Raději bezpečně než špatně."},
-        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Start od 990 Kč/měs. Pro salony doporučujeme plán Pro (2 490 Kč)."}
+        {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Start od 990 Kč/měs. Pro salony doporučujeme plán Pro (2 490 Kč)."},
+        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí (GDPR)."}
       ]
     },
     "cta": {
+      "preheadline": "Pilotní provoz běží. Místa se rychle plní.",
       "headline": "Zaplněný diář bez nervů",
       "description": "Probíhá pilotní provoz s omezenou kapacitou. Připojte se včas.",
       "button": "Vyzkoušet demo pro salony"
@@ -173,7 +178,7 @@
         {"icon": "Clock", "title": "Dostupnost podle plánu", "description": "Můžete obsluhovat i mimo ordinační dobu – ale jen v oknech, která povolíte."},
         {"icon": "MessageSquare", "title": "Chytré připomínky", "description": "Automatické upomínky snižují no‑show a hlídají dochvilnost."},
         {"icon": "Globe", "title": "Čeština i angličtina", "description": "Cizinci se dovolají bez bariér, triáž proběhne srozumitelně."},
-        {"icon": "Users", "title": "Paralelní linky", "description": "Zvládne více hovorů najednou podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
+        {"icon": "Users", "title": "Více linek", "description": "Zvládne více hovorů najednou podle vašich nastavení. Můžete si určit pravidla pro přepojení."}
       ]
     },
     "testimonials": {
@@ -190,13 +195,15 @@
         {"question": "Může AI udělat chybu při rezervaci?", "answer": "Je navržené jako profesionální recepční. Pracuje s vaším kalendářem a drží se pravidel, která nastavíte. Když si není jisté, doptá se nebo předá hovor."},
         {"question": "Rozpozná různé požadavky pacientů?", "answer": "Ano. Typy vyšetření, triáž, poznámky k bolesti – vše jde nastavit tak, aby nabídky dávaly smysl."},
         {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro ordinace doporučujeme plán Pro (2 490 Kč)."},
-        {"question": "Jak je to s ochranou dat?", "answer": "Data jsou šifrovaná, uložená v EU a v souladu s GDPR. Nad svými daty máte plnou kontrolu."},
-        {"question": "Můžu upravit styl komunikace?", "answer": "Ano. Tón i používané fráze si přizpůsobíte značce ordinace."}
+        {"question": "Jak je to s ochranou dat?", "answer": "Data jsou šifrovaná, uložená v EU a v souladu s GDPR. Nad svými daty máte plnou kontrolu. Nikdy je nesdílíme s třetími stranami."},
+        {"question": "Můžu upravit styl komunikace?", "answer": "Ano. Tón i používané fráze si přizpůsobíte značce ordinace."},
+        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí (GDPR)."}
       ]
     },
     "cta": {
+      "preheadline": "Pilotní provoz běží. Místa se rychle plní.",
       "headline": "Ať ordinace zní dostupně, ne obsazeno",
-      "description": "Probíhá pilotní provoz s omezenou kapacitou. Připojte se včas.",
+      "description": "Probíhá pilotní provoz s omezenou kapacitou. Přidejte se, než se zaplní.",
       "button": "Vyzkoušet demo pro zubaře"
     }
   }

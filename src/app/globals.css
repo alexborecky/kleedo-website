@@ -1478,6 +1478,22 @@ footer, footer .border-t {
   max-width: 720px;
 }
 
+.blog-content h2 {
+  margin-top: 64px;
+}
+
+.blog-content ul li {
+  justify-content: flex-start;
+  align-items: center !important;
+  span {
+    margin-top: 0 !important;
+  }
+}
+
+.blog-content hr {
+  margin: 32px 0;
+}
+
 .blog-image-cover {
   background-color: rgba(0, 0, 0, 0.8);
 }

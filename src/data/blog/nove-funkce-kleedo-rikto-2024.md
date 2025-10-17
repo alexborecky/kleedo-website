@@ -1,108 +1,79 @@
 ---
-title: "Nové funkce Kleedo: Říjen 2025 - Co připravujeme"
-excerpt: "Podívejte se na nové funkce, na kterých pracujeme. Multi-jazyčná podpora, pokročilá analytika a další vylepšení pro váš podnik."
+title: "Novinky v Kleedo: co právě testujeme a chystáme dál"
+excerpt: "Nahlédněte pod pokličku toho, na čem právě pracujeme — od vícejazyčné komunikace po chytřejší přehledy. Vše zatím v pilotu."
 date: "2025-10-15"
 tags: ["novinky", "AI", "funkce", "update"]
 image: "/images/coming-soon.jpg"
 imageAlt: "Kleedo - Nové funkce a vylepšení pro váš podnik"
 ---
 
-# Nové funkce Kleedo: Co připravujeme pro vás
+# Co právě testujeme a ladíme
 
-Neustále pracujeme na vylepšení Kleedo, abychom vám přinesli ještě lepší služby. Zde je přehled funkcí, na kterých momentálně pracujeme a které brzy budou k dispozici.
+Kleedo se vyvíjí každým týdnem. Testujeme nové nápady, sbíráme zpětnou vazbu a ladíme funkce, které pomůžou vašemu podnikání fungovat ještě plynuleji.  
+Tady je malý náhled do toho, co právě zkoušíme.
 
-## 1. Multi-jazyčná podpora
 
-**Co to je:** Rozšiřujeme podporu pro více jazyků, aby AI recepční mohla komunikovat s klienty v jejich preferovaném jazyce.
 
-**Kdy:** Listopad 2024
+## 🗣️ Mluvíme víc než jedním jazykem (v testování)
 
-**Výhody:**
-- Automatické rozpoznání jazyka klienta
-- Podpora angličtiny, němčiny, slovenštiny a dalších
-- Ideální pro podniky v turistických oblastech
-- Rozšíření zákaznické základny
+**O co jde:** Kleedo se učí mluvit cizími jazyky. Postupně přidáváme angličtinu, němčinu a slovenštinu, aby mohla AI recepční komunikovat s klienty v jejich rodném jazyce.  
+**Proč:** Pomůže to hlavně podnikům v turistických oblastech nebo těm, kteří mají mezinárodní klientelu.
 
-## 2. Pokročilá analytika a reporty
 
-**Co to je:** Nový dashboard s detailními statistikami a přehledy o všech hovorech a interakcích.
 
-**Kdy:** Prosinec 2024
+## 📊 Přehled, který dává smysl (v přípravě)
 
-**Co bude zahrnovat:**
-- Graf počtu hovorů podle času
-- Analýza nejčastějších dotazů
-- Konverzní poměr (hovory → rezervace)
-- Export dat do Excel a PDF
-- Sledování trendů
+**O co jde:** Připravujeme přehlednější statistiky a analýzy, které vám ukážou, jak si vaše komunikace stojí.  
+**Co testujeme:**  
+- Počet hovorů podle času  
+- Přehled rezervací a no-show  
+- Nejčastější dotazy klientů  
+- Základní trendy bez zbytečných grafů navíc  
 
-## 3. WhatsApp Business integrace
 
-**Co to je:** Plná integrace s WhatsApp Business pro ještě lepší komunikaci s klienty.
 
-**Kdy:** Leden 2025
+## 💬 Kleedo si píše s vašimi klienty (v přípravě)
 
-**Funkce:**
-- Automatické odpovědi na WhatsApp zprávy
-- Potvrzení rezervací přes WhatsApp
-- Připomínky termínů
-- Sdílení ceníku a fotografií služeb
+**O co jde:** Integrace s WhatsApp Business — jednodušší, přirozenější způsob komunikace s klienty.  
+**Cíl:** Umožnit potvrzení rezervací, zasílání připomínek nebo ceníku přímo přes WhatsApp.  
+**Stav:** První testovací verze probíhá s několika partnery z oblasti beauty a wellness.
 
-## 4. Chytré doporučování služeb
 
-**Co to je:** AI se naučí doporučovat doplňkové služby na základě historie klienta.
 
-**Kdy:** Únor 2025
+## 🔊 Hlas s osobností (experiment)
 
-**Jak to funguje:**
-- Analýza preferencí klienta
-- Návrhy souvisejících služeb
-- Zvýšení průměrné hodnoty objednávky
-- Personalizované nabídky
+**O co jde:** Zkoumáme, jak dát Kleedu trochu osobnosti.  
+**Možnosti:**  
+- Výběr z několika hlasů  
+- Přirozenější intonace  
+- Emoční zabarvení podle situace  
 
-## 5. Integrace s platebními systémy
 
-**Co to je:** Možnost přijímat zálohy a platby přímo přes telefon nebo chat.
 
-**Kdy:** Březen 2025
+## 🧩 Co testujeme právě teď
 
-**Výhody:**
-- Snížení no-show díky zálohám
-- Platby kartou, Apple Pay, Google Pay
-- Automatické generování účtenek
-- Bezpečné zpracování plateb
+- Vylepšené rozpoznávání řeči (dialekty, akcenty)  
+- Rychlejší odezva na hovory  
+- Přesnější plánování rezervací  
+- Jednodušší nastavení a správa účtu  
 
-## 6. Hlasová personalizace
 
-**Co to je:** Možnost nahrát vlastní hlasovou stopu nebo vybrat z většího počtu hlasů.
 
-**Kdy:** Duben 2025
+## 💬 Chceme slyšet i vás
 
-**Možnosti:**
-- Vlastní nahrávka uvítání
-- Výběr z 20+ různých hlasů
-- Nastavení tempa a tónu řeči
-- Emocionální odstínění podle situace
+Máte nápad, co by mělo Kleedo umět dál? Napište nám na [info@kleedo.app](mailto:info@kleedo.app) nebo přímo v aplikaci.  
+Každý nápad z pilotu pomáhá Kleedu růst a zlepšovat se.
 
-## Co už funguje a stále vylepšujeme
 
-Kromě nových funkcí neustále vylepšujeme stávající:
-
-- **Přesnější rozpoznávání řeči** - lepší pochopení dialektů a akcentů
-- **Rychlejší odpovědi** - zkrácení doby odezvy na minimum
-- **Intuitivnější rozhraní** - jednodušší nastavení a správa
-- **Spolehlivější integrace** - lepší propojení s kalendáři a CRM systémy
-
-## Vaše zpětná vazba je důležitá
-
-Chceme vytvářet funkce, které opravdu potřebujete. Pokud máte nápad na vylepšení nebo novou funkci, neváhejte nás kontaktovat.
-
-**Co byste chtěli vidět v Kleedo?** Napište nám na [info@kleedo.app](mailto:info@kleedo.app) nebo přímo v aplikaci.
 
 ## Závěr
 
-Kleedo se neustále vyvíjí a rosteme společně s vámi. Naším cílem je poskytnout nejlepší AI recepční řešení na českém trhu, které vám skutečně pomůže růst a šetřit čas.
+Kleedo se posouvá kupředu, ale pořád zůstává tím, čím má být — pomocníkem, který odpoví, naplánuje a nezapomene.  
+Díky vám se učí každý den.
 
-**Ještě nepoužíváte Kleedo?** [Vyzkoušejte zdarma na 14 dní](mailto:info@kleedo.app) a přesvědčte se sami.
+---
 
-
+> ⚠️ **Poznámka:**  
+> Kleedo je aktuálně ve fázi **pilotního provozu** s omezenou kapacitou.  
+> Funkce, které zde zmiňujeme, jsou ve vývoji nebo testování a mohou se v průběhu času měnit.  
+> Pokud se chcete zapojit, napište nám na [info@kleedo.app](mailto:info@kleedo.app) – ozveme se vám, jakmile se uvolní místo.

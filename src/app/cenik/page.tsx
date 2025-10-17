@@ -1,3 +1,4 @@
+'use client';
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
@@ -5,6 +6,7 @@ import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { Check, Star, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const pricingPlans = [
   {
@@ -18,7 +20,7 @@ const pricingPlans = [
       "Okamžitá odpověď na hovory",
       "Integrace do Google kalendáře",
       "SMS upozornění",
-      "GDPR ready"
+      "V souladu s GDPR"
     ],
     cta: "Chci to vyzkoušet",
     ctaLink: "/demo?plan=starter"
@@ -33,7 +35,7 @@ const pricingPlans = [
       "Vše ze Starteru",
       "Více linek současně",
       "WhatsApp zprávy & připomínky",
-      "No-gap scheduling",
+      "Plánování bez mezer",
       "Podpora více jazyků (CZ + EN)",
       "Statistiky & reporty",
       "Vlastní pravidla a automatizace",
@@ -66,27 +68,27 @@ const faqs = [
   },
   {
     question: "Potřebuji SIM kartu/fyzický telefon?",
-    answer: "Ne, Kleedo funguje přes internetové připojení. Nepotřebujete žádnou SIM kartu ani fyzický telefon. Vše funguje online."
+    answer: "Ne, hovory odbavujeme online. Není potřeba SIM karta ani speciální hardware."
   },
   {
     question: "Kolik to stojí?",
-    answer: "Ceny začínají od 990 Kč měsíčně za základní plán. Máme tři úrovně: Starter (990 Kč), Pro (2 490 Kč) a Business (4 990 Kč)."
+    answer: "Orientačně od 990 Kč měsíčně podle plánu a objemu hovorů. Přesný ceník ladíme v pilotu — připravíme nabídku podle velikosti vašeho provozu."
   },
   {
     question: "Jak je to s ochranou?",
-    answer: "Všechna data jsou šifrována, ukládána v EU a plně v souladu s GDPR. Máte plnou kontrolu nad svými daty a můžete je kdykoli smazat."
+    answer: "Ochrana dat je priorita. Data šifrujeme, zpracováváme v EU a dodržujeme GDPR. V nastavení máte kontrolu nad uloženými údaji a můžete požádat o výmaz. Podrobnosti najdete v Zásadách ochrany soukromí."
   },
   {
-    question: "Můžu si nastavit, jak Kleedo odpovídá klienty?",
-    answer: "Ano, máte plnou kontrolu nad tím, jak Kleedo komunikuje. Můžete nastavit tón komunikace, fráze, které má používat, a dokonce i to, jaké služby má nabízet."
+    question: "Můžu si nastavit, jak Kleedo mluví s mými klienty?",
+    answer: "Ano. Nastavíte tón, fráze i to, co smí nabídnout. Kdykoli můžete upravit pravidla nebo nechat hovor přepojit na vás."
   },
   {
     question: "Co když mám více firem? Stačí mi jedna?",
-    answer: "Ano, jeden účet Kleedo může spravovat více firem. Každá firma má své vlastní nastavení, ceník a kalendář."
+    answer: "Podporujeme více provozů v rámci jednoho účtu. Nastavení s vámi doladíme v pilotu."
   },
   {
     question: "Může Kleedo fungovat 24/7?",
-    answer: "Ano, Kleedo je dostupné 24 hodin denně, 7 dní v týdnu. Nikdy nebere dovolenou, nemá nemoc a vždy zvedne telefon."
+    answer: "Ano, pokud to tak nastavíte. Mimo pracovní dobu může přijímat hovory, sbírat rezervace a posílat potvrzení podle vašich pravidel."
   },
   {
     question: "Dokáže AI rezervovat schůzky?",
@@ -94,14 +96,60 @@ const faqs = [
   },
   {
     question: "Můžu si Kleedo vyzkoušet?",
-    answer: "Ano, nabízíme 14denní zkušební verzi zdarma. Můžete si vyzkoušet všechny funkce bez závazků."
+    answer: "Ano, nabízíme zkušební přístup v rámci pilotu. Přihlaste se a domluvíme detaily podle vašeho provozu."
   }
 ]
+
+function CookieBanner() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    try {
+      const choice = localStorage.getItem('kleedo_cookie_consent')
+      if (!choice) setVisible(true)
+    } catch {
+      setVisible(true)
+    }
+  }, [])
+
+  const updateConsent = (status: 'granted' | 'denied') => {
+    try { localStorage.setItem('kleedo_cookie_consent', status) } catch {}
+    if (typeof window !== 'undefined') {
+      const w: any = window as any
+      if (w.gtag) {
+        w.gtag('consent', 'update', { ad_storage: status, analytics_storage: status })
+      }
+      document.dispatchEvent(new CustomEvent('kleedo-consent', { detail: status }))
+    }
+    setVisible(false)
+  }
+
+  if (!visible) return null
+
+  return (
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[9999] w-[95%] md:w-[720px]">
+      <div className="glass shadow-xl rounded-2xl p-5 md:p-6 border border-white/10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p className="text-gray-200 text-sm md:text-base leading-relaxed">
+            Používáme soubory cookie pro měření návštěvnosti a reklamu (Google, Meta) a službu Leadinfo.
+            Pokračováním souhlasíte, nebo si zvolte možnost níže. Více v&nbsp;
+            <a href="/gdpr" className="underline">Zásadách ochrany soukromí</a>.
+          </p>
+          <div className="flex gap-2 shrink-0">
+            <button onClick={() => updateConsent('denied')} className="btn btn-secondary button circular circular-secondary px-4 py-2 text-sm">Odmítnout</button>
+            <button onClick={() => updateConsent('granted')} className="btn btn-primary button circular circular-primary px-4 py-2 text-sm">Povolit vše</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function PricingPage() {
   return (
     <main className="min-h-screen">
       <Header />
+      <CookieBanner />
       
       {/* Hero Section */}
       <section className="relative hero overflow-hidden vertical-hero-section pricing">
@@ -113,7 +161,7 @@ export default function PricingPage() {
           </h1>
           
           <p className="text-small mb-8 max-w-3xl mx-auto">
-            Vyberte si plán, který sedí vám. Všechny plány obsahují 14denní zkušební verzi zdarma.
+            Vyberte si plán, který sedí vám. Nabízíme zkušební přístup v rámci pilotu — bez závazků.
           </p>
           </div>
 
@@ -248,7 +296,7 @@ export default function PricingPage() {
 
           <div className="mt-12 creed-section">
             <p className=" mb-4 text-center">
-              Všechny plány obsahují 14denní zkušební verzi zdarma
+              Zkušební přístup v rámci pilotu — bez závazků
             </p>
             <div className="flex items-center justify-center space-x-6 text-sm">
               <div className="flex items-center">
@@ -257,7 +305,7 @@ export default function PricingPage() {
               </div>
               <div className="flex items-center">
                 <Check className="h-4 w-4 text-green-500 mr-2" />
-                Okamžité spuštění
+                Rychlé spuštění (podle nastavení)
               </div>
               {/* <div className="flex items-center">
                 <Check className="h-4 w-4 text-green-500 mr-2" />

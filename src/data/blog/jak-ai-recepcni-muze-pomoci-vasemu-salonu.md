@@ -1,59 +1,62 @@
 ---
-title: "Jak AI recepční pomáhá vašemu podnikání růst"
-excerpt: "Objevte, jak AI recepční může zvýšit počet rezervací, zlepšit spokojenost klientů a ušetřit váš čas."
-date: "2024-01-15"
+title: "Jak AI recepční pomůže vašemu salonu růst"
+excerpt: "Méně zmeškaných hovorů, více rezervací a klidnější den. Podívejte se, jak AI recepční zjednoduší provoz salonu."
+date: "2025-04-22"
 tags: ["salony", "AI", "automatizace", "růst"]
 image: "/images/grow.jpg"
 imageAlt: "Moderní salon s AI recepční - efektivní rezervace a komunikace"
+
 ---
 
 
+## Proč salony řeší AI recepční právě teď
 
-### **V dnešní době, kdy je konkurence v oblasti kadeřnictví a kosmetiky stále větší, je důležité najít způsoby, jak se odlišit a poskytnout klientům nejlepší možnou službu. Jedním z nejefektivnějších způsobů je implementace AI recepční, která může výrazně zlepšit fungování vašeho salonu.**
+Konkurence roste, telefony zvoní, ale ruce jsou u klientky. Každý zmeškaný hovor může být ztracená rezervace. AI recepční odpoví během pár vteřin, domluví termín podle vašeho kalendáře a pošle potvrzení. Vy se mezitím věnujete práci.
 
-## Proč je AI recepční důležitá pro salony?
 
-### 1. Nikdy nezmeškáte hovor
 
-Jedním z největších problémů salonů je zmeškané hovory. Když klient volá a nikdo neodpoví, často se obrátí na konkurenci. AI recepční zvedne každý hovor do několika vteřin, což znamená, že nikdy nezmeškáte potenciálního klienta.
+## 1) Žádné zbytečné zmeškané hovory
+Když volá klientka a nikdo to nevezme, často zkusí jiný salon. Kleedo hovor přijme a drží se pravidel, která nastavíte — včetně toho, kdy přepojit na vás.
 
-### 2. Automatické rezervace
+## 2) Automatické rezervace do vašeho kalendáře
+Kleedo pracuje s kalendářem, který používáte (dnes Google Kalendář; další v přípravě). Navrhne volné termíny a zapíše rezervaci tak, aby nevznikaly zbytečné mezery.
 
-AI recepční dokáže automaticky najít volné termíny ve vašem kalendáři a zarezervovat je za vás. Klient nemusí čekat, až budete mít čas, a vy se můžete soustředit na práci s klienty.
+## 3) Připomínky, které snižují no-show
+Potvrzení a připomínky odchází automaticky přes SMS nebo WhatsApp (podle nastavení). Méně zapomenutých termínů, méně prázdných křesel.
 
-### 3. Připomínky klientům
 
-Zapomínání na termíny je častý problém. AI recepční automaticky pošle SMS nebo WhatsApp připomínku den před termínem, což snižuje počet no-show a zvyšuje spokojenost klientů.
 
-## Jak Kleedo pomáhá salonům
+## Jak Kleedo mluví „salonštinou“
+- **Pracuje s ceníkem, který nastavíte** — odpoví na běžné dotazy ke službám.
+- **Rozumí terminologii** — střih, barvení, melír, foukaná.
+- **Drží váš tón komunikace** — přátelsky, stručně nebo formálně.
+- **Respektuje pravidla** — délky služeb, pauzy, otevírací dobu, přepojení.
 
-Kleedo je speciálně navrženo pro potřeby salonů a kadeřnictví. Naše AI recepční:
 
-- **Zná váš ceník** - dokáže odpovědět na otázky o cenách služeb
-- **Rozumí terminologii** - ví, co je střih, barvení, melíry a další služby
-- **Přizpůsobí se vašemu stylu** - můžete nastavit, jak má komunikovat s klienty
-- **Integruje se s kalendářem** - automaticky najde volné termíny
 
-## Reálné výsledky
+## Co z toho budete mít
+- Více dovolaných klientek a domluvených termínů.
+- Méně no-show díky potvrzením a připomínkám.
+- Méně času na telefonu, více času na práci.
+- Profesionální dojem — odpověď přijde rychle a slušně.
 
-Salony, které používají Kleedo, zaznamenaly:
+*(Pozn.: Konkrétní výsledky se liší podle provozu a nastavení.)*
 
-- **40% více rezervací** - díky tomu, že nikdy nezmeškají hovor
-- **30% méně no-show** - díky automatickým připomínkám
-- **50% méně času na telefon** - více času na práci s klienty
-- **Významně vyšší spokojenost klientů** - rychlé odpovědi a profesionální komunikace
+
 
 ## Jak začít
+1. **Krátký dotazník** — řeknete nám typ služeb a otevírací dobu.
+2. **Propojení kalendáře** — dnes Google Kalendář; Apple/Outlook v přípravě.
+3. **Pilot bez závazků** — vše otestujeme na vašich pravidlech a vzorcích scénářů.
 
-Začít s Kleedo je jednoduché:
 
-1. **Registrace** - zaregistrujte se na našem webu
-2. **Nastavení** - propojte váš kalendář a nastavte ceník
-3. **Testování** - vyzkoušejte 14denní zkušební verzi zdarma
-4. **Spuštění** - začněte přijímat více rezervací
 
 ## Závěr
+AI recepční není jen další appka. Je to způsob, jak být dostupná, aniž byste museli žít na telefonu. Kleedo odpoví, zapíše termín a připomene — vy se soustředíte na klientku.
 
-AI recepční není budoucnost - je to současnost. Salony, které ji implementují, mají výhodu před konkurencí a mohou se soustředit na to, co umí nejlépe: péči o klienty.
+---
 
-Chcete vyzkoušet, jak Kleedo může pomoci vašemu salonu? [Kontaktujte nás ještě dnes](mailto:info@kleedo.app) a domluvte si demo.
+> ⚠️ **Poznámka:**  
+> Kleedo je aktuálně ve fázi **pilotního provozu** s omezenou kapacitou.  
+> Funkce a integrace se mohou v průběhu testování měnit.  
+> Pokud se chcete zapojit, vyplňte [následující formulář](/demo) – ozveme se vám, jakmile se uvolní místo.
