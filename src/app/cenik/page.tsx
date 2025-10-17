@@ -6,7 +6,6 @@ import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { Check, Star, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 const pricingPlans = [
   {
@@ -100,56 +99,11 @@ const faqs = [
   }
 ]
 
-function CookieBanner() {
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    try {
-      const choice = localStorage.getItem('kleedo_cookie_consent')
-      if (!choice) setVisible(true)
-    } catch {
-      setVisible(true)
-    }
-  }, [])
-
-  const updateConsent = (status: 'granted' | 'denied') => {
-    try { localStorage.setItem('kleedo_cookie_consent', status) } catch {}
-    if (typeof window !== 'undefined') {
-      const w: any = window as any
-      if (w.gtag) {
-        w.gtag('consent', 'update', { ad_storage: status, analytics_storage: status })
-      }
-      document.dispatchEvent(new CustomEvent('kleedo-consent', { detail: status }))
-    }
-    setVisible(false)
-  }
-
-  if (!visible) return null
-
-  return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[9999] w-[95%] md:w-[720px]">
-      <div className="glass shadow-xl rounded-2xl p-5 md:p-6 border border-white/10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="text-gray-200 text-sm md:text-base leading-relaxed">
-            Používáme soubory cookie pro měření návštěvnosti a reklamu (Google, Meta) a službu Leadinfo.
-            Pokračováním souhlasíte, nebo si zvolte možnost níže. Více v&nbsp;
-            <a href="/ochrana-osobnich-udaju" className="underline">Zásadách ochrany soukromí</a>.
-          </p>
-          <div className="flex gap-2 shrink-0">
-            <button onClick={() => updateConsent('denied')} className="btn btn-secondary button circular circular-secondary px-4 py-2 text-sm">Odmítnout</button>
-            <button onClick={() => updateConsent('granted')} className="btn btn-primary button circular circular-primary px-4 py-2 text-sm">Povolit vše</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function PricingPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <CookieBanner />
       
       {/* Hero Section */}
       <section className="relative hero overflow-hidden vertical-hero-section pricing">

@@ -117,35 +117,35 @@ export function CookieBanner() {
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-dark-800 border-t border-dark-700 p-4 z-50">
-      <div className="max-w-4xl mx-auto">
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[9999] w-[95%] md:w-[720px]">
+      <div className="glass shadow-xl rounded-2xl p-5 md:p-6 border border-white/10">
         {!showSettings ? (
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex-1">
-              <p className="text-sm text-gray-300">
+              <p className="text-gray-200 text-sm md:text-base leading-relaxed">
                 Tento web používá cookies k analýze návštěvnosti a zlepšení uživatelského zážitku. 
-                <a href="/cookies" className="text-primary-400 hover:underline ml-1">
+                <a href="/cookies" className="underline">
                   Více informací
                 </a>
               </p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 shrink-0">
               <button
                 onClick={rejectAllCookies}
-                className="px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                className="btn btn-secondary button circular circular-secondary px-4 py-2 text-sm"
               >
                 Odmítnout
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                className="btn btn-secondary button circular circular-secondary px-4 py-2 text-sm flex items-center gap-1"
               >
                 <Settings className="h-4 w-4" />
                 Nastavení
               </button>
               <button
                 onClick={acceptAllCookies}
-                className="btn-primary text-sm"
+                className="btn btn-primary button circular circular-primary px-4 py-2 text-sm"
               >
                 Přijmout vše
               </button>
@@ -207,13 +207,13 @@ export function CookieBanner() {
             <div className="flex gap-2">
               <button
                 onClick={rejectAllCookies}
-                className="px-4 py-2 text-sm text-gray-400 hover:text-white transition-colors"
+                className="btn btn-secondary button circular circular-secondary px-4 py-2 text-sm"
               >
                 Odmítnout vše
               </button>
               <button
                 onClick={saveCustomPreferences}
-                className="btn-primary text-sm"
+                className="btn btn-primary button circular circular-primary px-4 py-2 text-sm"
               >
                 Uložit nastavení
               </button>
