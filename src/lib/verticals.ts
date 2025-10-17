@@ -1,4 +1,5 @@
 import verticalsData from '../data/verticals.json'
+import verticalsEnData from '../data/verticals-en.json'
 
 export type VerticalContent = {
   hero: {
@@ -57,10 +58,37 @@ type VerticalsData = {
   [key: string]: VerticalContent
 }
 
-export function getVerticalContent(slug: string): VerticalContent | undefined {
+// Mapping between Czech and English slugs
+const slugMapping: { [key: string]: string } = {
+  'zubari': 'dentists',
+  'salony': 'salons', 
+  'firmy': 'businesses'
+}
+
+const reverseSlugMapping: { [key: string]: string } = {
+  'dentists': 'zubari',
+  'salons': 'salony',
+  'businesses': 'firmy'
+}
+
+export function getVerticalContent(slug: string, locale: string = 'cs'): VerticalContent | undefined {
+  if (locale === 'en') {
+    return (verticalsEnData as VerticalsData)[slug]
+  }
   return (verticalsData as VerticalsData)[slug]
 }
 
-export function getAllVerticalSlugs() {
+export function getAllVerticalSlugs(locale: string = 'cs') {
+  if (locale === 'en') {
+    return Object.keys(verticalsEnData).map(slug => ({ slug }))
+  }
   return Object.keys(verticalsData).map(slug => ({ slug }))
+}
+
+export function getSlugMapping() {
+  return slugMapping
+}
+
+export function getReverseSlugMapping() {
+  return reverseSlugMapping
 }

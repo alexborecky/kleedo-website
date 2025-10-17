@@ -1,0 +1,209 @@
+{
+  "businesses": {
+    "hero": {
+      "badge": "AI Receptionist for Businesses",
+      "badgeIcon": "Building",
+      "headline": "End of missed opportunities",
+      "headlineHighlight": "opportunities",
+      "subline": "Phone rings. Kleedo answers, schedules and sends confirmations. You negotiate, work and nothing pulls you away from the desk."
+    },
+    "painPoint": {
+      "headline": "Every unanswered call hurts the wallet",
+      "headlineHighlight": "hurts",
+      "description": "Either you interrupt the meeting or you lose a lead. Bad choice in both cases — and it repeats all day.",
+      "points": [
+        "Missed calls = missed deals",
+        "Interruption in the middle of a meeting = angry clients",
+        "Stress and chaos instead of peace to work"
+      ],
+      "emoji": "😵‍💫",
+      "emojiLabel": "Typical day without Kleedo"
+    },
+    "solution": {
+      "emoji": "😌",
+      "emojiLabel": "With Kleedo",
+      "headline": "AI receptionist that holds the line and nerves",
+      "headlineHighlight": "holds the line",
+      "description": "Kleedo answers in seconds, asks questions, suggests appointments, writes to calendar and sends confirmations. You maintain your flow.",
+      "points": [
+        "Every call served instantly",
+        "No work interruptions",
+        "More focus = more won deals"
+      ]
+    },
+    "benefits": {
+      "headline": "Why businesses choose Kleedo",
+      "cards": [
+        {"icon": "TrendingUp", "title": "More clients", "description": "1–2 new leads per week often mean monthly difference. Kleedo won't let any fall under the table."},
+        {"icon": "Building", "title": "Fewer interruptions", "description": "You don't chase phones. Meetings run smoothly and professionally."},
+        {"icon": "Clock", "title": "Always available", "description": "In Czech and English, even outside business hours — according to rules you set."},
+        {"icon": "MessageSquare", "title": "Smart reminders", "description": "SMS/WhatsApp reminders reduce no-shows and save time and nerves."},
+        {"icon": "Globe", "title": "No barriers", "description": "Foreign caller? Assistant switches to English and arranges everything just as smoothly."},
+        {"icon": "Users", "title": "Scales with you", "description": "Handles multiple lines simultaneously and transfers according to your rules."}
+      ]
+    },
+    "testimonials": {
+      "headline": "What business owners say",
+      "cards": [
+        {"quote": "Phone no longer controls us. Clients get through immediately and I finish the meeting in peace.", "author": "Auto service owner"},
+        {"quote": "Outside business hours we have peace and yet miss nothing. Times we offer, I have full control over.", "author": "Fitness center owner"},
+        {"quote": "English without problems. Foreigners book with us just as easily as Czechs.", "author": "Cosmetic studio owner"}
+      ]
+    },
+    "faq": {
+      "headline": "Frequently asked questions",
+      "items": [
+        {"question": "How does AI know what to offer?", "answer": "In administration you set services, prices, durations and business hours. Kleedo follows this and keeps offers within your rules."},
+        {"question": "Can it change and cancel meetings?", "answer": "Yes. Reschedules, cancellations and confirmations it handles itself and writes everything directly to your calendar."},
+        {"question": "Can I customize communication style?", "answer": "Absolutely. Tone, phrases and vocabulary you set so it matches your brand."},
+        {"question": "What if it's not sure?", "answer": "It would rather ask. And when needed, it transfers the call to a human."},
+        {"question": "How much does it cost?", "answer": "Prices are indicative and tuned during pilot. Basic from 990 CZK/month. For businesses we recommend Pro plan (2,490 CZK) with everything you'll need."},
+        {"question": "Where can I learn more about data protection?", "answer": "Details can be found in our Privacy Policy."}
+      ]
+    },
+    "cta": {
+      "preheadline": "Pilot operation running. Spots filling quickly.",
+      "headline": "Stop answering everything. Start answering results.",
+      "description": "Pilot operation is running with limited capacity. Join before it fills up.",
+      "button": "Try demo for businesses"
+    }
+  },
+  "salons": {
+    "hero": {
+      "badge": "AI Receptionist for Salons",
+      "badgeIcon": "Scissors",
+      "headline": "No running away from the cut",
+      "headlineHighlight": "cut",
+      "subline": "Kleedo answers the phone, schedules appointments and sends confirmations. You create beauty, not administration."
+    },
+    "painPoint": {
+      "headline": "Missed call = missed client",
+      "headlineHighlight": "missed client",
+      "description": "When you answer during coloring, work stops. When you don't answer, client goes elsewhere. Vicious circle every day.",
+      "points": [
+        "Lost appointments = lost income",
+        "Work interruptions ruin service",
+        "Stress from constant ringing"
+      ],
+      "emoji": "🙃",
+      "emojiLabel": "Day without receptionist"
+    },
+    "solution": {
+      "emoji": "💅",
+      "emojiLabel": "With Kleedo",
+      "headline": "AI receptionist that doesn't run for rubber bands",
+      "headlineHighlight": "doesn't run",
+      "description": "Offers appointments, writes them down, reminds. And you calmly devote yourself to clients.",
+      "points": [
+        "Call answered in seconds",
+        "No running away from the chair",
+        "Better service = better revenue"
+      ]
+    },
+    "benefits": {
+      "headline": "Why salons choose Kleedo",
+      "cards": [
+        {"icon": "TrendingUp", "title": "More clients", "description": "1–2 new bookings per week often mean monthly difference. Kleedo won't let any slip away."},
+        {"icon": "Scissors", "title": "Less chaos", "description": "No phone chasing during work. Salon runs in peace."},
+        {"icon": "Clock", "title": "Availability by plan", "description": "You can serve even outside business hours — but only in windows you allow."},
+        {"icon": "MessageSquare", "title": "Smart reminders", "description": "Automatic reminders reduce no-shows and ensure punctuality."},
+        {"icon": "Globe", "title": "Czech and English", "description": "Foreigners call without barriers, triage happens understandably."},
+        {"icon": "Users", "title": "Multiple lines", "description": "Handles multiple calls at once according to your settings. You can set rules for transfers."}
+      ]
+    },
+    "testimonials": {
+      "headline": "From salons",
+      "cards": [
+        {"quote": "Clients get through immediately. We have peace for work and less routine calling.", "author": "Private salon"},
+        {"quote": "I set rules and only watch exceptions. Everything else runs by itself.", "author": "Practical hairdresser"},
+        {"quote": "English-speaking clients book without assistance. It saves time for the assistant.", "author": "Salon owner"}
+      ]
+    },
+    "faq": {
+      "headline": "Frequently asked questions",
+      "items": [
+        {"question": "Can AI make mistakes in booking?", "answer": "It's designed as a professional receptionist. Works with your calendar and follows rules you set. When not sure, it asks or transfers the call."},
+        {"question": "Does it recognize different client requests?", "answer": "Yes. Service types, triage, notes about pain — everything can be set so offers make sense."},
+        {"question": "How much does it cost?", "answer": "Prices are indicative and tuned during pilot. Basic from 990 CZK/month. For salons we recommend Pro plan (2,490 CZK)."},
+        {"question": "How about data protection?", "answer": "Data is encrypted, stored in EU and GDPR compliant. You have full control over your data. We never share it with third parties."},
+        {"question": "Can I adjust communication style?", "answer": "Yes. Tone and used phrases you adapt to salon brand."},
+        {"question": "Where can I learn more about data protection?", "answer": "Details can be found in our Privacy Policy."}
+      ]
+    },
+    "cta": {
+      "preheadline": "Pilot operation running. Spots filling quickly.",
+      "headline": "Let salon sound available, not busy",
+      "description": "Pilot operation is running with limited capacity. Join before it fills up.",
+      "button": "Try demo for salons"
+    }
+  },
+  "dentists": {
+    "hero": {
+      "badge": "AI Receptionist for Dentists",
+      "badgeIcon": "Stethoscope",
+      "headline": "Patients will never hear busy again",
+      "headlineHighlight": "busy",
+      "subline": "No full mailboxes, no 'try later'. Kleedo answers, sorts requests, writes appointments and sends reminders. Practice sounds available and professional."
+    },
+    "painPoint": {
+      "headline": "Unanswered call = lost patient",
+      "headlineHighlight": "lost patient",
+      "description": "During treatment, phone doesn't belong in hand. But when you don't answer, patient leaves. And often doesn't return.",
+      "points": [
+        "Missed calls = empty windows in diary",
+        "Treatment interruptions = dissatisfied patients",
+        "Unnecessary stress for entire team"
+      ],
+      "emoji": "🦷",
+      "emojiLabel": "Reality without receptionist"
+    },
+    "solution": {
+      "emoji": "🧑‍⚕️",
+      "emojiLabel": "With Kleedo",
+      "headline": "AI receptionist with monk's patience",
+      "headlineHighlight": "patience",
+      "description": "Immediately answers, offers correct type of examination, writes to calendar and sends SMS/WhatsApp reminder.",
+      "points": [
+        "No dropped calls",
+        "No interruptions during procedures",
+        "More time for care, less administration"
+      ]
+    },
+    "benefits": {
+      "headline": "Why dentists choose Kleedo",
+      "cards": [
+        {"icon": "TrendingUp", "title": "Fuller diary", "description": "1–2 new patients per week make a difference. Kleedo won't let them wait or leave."},
+        {"icon": "Stethoscope", "title": "Less chaos", "description": "Doctor and nurse don't handle phones. Practice runs in peace."},
+        {"icon": "Clock", "title": "Availability by plan", "description": "You can serve even outside practice hours — but only in windows you allow."},
+        {"icon": "MessageSquare", "title": "Smart reminders", "description": "Automatic reminders reduce no-shows and ensure punctuality."},
+        {"icon": "Globe", "title": "Czech and English", "description": "Foreigners call without barriers, triage happens understandably."},
+        {"icon": "Users", "title": "Multiple lines", "description": "Handles multiple calls at once according to your settings. You can set rules for transfers."}
+      ]
+    },
+    "testimonials": {
+      "headline": "From practices",
+      "cards": [
+        {"quote": "Patients get through immediately. We have peace for procedures and less routine calling.", "author": "Private practice"},
+        {"quote": "I set rules and only watch exceptions. Everything else runs by itself.", "author": "Practical dentist"},
+        {"quote": "English-speaking patients book without assistance. It saves time for the nurse.", "author": "Practice owner"}
+      ]
+    },
+    "faq": {
+      "headline": "Frequently asked questions",
+      "items": [
+        {"question": "Can AI make mistakes in booking?", "answer": "It's designed as a professional receptionist. Works with your calendar and follows rules you set. When not sure, it asks or transfers the call."},
+        {"question": "Does it recognize different patient requests?", "answer": "Yes. Examination types, triage, pain notes — everything can be set so offers make sense."},
+        {"question": "How much does it cost?", "answer": "Prices are indicative and tuned during pilot. Basic from 990 CZK/month. For practices we recommend Pro plan (2,490 CZK)."},
+        {"question": "How about data protection?", "answer": "Data is encrypted, stored in EU and GDPR compliant. You have full control over your data. We never share it with third parties."},
+        {"question": "Can I adjust communication style?", "answer": "Yes. Tone and used phrases you adapt to practice brand."},
+        {"question": "Where can I learn more about data protection?", "answer": "Details can be found in our Privacy Policy."}
+      ]
+    },
+    "cta": {
+      "preheadline": "Pilot operation running. Spots filling quickly.",
+      "headline": "Let practice sound available, not busy",
+      "description": "Pilot operation is running with limited capacity. Join before it fills up.",
+      "button": "Try demo for dentists"
+    }
+  }
+}

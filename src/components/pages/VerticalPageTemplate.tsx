@@ -258,48 +258,10 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
                 })}
               </div>
             </div>
-            {/* <div className="text-center">
-              <div className="text-6xl mb-4">{content.painPoint.emoji}</div>
-              <p className="text-gray-400">{content.painPoint.emojiLabel}</p>
-            </div> */}
           </div>
         </div>
       </section>
 
-      {/* Solution Section */}
-      {/* <section className="py-20 bg-dark-900">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">{content.solution.emoji}</div>
-              <p className="text-gray-400">{content.solution.emojiLabel}</p>
-            </div>
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                {content.solution.headline.split(content.solution.headlineHighlight).map((part, index, array) => (
-                  <span key={index}>
-                    {part}
-                    {index < array.length - 1 && (
-                      <span className="text-primary-500">{content.solution.headlineHighlight}</span>
-                    )}
-                  </span>
-                ))}
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                {content.solution.description}
-              </p>
-              <div className="space-y-4">
-                {content.solution.points.map((point, index) => (
-                  <div key={index} className="flex items-center text-gray-300">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    {point}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Benefits Section */}
       <section className="py-20 page-section features-section">
@@ -357,36 +319,6 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* <section className="py-20 bg-dark-800">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              {content.testimonials.headline}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.testimonials.cards.map((testimonial, index) => (
-              <div key={index} className="feature-card glass">
-                <div className="stroke"></div>
-                <div className="flex flex-col items-start">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
-                    <Star className="h-5 w-5 text-primary-500" />
-                  </div>
-                  <p className="text-gray-300 text-sm mb-3 leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="text-xs text-gray-500 font-medium">
-                    {testimonial.author}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* FAQ Section */}
       <section className="py-24 faq-section">
         <div className="container px-4">
@@ -412,10 +344,10 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
         </div>
       </section>
 
-      <LeadCaptureSection 
+      {/* <LeadCaptureSection 
         title="Vyzkoušet zdarma"
         subtitle="14denní zkušební verze bez závazků."
-      />
+      /> */}
 
       {/* Final CTA */}
       <section className="py-20 page-section cta-section cta-section-big">

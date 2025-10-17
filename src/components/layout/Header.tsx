@@ -23,11 +23,11 @@ export function Header() {
           <div className="stroke"></div>
           
           {/* Logo */}
-          <Link href="/" className="brand" tabIndex={-1}>
-            <Image 
-              src="/images/kleedo-logo.svg" 
-              alt="Kleedo" 
-              width={80} 
+          <Link href={currentLocale === 'en' ? '/en' : '/'} className="brand" tabIndex={-1}>
+            <Image
+              src="/images/kleedo-logo.svg"
+              alt="Kleedo"
+              width={80}
               height={20}
               className="h-5 w-auto"
             />
@@ -35,28 +35,27 @@ export function Header() {
 
           {/* Navigation Links - Desktop */}
           <div className="links">
-            <Link href="/pro-zubare" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href={currentLocale === 'en' ? '/en/for-dentists' : '/pro-zubare'} className="hover:text-white transition-colors" tabIndex={-1}>
               {t(currentLocale, 'navigation.proZubare')}
             </Link>
-            <Link href="/pro-salony" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href={currentLocale === 'en' ? '/en/for-salons' : '/pro-salony'} className="hover:text-white transition-colors" tabIndex={-1}>
               {t(currentLocale, 'navigation.proSalony')}
             </Link>
-            <Link href="/pro-firmy" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href={currentLocale === 'en' ? '/en/for-businesses' : '/pro-firmy'} className="hover:text-white transition-colors" tabIndex={-1}>
               {t(currentLocale, 'navigation.proFirmy')}
             </Link>
-            <Link href="/cenik" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href={currentLocale === 'en' ? '/en/pricing' : '/cenik'} className="hover:text-white transition-colors" tabIndex={-1}>
               {t(currentLocale, 'navigation.cenik')}
             </Link>
-            <Link href="/blog" className="hover:text-white transition-colors" tabIndex={-1}>
+            <Link href={currentLocale === 'en' ? '/en/blog' : '/blog'} className="hover:text-white transition-colors" tabIndex={-1}>
               {t(currentLocale, 'navigation.blog')}
             </Link>
           </div>
 
+          {/* CTA Button - Desktop */}
           {/* Language Switcher */}
           <LanguageSwitch />
-
-          {/* CTA Button - Desktop */}
-          <Link href="/demo" className="cta button btn btn-primary circular circular-primary" tabIndex={-1}>
+          <Link href="/demo" className="cta button btn btn-primary circular circular-primary desktop-nav-cta" tabIndex={-1}>
             <span>{t(currentLocale, 'navigation.vyzkousetZdarma')}</span>
             <span className="btn-fill"></span>
           </Link>
@@ -80,6 +79,7 @@ export function Header() {
           </div>
         </nav>
 
+
         {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <>
@@ -88,7 +88,7 @@ export function Header() {
               <div className="stroke"></div>
               <div className="mobile-menu-content">
                 <Link 
-                  href="/pro-zubare" 
+                  href={currentLocale === 'en' ? '/en/for-dentists' : '/pro-zubare'} 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -96,7 +96,7 @@ export function Header() {
                   {t(currentLocale, 'navigation.proZubare')}
                 </Link>
                 <Link 
-                  href="/pro-salony" 
+                  href={currentLocale === 'en' ? '/en/for-salons' : '/pro-salony'} 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -104,7 +104,7 @@ export function Header() {
                   {t(currentLocale, 'navigation.proSalony')}
                 </Link>
                 <Link 
-                  href="/pro-firmy" 
+                  href={currentLocale === 'en' ? '/en/for-businesses' : '/pro-firmy'} 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -112,7 +112,7 @@ export function Header() {
                   {t(currentLocale, 'navigation.proFirmy')}
                 </Link>
                 <Link 
-                  href="/cenik" 
+                  href={currentLocale === 'en' ? '/en/pricing' : '/cenik'} 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
@@ -120,7 +120,7 @@ export function Header() {
                   {t(currentLocale, 'navigation.cenik')}
                 </Link>
                 <Link 
-                  href="/blog" 
+                  href={currentLocale === 'en' ? '/en/blog' : '/blog'} 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}

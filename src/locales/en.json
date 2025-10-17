@@ -1,11 +1,11 @@
 {
   "navigation": {
     "proZubare": "For Dentists",
-    "proSalony": "For Salons", 
+    "proSalony": "For Salons",
     "proFirmy": "For Businesses",
     "cenik": "Pricing",
     "blog": "Blog",
-    "vyzkousetZdarma": "Try Free",
+    "vyzkousetZdarma": "Join the Pilot",
     "demo": "Demo"
   },
   "home": {
@@ -180,6 +180,15 @@
       "description": "AI receptionist with human voice picks up the phone and takes care of clients according to your rules. No unnecessary waiting, no voicemails.",
       "button": "Order demo"
     },
+    "pricing": {
+      "creed": {
+        "text": "Trial access during pilot — no commitments",
+        "features": [
+          "No commitments",
+          "Quick setup (based on configuration)"
+        ]
+      }
+    },
     "faq": {
       "headline": "Frequently asked",
       "headline2": "questions",
@@ -189,20 +198,20 @@
           "answer": "AI is designed to behave like a professional receptionist. It has access to your calendar and learns from every conversation. You can set rules for transferring calls to you in case of uncertainties."
         },
         {
-          "question": "Can AI recognize different client requests?",
-          "answer": "Yes, AI can recognize different types of services and requests. You can set rules for how AI should respond to different situations and client types."
+          "question": "Will AI recognize different client requests?",
+          "answer": "Yes, AI can recognize different types of services and requests. You can set rules for how AI should react to different situations and client types."
         },
         {
           "question": "How much does it cost?",
-          "answer": "Prices are indicative and being fine-tuned during the pilot. We have three levels: Starter (990 CZK), Pro (2,490 CZK) and Business (4,990 CZK). Each plan contains different features based on your company size."
+          "answer": "Prices are indicative and refined during the pilot. We have three tiers: Starter (990 CZK), Pro (2,490 CZK), and Business (4,990 CZK). Each plan includes different features depending on the size of your company."
         },
         {
           "question": "What about data protection?",
-          "answer": "Data protection is our priority. All data is encrypted, stored in the EU and fully GDPR compliant. You have full data subject rights according to our Privacy Policy."
+          "answer": "Data protection is our priority. All data is encrypted, stored in the EU, and fully compliant with GDPR. You have full data subject rights according to our Privacy Policy."
         },
         {
           "question": "Can I set how AI talks to my clients?",
-          "answer": "Yes, you have full control over how AI communicates. You can set communication tone, phrases it should use, and even what services it can offer."
+          "answer": "Yes, you have full control over how AI communicates. You can set the tone of communication, phrases it should use, and even what services it should offer."
         },
         {
           "question": "What if I don't have Google Calendar?",
@@ -229,10 +238,14 @@
   },
   "pricing": {
     "hero": {
+      "badge": "AI Receptionist on Phone",
       "headline": "Peace of mind costs less than a {highlight} lost deal",
       "highlight": "lost deal",
       "subline": "Choose a plan that fits you. We offer trial access during the pilot — no commitments."
     },
+    "sectionTitle": "Simple, transparent pricing",
+    "sectionSubtitle": "Choose the plan that fits your business needs. All plans include our core AI receptionist features.",
+    "mostPopular": "Most Popular",
     "plans": [
       {
         "name": "Starter",
@@ -273,105 +286,53 @@
         "period": "month",
         "popular": false,
         "features": [
-          "Everything from Pro +",
-          "Waitlist & dropout management",
-          "Advanced integrations (other booking systems)",
+          "Everything from Pro",
+          "Unlimited lines",
+          "Advanced analytics",
           "Priority support",
-          "Custom voice and brand settings"
+          "Custom integrations",
+          "Dedicated account manager",
+          "SLA guarantee"
         ],
         "cta": "I want Business"
       }
     ],
-    "creed": {
-      "text": "Trial access during pilot — no commitments",
-      "features": [
-        "No commitments",
-        "Quick setup (based on configuration)"
-      ]
-    },
-    "faq": {
-      "headline": "Frequently asked",
-      "headline2": "questions",
-      "items": [
-        {
-          "question": "Can AI reject calls/customers?",
-          "answer": "AI can only reject calls according to rules you set. For example, you can set that AI rejects calls outside business hours or from unknown numbers."
-        },
-        {
-          "question": "Do I need a SIM card/physical phone?",
-          "answer": "No, we handle calls online. No SIM card or special hardware needed."
-        },
-        {
-          "question": "How much does it cost?",
-          "answer": "Approximately from 990 CZK monthly based on plan and call volume. We're fine-tuning pricing during the pilot — we'll prepare an offer based on your operation size."
-        },
-        {
-          "question": "What about protection?",
-          "answer": "Data protection is a priority. We encrypt data, process in the EU and follow GDPR. In settings you have control over stored data and can request deletion. Details are in our Privacy Policy."
-        },
-        {
-          "question": "Can I set how Kleedo talks to my clients?",
-          "answer": "Yes. You set tone, phrases and what it can offer. You can adjust rules anytime or have calls transferred to you."
-        },
-        {
-          "question": "What if I have multiple businesses? Do I need one?",
-          "answer": "We support multiple operations within one account. We'll fine-tune settings with you during the pilot."
-        },
-        {
-          "question": "Can Kleedo work 24/7?",
-          "answer": "Yes, if you set it that way. Outside business hours it can take calls, collect bookings and send confirmations according to your rules."
-        },
-        {
-          "question": "Can AI book meetings?",
-          "answer": "Yes, AI can automatically find free slots in your calendar and book them for you. It can also send reminders to clients."
-        },
-        {
-          "question": "Can I try Kleedo?",
-          "answer": "Yes, we offer trial access during the pilot. Sign up and we'll arrange details based on your operation."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Try Free",
-      "subtitle": "14-day trial version with no commitments."
-    }
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "Everything you need to know about our pricing",
+    "faq": [
+      {
+        "question": "Can I change plans anytime?",
+        "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle."
+      },
+      {
+        "question": "Is there a setup fee?",
+        "answer": "No setup fees. You only pay the monthly subscription. We handle all the technical setup for you."
+      },
+      {
+        "question": "What happens if I exceed my plan limits?",
+        "answer": "We'll notify you if you're approaching your limits. You can upgrade your plan or we can discuss custom solutions for high-volume usage."
+      }
+    ]
   },
   "demo": {
     "title": "Try Free",
-    "subtitle": "14-day trial version with no commitments."
+    "subtitle": "14-day free trial with no commitments."
   },
   "footer": {
-    "description": "AI receptionist that always answers the phone and never has a bad mood. Perfect for salons, clinics and services.",
+    "description": "AI receptionist that always picks up the phone and never has a bad mood. Ideal for salons, clinics and services.",
     "product": "Product",
-    "legal": "Legal Information",
-    "copyright": "© 2025 Kleedo. All rights reserved.",
-    "cookieSettings": "Cookie settings",
     "proFirmy": "For Businesses",
     "proSalony": "For Salons",
     "proZubare": "For Dentists",
     "cenik": "Pricing",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy"
-  },
-  "forms": {
-    "leadCapture": {
-      "title": "Start free today",
-      "subtitle": "Fill out the form and we'll contact you within 24 hours with access to the trial version."
-    }
-  },
-  "cookies": {
-    "banner": {
-      "text": "We use cookies for measuring traffic and advertising (Google, Meta) and Leadinfo service. By continuing you agree, or choose the option below. More in {privacyLink}.",
-      "privacyLink": "Privacy Policy",
-      "deny": "Reject",
-      "accept": "Allow all"
-    }
-  },
-  "metadata": {
-    "title": "Kleedo - AI Receptionist That Never Misses a Client",
-    "description": "AI receptionist that always answers the phone and never has a bad mood. Perfect for salons, clinics and services.",
-    "keywords": "AI receptionist, virtual assistant, automatic phone, salon, clinic",
-    "ogTitle": "Kleedo - AI Receptionist for Your Business",
-    "ogDescription": "Never miss a client again. AI receptionist available 24/7."
+    "legal": "Legal Information",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Settings",
+    "contact": "Contact",
+    "phone": "+420 777 123 456",
+    "email": "info@kleedo.com",
+    "address": "Prague, Czech Republic",
+    "copyright": "© 2025 Kleedo. All rights reserved."
   }
 }

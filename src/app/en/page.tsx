@@ -320,7 +320,7 @@ export default function EnglishHomePage() {
                   <p className="text-gray-400 text-sm">
                     {t(currentLocale, 'home.industries.dentists.description')}
                   </p>
-                  <a href="/pro-zubare" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
+                  <a href="/en/for-dentists" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
                     <span>{t(currentLocale, 'home.industries.learn_more')}</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -361,7 +361,7 @@ export default function EnglishHomePage() {
                   <p className="text-gray-400 text-sm">
                     {t(currentLocale, 'home.industries.salons.description')}
                   </p>
-                  <a href="/pro-salony" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
+                  <a href="/en/for-salons" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
                     <span>{t(currentLocale, 'home.industries.learn_more')}</span>
                     <span className="btn-fill"></span>
                   </a>
@@ -402,7 +402,7 @@ export default function EnglishHomePage() {
                   <p className="text-gray-400 text-sm">
                     {t(currentLocale, 'home.industries.businesses.description')}
                   </p>
-                  <a href="/pro-firmy" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
+                  <a href="/en/for-businesses" className="mt-4 btn btn-secondary button circular circular-secondary" tabIndex={-1}>
                     <span>{t(currentLocale, 'home.industries.learn_more')}</span>
                     <span className="btn-fill"></span>
                   </a>
