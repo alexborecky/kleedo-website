@@ -1,5 +1,5 @@
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
+import { BlogHeader } from '@/components/layout/BlogHeader'
+import { BlogFooter } from '@/components/layout/BlogFooter'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { getAllPosts, getPostBySlug, BlogPost } from '@/lib/blog'
 import { Calendar, Clock, ArrowLeft } from 'lucide-react'
@@ -31,7 +31,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="min-h-screen">
-      <Header />
+      <BlogHeader />
       
       {/* Article Header */}
       <section className="relative overflow-hidden page-section blog-header">
@@ -275,7 +275,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
       
 
-      <Footer />
+      <BlogFooter />
     </main>
   )
 }

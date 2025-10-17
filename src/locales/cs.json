@@ -1,0 +1,405 @@
+{
+  "navigation": {
+    "proZubare": "Pro zubaře",
+    "proSalony": "Pro salony", 
+    "proFirmy": "Pro firmy",
+    "cenik": "Ceník",
+    "blog": "Blog",
+    "vyzkousetZdarma": "Vyzkoušet zdarma",
+    "demo": "Demo"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI recepční na telefonu",
+      "headline": "Asistent na telefonu, který nezmešká klienta a {highlight} nemá blbou náladu.",
+      "highlight": "nemá blbou náladu",
+      "subline": "Žádná hudba na čekání. Žádné „zmáčkněte 1 pro rezervaci, 2 pro info\". Jen plynulý rozhovor, který vám vydělává.",
+      "cta": "Chci Kleedo na svém telefonu"
+    },
+    "features": {
+      "title": "Když někdo volá, vždycky to někdo zvedne.",
+      "subtitle": "AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu.",
+      "phone": {
+        "title": "Každý hovor přijme do pár vteřin",
+        "description": "AI recepční zvedne telefon okamžitě, i když jste zrovna v jednání nebo u klienta."
+      },
+      "scheduling": {
+        "title": "Plynulý den, bez mezer",
+        "description": "Inteligentně plánuje termíny tak, aby mezi schůzkami nebyly mezery. Maximální využití času a více zakázek."
+      },
+      "communication": {
+        "title": "WhatsApp komunikace & automatické potvrzení",
+        "description": "Všechny rezervace, potvrzení a připomínky fungují automaticky přes WhatsApp i SMS. Klienti dostanou potvrzení okamžitě."
+      },
+      "headline": "Když někdo volá, vždycky to někdo zvedne.",
+      "cards": [
+        {
+          "title": "Každý hovor přijme do pár vteřin",
+          "description": "AI recepční zvedne telefon okamžitě, i když jste zrovna v jednání nebo u klienta."
+        },
+        {
+          "title": "Plynulý den, bez mezer",
+          "description": "Inteligentně plánuje termíny tak, aby mezi schůzkami nebyly mezery. Maximální využití času a více zakázek."
+        },
+        {
+          "title": "Záchrana termínu",
+          "description": "Když někdo zruší, automaticky kontaktuje čekající na waitlistě a zaplní uvolněný termín. Žádné mezery v kalendáři."
+        },
+        {
+          "title": "WhatsApp komunikace & automatické potvrzení",
+          "description": "Všechny rezervace, potvrzení a připomínky fungují automaticky přes WhatsApp i SMS. Klienti dostanou potvrzení okamžitě."
+        }
+      ]
+    },
+    "problem": {
+      "title": "Když nezvednete vy, váš konkurent ano.",
+      "subtitle": "Nezvednutý telefon je první důvod, proč klienti odcházejí ke konkurenci.",
+      "missed": {
+        "title": "Zmeškané hovory = ztracené peníze",
+        "description": "Každý zmeškaný hovor je ztracená příležitost. Váš klient volá konkurenci, která má čas a zvedne telefon."
+      },
+      "lost": {
+        "title": "Klienti odcházejí ke konkurenci",
+        "description": "Zatímco vy ztrácíte peníze, oni vydělávají. Každý zmeškaný hovor je potenciální zákazník navíc pro konkurenci."
+      },
+      "time": {
+        "title": "Ztráta času na neefektivní komunikaci",
+        "description": "Ruční volání zpět, domlouvání termínů a připomínání schůzek zabírá čas, který byste mohli věnovat práci s klienty."
+      },
+      "headline": "Když nezvednete vy, <br /> váš konkurent ano.",
+      "subline": "Nezvednutý telefon je první důvod, proč klienti odcházejí ke konkurenci.",
+      "description": "Každý zmeškaný hovor je ztracená příležitost. Váš klient volá konkurenci, která má čas a zvedne telefon. Zatímco vy ztrácíte peníze, oni vydělávají."
+    },
+    "benefits": {
+      "title": "Majitelé salonů, ordinací a služeb chtějí klid — a víc klientů.",
+      "subtitle": "AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu.",
+      "always": {
+        "title": "Vždy dostupná",
+        "description": "AI recepční je dostupná 24/7, i když jste zrovna v jednání nebo u klienta."
+      },
+      "cost": {
+        "title": "Úspora nákladů",
+        "description": "Žádné mzdy, žádné dovolené, žádné nemocenské. Pouze měsíční poplatek za službu."
+      },
+      "reliable": {
+        "title": "Spolehlivá",
+        "description": "Nikdy nemá špatnou náladu, nikdy nezapomene a vždy je profesionální."
+      },
+      "headline": "Majitelé salonů, ordinací a služeb chtějí klid — a víc klientů.",
+      "cards": [
+        {
+          "title": "Více klientů, více tržeb",
+          "description": "Zmeškaný hovor už neznamená ztracenou zakázku. I jedna–dvě nové rezervace týdně znamenají tisíce korun navíc měsíčně. Kleedo plní váš kalendář, aniž byste hnuli prstem."
+        },
+        {
+          "title": "Méně telefonátů, více prostoru na práci",
+          "description": "Běžné hovory (rezervace, přesuny, dotazy) sežerou podnikatelům v průměru 5 hodin týdně. Kleedo je vyřeší za vás – a vy můžete konečně dělat práci, která vydělává."
+        },
+        {
+          "title": "Firma, která je vždy k dispozici",
+          "description": "Klienti se dovolají okamžitě. V češtině, angličtině a další jazyky přidáváme postupně. Vypadejte jako profi hráč, co má vždy čas a rozumí více jazykům i když jste zrovna offline."
+        },
+        {
+          "title": "Vy určujete pravidla hry",
+          "description": "Kleedo hraje podle vás. Nastavíte, kdy má přepojit hovor přímo vám, co smí nabídnout a v jakém jazyce mluví. Žádný chaos, jen vaše vlastní pravidla."
+        }
+      ]
+    },
+    "industries": {
+      "title": "Pro koho je Kleedo",
+      "subtitle": "Kleedo funguje ve více odvětvích. Klikněte na svůj obor a zjistěte, jak vám AI recepční pomůže.",
+      "salons": {
+        "title": "Pro salony",
+        "description": "Žádné odbíhání od střihu. AI recepční zvedne telefon, domluví termín a pošle potvrzení."
+      },
+      "dentists": {
+        "title": "Pro zubaře",
+        "description": "Pacienti už nikdy neuslyší obsazeno. AI recepční zvládne více hovorů současně."
+      },
+      "businesses": {
+        "title": "Pro firmy",
+        "description": "Žádné zmeškané příležitosti. AI recepční zvedne telefon, domluví schůzku a pošle potvrzení."
+      },
+      "learn_more": "Zjistit více",
+      "headline": "Pro koho je Kleedo",
+      "subline": "Kleedo funguje ve více odvětvích. Klikněte na svůj obor a zjistěte, jak vám AI recepční pomůže.",
+      "dentist": {
+        "title": "Pro zubaře",
+        "description": "Pacienti už nikdy neuslyší obsazeno. AI recepční zvládne více hovorů současně.",
+        "cta": "Zjistit více"
+      },
+      "salon": {
+        "title": "Pro salony",
+        "description": "Žádné odbíhání od střihu. AI recepční zvedne telefon, domluví termín a pošle potvrzení.",
+        "cta": "Zjistit více"
+      },
+      "business": {
+        "title": "Pro firmy",
+        "description": "Žádné zmeškané příležitosti. AI recepční zvedne telefon, domluví schůzku a pošle potvrzení.",
+        "cta": "Zjistit více"
+      }
+    },
+    "testimonials": {
+      "title": "První firmy už testují Kleedo. Přidejte se mezi ně!",
+      "subtitle": "Přidejte se k nám",
+      "testimonial1": {
+        "text": "Nemusím pořád odbíhat k telefonu. Klienti mají pocit, že jsme vždy dostupní, a já mám klid na práci.",
+        "author": "Majitelka kadeřnictví",
+        "position": "Majitelka kadeřnictví"
+      },
+      "testimonial2": {
+        "text": "Klienti oceňují, že se dovolají i mimo pracovní dobu. A já mám jistotu, že se rezervace zobrazí až od času, který sám určím.",
+        "author": "Trenérka jógy",
+        "position": "Trenérka jógy"
+      },
+      "testimonial3": {
+        "text": "Pacienti oceňují, že se dovolají hned. Mně odpadla zátěž z rutinních hovorů a soustředím se na léčbu.",
+        "author": "Lékař v ordinaci",
+        "position": "Lékař v ordinaci"
+      },
+      "badge": "Přidejte se k nám",
+      "headline": "První firmy už testují Kleedo.",
+      "headline2": "Přidejte se mezi ně!",
+      "cards": [
+        {
+          "quote": "Nemusím pořád odbíhat k telefonu. Klienti mají pocit, že jsme vždy dostupní, a já mám klid na práci.",
+          "author": "Majitelka kadeřnictví"
+        },
+        {
+          "quote": "Klienti oceňují, že se dovolají i mimo pracovní dobu. A já mám jistotu, že se rezervace zobrazí až od času, který sám určím.",
+          "author": "Trenérka jógy"
+        },
+        {
+          "quote": "Pacienti oceňují, že se dovolají hned. Mně odpadla zátěž z rutinních hovorů a soustředím se na léčbu.",
+          "author": "Lékař v ordinaci"
+        },
+        {
+          "quote": "Telefon je konečně nástroj, který pracuje pro mě. Už žádné zmeškané hovory a ztracené zakázky.",
+          "author": "Majitel autoservisu"
+        },
+        {
+          "quote": "Volají k nám i cizinci. Asistent přepne do angličtiny a vyřídí rezervaci stejně snadno jako v češtině.",
+          "author": "Majitelka kosmetického salonu"
+        },
+        {
+          "quote": "Dřív jsem měl v kalendáři chaos. Teď systém nabízí jen volná místa, která dávají smysl, a den je uspořádanější.",
+          "author": "Fyzioterapeut"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Přidejte se mezi první, kteří získají AI recepční",
+      "subtitle": "Probíhá pilotní provoz s omezenou kapacitou. Zajistěte si místo včas.",
+      "button": "Objednat demo",
+      "preheadline": "AI recepční na telefonu",
+      "headline": "Přidejte se mezi první, kteří získají AI recepční",
+      "description": "Probíhá pilotní provoz s omezenou kapacitou. Zajistěte si místo včas."
+    },
+    "finalCta": {
+      "badge": "AI recepční na telefonu",
+      "headline": "Už žádný zmeškaný klient.",
+      "description": "AI recepční s lidským hlasem zvedne telefon a postará se o klienta podle vašich pravidel. Žádné zbytečné čekání, žádné záznamníky.",
+      "button": "Objednat demo"
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "subtitle": "Odpovědi na nejčastější otázky o AI recepční",
+      "question1": "Může AI odmítnout hovor/zákazníka?",
+      "answer1": "AI může odmítnout hovor pouze podle pravidel, která si nastavíte. Můžete například nastavit, že AI odmítne hovory mimo pracovní dobu nebo od neznámých čísel.",
+      "question2": "Potřebuji SIM kartu/fyzický telefon?",
+      "answer2": "Ne, hovory odbavujeme online. Není potřeba SIM karta ani speciální hardware.",
+      "question3": "Kolik to stojí?",
+      "answer3": "Orientačně od 990 Kč měsíčně podle plánu a objemu hovorů. Přesný ceník ladíme v pilotu — připravíme nabídku podle velikosti vašeho provozu.",
+      "headline": "Často kladené",
+      "headline2": "otázky",
+      "items": [
+        {
+          "question": "Může AI udělat chybu při rezervaci?",
+          "answer": "AI je navrženo tak, aby se chovalo jako profesionální recepční. Má přístup k vašemu kalendáři a učí se z každé konverzace. Můžete si nastavit pravidla pro přepojení hovoru na vás v případě nejasností."
+        },
+        {
+          "question": "Rozpozná AI různé požadavky klientů?",
+          "answer": "Ano, AI dokáže rozpoznat různé typy služeb a požadavky. Můžete si nastavit pravidla, jak má AI reagovat na různé situace a typy klientů."
+        },
+        {
+          "question": "Kolik to stojí?",
+          "answer": "Ceny jsou orientační a laděné během pilotu. Máme tři úrovně: Starter (990 Kč), Pro (2 490 Kč) a Business (4 990 Kč). Každý plán obsahuje jiné funkce podle velikosti vaší firmy."
+        },
+        {
+          "question": "Jak je to s ochranou dat?",
+          "answer": "Ochrana dat je pro nás prioritou. Všechna data jsou šifrována, ukládána v EU a plně v souladu s GDPR. Máte plná práva subjektu údajů podle našich Zásad ochrany osobních údajů."
+        },
+        {
+          "question": "Můžu si nastavit, jak AI mluví s mými klienty?",
+          "answer": "Ano, máte plnou kontrolu nad tím, jak AI komunikuje. Můžete nastavit tón komunikace, fráze, které má používat, a dokonce i to, jaké služby má nabízet."
+        },
+        {
+          "question": "Co když nemám Google Kalendář?",
+          "answer": "Kleedo se v budoucnu propojí s více kalendářovými systémy - Google, Outlook, Apple iCal nebo jinými. Průběžně přidáváme další kalendářové a rezervační systémy. Můžete také použít naše vlastní kalendářové řešení."
+        },
+        {
+          "question": "Kolik hovorů zvládne současně?",
+          "answer": "AI recepční zvládne více hovorů současně. Můžete si nastavit pravidla pro přepojení hovorů na vás podle vašich potřeb."
+        },
+        {
+          "question": "Může Kleedo fungovat 24/7?",
+          "answer": "Kleedo je dostupné podle vašich nastavení. Můžete si určit pracovní dobu, kdy má AI přijímat hovory, a kdy má přesměrovávat na vás."
+        },
+        {
+          "question": "Co když AI nerozumí klientovi?",
+          "answer": "AI je navrženo tak, aby rozumělo přirozené řeči. Pokud si není jisté, zeptá se na upřesnění nebo přesměruje hovor na vás podle vašich nastavení."
+        },
+        {
+          "question": "Musím něco instalovat?",
+          "answer": "Ne, Kleedo funguje přes internetové připojení. Nepotřebujete žádnou instalaci ani speciální vybavení. Stačí se zaregistrovat a začít používat."
+        }
+      ]
+    }
+  },
+  "pricing": {
+    "hero": {
+      "headline": "Klid v hlavě stojí míň, než {highlight} ztracená zakázka",
+      "highlight": "ztracená zakázka",
+      "subline": "Vyberte si plán, který sedí vám. Nabízíme zkušební přístup v rámci pilotu — bez závazků."
+    },
+    "plans": [
+      {
+        "name": "Starter",
+        "description": "Pro malé podniky a začínající podnikatele",
+        "price": "990",
+        "period": "měsíc",
+        "popular": false,
+        "features": [
+          "1 linka, základní AI recepční",
+          "Okamžitá odpověď na hovory",
+          "Integrace do Google kalendáře",
+          "SMS upozornění",
+          "V souladu s GDPR"
+        ],
+        "cta": "Chci to vyzkoušet"
+      },
+      {
+        "name": "Pro",
+        "description": "Pro střední a větší podniky",
+        "price": "1 990",
+        "period": "měsíc",
+        "popular": true,
+        "features": [
+          "Vše ze Starteru",
+          "Více linek současně",
+          "WhatsApp zprávy & připomínky",
+          "Plánování bez mezer",
+          "Podpora více jazyků (CZ + EN)",
+          "Statistiky & reporty",
+          "Vlastní pravidla a automatizace"
+        ],
+        "cta": "Chci být Pro"
+      },
+      {
+        "name": "Business",
+        "description": "Pro velké podniky a korporace",
+        "price": "2 990",
+        "period": "měsíc",
+        "popular": false,
+        "features": [
+          "Vše z Pro +",
+          "Čekací listina & dropout management",
+          "Pokročilé integrace (další rezervační systémy)",
+          "Prioritní podpora",
+          "Custom nastavení hlasu a brandu"
+        ],
+        "cta": "Chci Business"
+      }
+    ],
+    "creed": {
+      "text": "Zkušební přístup v rámci pilotu — bez závazků",
+      "features": [
+        "Bez závazků",
+        "Rychlé spuštění (podle nastavení)"
+      ]
+    },
+    "faq": {
+      "headline": "Často kladené<br/>otázky",
+      "items": [
+        {
+          "question": "Může AI odmítnout hovor/zákazníka?",
+          "answer": "AI může odmítnout hovor pouze podle pravidel, která si nastavíte. Můžete například nastavit, že AI odmítne hovory mimo pracovní dobu nebo od neznámých čísel."
+        },
+        {
+          "question": "Potřebuji SIM kartu/fyzický telefon?",
+          "answer": "Ne, hovory odbavujeme online. Není potřeba SIM karta ani speciální hardware."
+        },
+        {
+          "question": "Kolik to stojí?",
+          "answer": "Orientačně od 990 Kč měsíčně podle plánu a objemu hovorů. Přesný ceník ladíme v pilotu — připravíme nabídku podle velikosti vašeho provozu."
+        },
+        {
+          "question": "Jak je to s ochranou?",
+          "answer": "Ochrana dat je priorita. Data šifrujeme, zpracováváme v EU a dodržujeme GDPR. V nastavení máte kontrolu nad uloženými údaji a můžete požádat o výmaz. Podrobnosti najdete v Zásadách ochrany soukromí."
+        },
+        {
+          "question": "Můžu si nastavit, jak Kleedo mluví s mými klienty?",
+          "answer": "Ano. Nastavíte tón, fráze i to, co smí nabídnout. Kdykoli můžete upravit pravidla nebo nechat hovor přepojit na vás."
+        },
+        {
+          "question": "Co když mám více firem? Stačí mi jedna?",
+          "answer": "Podporujeme více provozů v rámci jednoho účtu. Nastavení s vámi doladíme v pilotu."
+        },
+        {
+          "question": "Může Kleedo fungovat 24/7?",
+          "answer": "Ano, pokud to tak nastavíte. Mimo pracovní dobu může přijímat hovory, sbírat rezervace a posílat potvrzení podle vašich pravidel."
+        },
+        {
+          "question": "Dokáže AI rezervovat schůzky?",
+          "answer": "Ano, AI dokáže automaticky najít volné termíny ve vašem kalendáři a zarezervovat je za vás. Může také poslat připomínku klientovi."
+        },
+        {
+          "question": "Můžu si Kleedo vyzkoušet?",
+          "answer": "Ano, nabízíme zkušební přístup v rámci pilotu. Přihlaste se a domluvíme detaily podle vašeho provozu."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Vyzkoušet zdarma",
+      "subtitle": "14denní zkušební verze bez závazků."
+    }
+  },
+  "demo": {
+    "title": "Vyzkoušet zdarma",
+    "subtitle": "14denní zkušební verze bez závazků."
+  },
+  "footer": {
+    "description": "AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu. Ideální pro salony, ordinace a služby.",
+    "product": "Produkt",
+    "legal": "Právní informace",
+    "copyright": "© 2025 Kleedo. Všechna práva vyhrazena.",
+    "cookieSettings": "Nastavení cookies",
+    "proFirmy": "Pro firmy",
+    "proSalony": "Pro salony",
+    "proZubare": "Pro zubaře",
+    "cenik": "Ceník",
+    "terms": "Obchodní podmínky",
+    "privacy": "Ochrana osobních údajů"
+  },
+  "forms": {
+    "leadCapture": {
+      "title": "Začněte zdarma ještě dnes",
+      "subtitle": "Vyplňte formulář a my vás budeme kontaktovat do 24 hodin s přístupem k zkušební verzi."
+    }
+  },
+  "cookies": {
+    "banner": {
+      "text": "Používáme soubory cookie pro měření návštěvnosti a reklamu (Google, Meta) a službu Leadinfo. Pokračováním souhlasíte, nebo si zvolte možnost níže. Více v {privacyLink}.",
+      "privacyLink": "Zásadách ochrany soukromí",
+      "deny": "Odmítnout",
+      "accept": "Povolit vše"
+    }
+  },
+  "metadata": {
+    "title": "Kleedo - AI Recepční, která nezmešká klienta",
+    "description": "AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu. Ideální pro salony, ordinace a služby.",
+    "keywords": "AI recepční, virtuální asistent, automatický telefon, salon, ordinace",
+    "ogTitle": "Kleedo - AI Recepční pro váš business",
+    "ogDescription": "Nikdy nezmeškejte klienta. AI recepční dostupná 24/7."
+  }
+}

@@ -1,7 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import { t } from '@/lib/translations'
+import { useLocale } from '@/components/LocaleProvider'
 
 export function Footer() {
+  const { locale } = useLocale()
+  
+  // Use locale from context or default to 'cs'
+  const currentLocale = locale || 'cs'
+  
   return (
     <footer className="border-t w-full">
       <div className="w-full footer-container">
@@ -10,8 +19,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="brand"><img src="/images/kleedo-logo.svg" alt="Kleedo" className="h-7 w-auto" /></Link>
             <p className="text-gray-400 mb-4 max-w-md text-small">
-              AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu. 
-              Ideální pro salony, ordinace a služby.
+              {t(currentLocale, 'footer.description')}
             </p>
             <div className="flex space-x-4">
               {/* <a href="mailto:info@kleedo.app" className="text-gray-400 hover:text-white transition-colors">
@@ -22,31 +30,26 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Produkt</h3>
+            <h3 className="text-white font-semibold mb-4">{t(currentLocale, 'footer.product')}</h3>
             <ul className="space-y-2">
-              {/* <li>
-                <Link href="/produkt" className="text-gray-400 hover:text-white transition-colors">
-                  Produkt
-                </Link>
-              </li> */}
               <li>
                 <Link href="/pro-firmy" className="text-gray-400 hover:text-white transition-colors">
-                  Pro firmy
+                  {t(currentLocale, 'footer.proFirmy')}
                 </Link>
               </li>
               <li>
                 <Link href="/pro-salony" className="text-gray-400 hover:text-white transition-colors">
-                  Pro salony
+                  {t(currentLocale, 'footer.proSalony')}
                 </Link>
               </li>
               <li>
                 <Link href="/pro-zubare" className="text-gray-400 hover:text-white transition-colors">
-                  Pro zubaře
+                  {t(currentLocale, 'footer.proZubare')}
                 </Link>
               </li>
               <li>
                 <Link href="/cenik" className="text-gray-400 hover:text-white transition-colors">
-                  Ceník
+                  {t(currentLocale, 'footer.cenik')}
                 </Link>
               </li>
             </ul>
@@ -54,26 +57,21 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Právní informace</h3>
+            <h3 className="text-white font-semibold mb-4">{t(currentLocale, 'footer.legal')}</h3>
             <ul className="space-y-2">
-              {/* <li>
-                <Link href="/ochrana-osobnich-udaju" className="text-gray-400 hover:text-white transition-colors">
-                  Ochrana údajů
-                </Link>
-              </li> */}
               <li>
                 <Link href="/obchodni-podminky" className="text-gray-400 hover:text-white transition-colors">
-                  Obchodní podmínky
+                  {t(currentLocale, 'footer.terms')}
                 </Link>
               </li>
               <li>
                 <Link href="/ochrana-osobnich-udaju" className="text-gray-400 hover:text-white transition-colors">
-                  Ochrana osobních údajů
+                  {t(currentLocale, 'footer.privacy')}
                 </Link>
               </li>
               <li>
                 <Link href="/cookies?manage=true" className="text-gray-400 hover:text-white transition-colors">
-                  Nastavení cookies
+                  {t(currentLocale, 'footer.cookieSettings')}
                 </Link>
               </li>
             </ul>
@@ -82,7 +80,7 @@ export function Footer() {
 
         <div className="border-t text-center copyright">
           <p className="text-gray-400 text-small">
-            © 2025 Kleedo. Všechna práva vyhrazena.
+            {t(currentLocale, 'footer.copyright')}
           </p>
         </div>
       </div>

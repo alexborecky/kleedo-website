@@ -1,5 +1,5 @@
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
+import { BlogHeader } from '@/components/layout/BlogHeader'
+import { BlogFooter } from '@/components/layout/BlogFooter'
 import Link from 'next/link'
 import { Calendar } from 'lucide-react'
 import { getAllPosts } from '@/lib/blog'
@@ -11,7 +11,7 @@ export default async function BlogPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
+      <BlogHeader />
       
       {/* Hero Section */}
       {/* <section className="relative hero overflow-hidden vertical-hero-section">
@@ -223,7 +223,7 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      <Footer />
+      <BlogFooter />
     </main>
   )
 }

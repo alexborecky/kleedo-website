@@ -9,11 +9,11 @@ import { t } from '@/lib/translations'
 import Link from 'next/link'
 import { useLocale } from '@/components/LocaleProvider'
 
-export default function HomePage() {
+export default function EnglishHomePage() {
   const { locale } = useLocale()
   
-  // Force Czech locale for the main page
-  const currentLocale = 'cs'
+  // Force English locale for the English page
+  const currentLocale = 'en'
 
   return (
     <main className="min-h-screen">
@@ -28,68 +28,27 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Asistent na telefonu, který nezmešká klienta a{' '}
-              <span className="text-primary-500">{t(currentLocale, 'home.hero.highlight')}</span>
+              {t(currentLocale, 'home.hero.headline')}
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               {t(currentLocale, 'home.hero.subline')}
             </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href="/demo" className="btn btn-primary inline-flex items-center justify-center button circular circular-primary" tabIndex={-1}>
                 <span>{t(currentLocale, 'home.hero.cta')}</span>
-              <span className="btn-fill"></span>
+                <span className="btn-fill"></span>
               </Link>
+            </div>
           </div>
-          </div>
-            <img
-              src="/images/hero-illustration.png"
-              alt="Kleedo AI Assistant"
-              className='hero-illustration'
-            />
+          <img
+            src="/images/hero-illustration.png"
+            alt="Kleedo AI Assistant"
+            className='hero-illustration'
+          />
           {/* Interactive Blobs */}
-          <div className="absolute inset-0 w-full h-full -z-50">
-            <InteractiveBlob 
-              className="absolute bottom-0 left-0 mobile-blob" 
-              widthPercent={120} 
-              heightPercent={70}
-              leftPercent={-30}
-              bottomPercent={-20}
-              baseRadius={200}
-              noiseAmplitude={120}
-              noiseSpeed={0.06}
-              mouseStrength={100}
-              mouseRadius={240}
-              relax={0.08}
-              pointsCount={12}
-              gradientStart="#D2D6DD"
-              gradientEnd="#717377"
-              gradientDirection="35deg"
-              gradientStartOpacity={.4}
-              gradientEndOpacity={0}
-              blurAmount={80}
-            />
-            <InteractiveBlob 
-              className="absolute mobile-blob" 
-              widthPercent={100} 
-              heightPercent={40}
-              rightPercent={-40}
-              baseRadius={200}
-              noiseAmplitude={120}
-              noiseSpeed={0.08}
-              mouseStrength={4}
-              mouseRadius={240}
-              relax={0.06}
-              pointsCount={12}
-              gradientStart="#EFC5A8"
-              gradientEnd="#4ECDC4"
-              gradientDirection="135deg"
-              gradientStartOpacity={.64}
-              gradientEndOpacity={0.2}
-              blurAmount={80}
-            />
-          </div>
+          <InteractiveBlob />
         </div>
       </section>
 
@@ -158,9 +117,9 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
                   <RefreshCw className="h-6 w-6 text-primary-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Záchrana termínu</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Rescue booking</h3>
                 <p className="text-gray-400 text-sm">
-                  Když někdo zruší, automaticky kontaktuje čekající na waitlistě a zaplní uvolněný termín. Žádné mezery v kalendáři.
+                  When someone cancels, automatically contacts those on the waiting list and fills the freed slot. No gaps in the calendar.
                 </p>
               </div>
             </div>

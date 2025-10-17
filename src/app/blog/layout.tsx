@@ -1,31 +1,24 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
 import { Leadinfo } from '@/components/analytics/Leadinfo'
 import { CookieBanner } from '@/components/layout/CookieBanner'
-import { LocaleProvider } from '@/components/LocaleProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Kleedo - AI Recepční, která nezmešká klienta',
-  description: 'AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu. Ideální pro salony, ordinace a služby.',
-  keywords: 'AI recepční, virtuální asistent, automatický telefon, salon, ordinace',
-  openGraph: {
-    title: 'Kleedo - AI Recepční pro váš business',
-    description: 'Nikdy nezmeškejte klienta. AI recepční dostupná 24/7.',
-    type: 'website',
-  },
+  title: 'Blog - Kleedo',
+  description: 'Blog o AI recepční a automatizaci pro salony, ordinace a služby.',
 }
 
-export default function RootLayout({
+export default function BlogLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html lang="cs">
       <body className={inter.className}>
         <GoogleAnalytics />
         <Leadinfo />
@@ -39,9 +32,7 @@ export default function RootLayout({
           />
         </noscript>
         <CookieBanner />
-        <LocaleProvider>
-          {children}
-        </LocaleProvider>
+        {children}
       </body>
     </html>
   )

@@ -4,16 +4,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import { t } from '@/lib/translations'
-import { LanguageSwitch } from './LanguageSwitch'
-import { useLocale } from '@/components/LocaleProvider'
 
-export function Header() {
+export function BlogHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { locale } = useLocale()
-  
-  // Use locale from context or default to 'cs'
-  const currentLocale = locale || 'cs'
 
   return (
     <header className="fixed header top-0 z-50" style={{ paddingTop: '24px', paddingBottom: '24px' }}>
@@ -23,7 +16,7 @@ export function Header() {
           <div className="stroke"></div>
           
           {/* Logo */}
-          <Link href="/" className="brand" tabIndex={-1}>
+          <Link href="/cs" className="brand" tabIndex={-1}>
             <Image 
               src="/images/kleedo-logo.svg" 
               alt="Kleedo" 
@@ -35,36 +28,33 @@ export function Header() {
 
           {/* Navigation Links - Desktop */}
           <div className="links">
-            <Link href="/pro-zubare" className="hover:text-white transition-colors" tabIndex={-1}>
-              {t(currentLocale, 'navigation.proZubare')}
+            <Link href="/cs/pro-zubare" className="hover:text-white transition-colors" tabIndex={-1}>
+              Pro zubaře
             </Link>
-            <Link href="/pro-salony" className="hover:text-white transition-colors" tabIndex={-1}>
-              {t(currentLocale, 'navigation.proSalony')}
+            <Link href="/cs/pro-salony" className="hover:text-white transition-colors" tabIndex={-1}>
+              Pro salony
             </Link>
-            <Link href="/pro-firmy" className="hover:text-white transition-colors" tabIndex={-1}>
-              {t(currentLocale, 'navigation.proFirmy')}
+            <Link href="/cs/pro-firmy" className="hover:text-white transition-colors" tabIndex={-1}>
+              Pro firmy
             </Link>
-            <Link href="/cenik" className="hover:text-white transition-colors" tabIndex={-1}>
-              {t(currentLocale, 'navigation.cenik')}
+            <Link href="/cs/cenik" className="hover:text-white transition-colors" tabIndex={-1}>
+              Ceník
             </Link>
             <Link href="/blog" className="hover:text-white transition-colors" tabIndex={-1}>
-              {t(currentLocale, 'navigation.blog')}
+              Blog
             </Link>
           </div>
 
-          {/* Language Switcher */}
-          <LanguageSwitch />
-
           {/* CTA Button - Desktop */}
-          <Link href="/demo" className="cta button btn btn-primary circular circular-primary" tabIndex={-1}>
-            <span>{t(currentLocale, 'navigation.vyzkousetZdarma')}</span>
+          <Link href="/cs/demo" className="cta button btn btn-primary circular circular-primary" tabIndex={-1}>
+            <span>Vyzkoušet zdarma</span>
             <span className="btn-fill"></span>
           </Link>
 
           <div className="mobile-cta-container">
             {/* Mobile CTA Button */}
-            <Link href="/demo" className="mobile-cta button btn btn-primary circular circular-primary" tabIndex={-1}>
-              <span>{t(currentLocale, 'navigation.demo')}</span>
+            <Link href="/cs/demo" className="mobile-cta button btn btn-primary circular circular-primary" tabIndex={-1}>
+              <span>Demo</span>
               <span className="btn-fill"></span>
             </Link>
 
@@ -88,36 +78,36 @@ export function Header() {
               <div className="stroke"></div>
               <div className="mobile-menu-content">
                 <Link 
-                  href="/pro-zubare" 
+                  href="/cs/pro-zubare" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
                 >
-                  {t(currentLocale, 'navigation.proZubare')}
+                  Pro zubaře
                 </Link>
                 <Link 
-                  href="/pro-salony" 
+                  href="/cs/pro-salony" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
                 >
-                  {t(currentLocale, 'navigation.proSalony')}
+                  Pro salony
                 </Link>
                 <Link 
-                  href="/pro-firmy" 
+                  href="/cs/pro-firmy" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
                 >
-                  {t(currentLocale, 'navigation.proFirmy')}
+                  Pro firmy
                 </Link>
                 <Link 
-                  href="/cenik" 
+                  href="/cs/cenik" 
                   className="mobile-menu-link"
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
                 >
-                  {t(currentLocale, 'navigation.cenik')}
+                  Ceník
                 </Link>
                 <Link 
                   href="/blog" 
@@ -125,11 +115,8 @@ export function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   tabIndex={-1}
                 >
-                  {t(currentLocale, 'navigation.blog')}
+                  Blog
                 </Link>
-                <div className="mobile-menu-link">
-                  <LanguageSwitch />
-                </div>
               </div>
             </div>
           </>

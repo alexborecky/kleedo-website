@@ -1,0 +1,377 @@
+{
+  "navigation": {
+    "proZubare": "For Dentists",
+    "proSalony": "For Salons", 
+    "proFirmy": "For Businesses",
+    "cenik": "Pricing",
+    "blog": "Blog",
+    "vyzkousetZdarma": "Try Free",
+    "demo": "Demo"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI Receptionist on Phone",
+      "headline": "Phone assistant that never misses a client and never has a bad mood.",
+      "highlight": "never has a bad mood",
+      "subline": "No hold music. No \"press 1 for booking, 2 for info\". Just smooth conversation that makes you money.",
+      "cta": "I want Kleedo on my phone"
+    },
+    "features": {
+      "title": "When someone calls, someone always answers.",
+      "subtitle": "AI receptionist that always picks up the phone and never has a bad mood.",
+      "phone": {
+        "title": "Every call answered in seconds",
+        "description": "AI receptionist picks up the phone instantly, even when you're in a meeting or with a client."
+      },
+      "scheduling": {
+        "title": "Smooth day, no gaps",
+        "description": "Intelligently schedules appointments so there are no gaps between meetings. Maximum time utilization and more business."
+      },
+      "communication": {
+        "title": "WhatsApp communication & automatic confirmation",
+        "description": "All bookings, confirmations and reminders work automatically via WhatsApp and SMS. Clients get confirmation immediately."
+      },
+      "headline": "When someone calls, someone always answers.",
+      "cards": [
+        {
+          "title": "Every call answered in seconds",
+          "description": "AI receptionist picks up the phone instantly, even when you're in a meeting or with a client."
+        },
+        {
+          "title": "Smooth day, no gaps",
+          "description": "Intelligently schedules appointments so there are no gaps between meetings. Maximum time utilization and more business."
+        },
+        {
+          "title": "Appointment rescue",
+          "description": "When someone cancels, automatically contacts those on the waitlist and fills the freed slot. No gaps in the calendar."
+        },
+        {
+          "title": "WhatsApp communication & automatic confirmation",
+          "description": "All bookings, confirmations and reminders work automatically via WhatsApp and SMS. Clients get confirmation immediately."
+        }
+      ]
+    },
+    "problem": {
+      "title": "When you don't answer, your competitor does.",
+      "subtitle": "Missed calls are the #1 reason clients go to competitors.",
+      "missed": {
+        "title": "Missed calls = lost money",
+        "description": "Every missed call is a lost opportunity. Your client calls the competition who has time and answers the phone."
+      },
+      "lost": {
+        "title": "Clients go to competitors",
+        "description": "While you lose money, they make it. Every missed call is a potential customer for the competition."
+      },
+      "time": {
+        "title": "Time lost on inefficient communication",
+        "description": "Manual callbacks, scheduling appointments and reminding about meetings takes time you could spend working with clients."
+      },
+      "headline": "When you don't answer, <br /> your competitor does.",
+      "subline": "Missed calls are the #1 reason clients go to competitors.",
+      "description": "Every missed call is a lost opportunity. Your client calls the competition who has time and answers the phone. While you lose money, they make it."
+    },
+    "benefits": {
+      "title": "Salon, clinic and service owners want peace — and more clients.",
+      "subtitle": "AI receptionist that always picks up the phone and never has a bad mood.",
+      "always": {
+        "title": "Always available",
+        "description": "AI receptionist is available 24/7, even when you're in a meeting or with a client."
+      },
+      "cost": {
+        "title": "Cost savings",
+        "description": "No salaries, no vacations, no sick leave. Just a monthly service fee."
+      },
+      "reliable": {
+        "title": "Reliable",
+        "description": "Never has a bad mood, never forgets and is always professional."
+      },
+      "headline": "Salon, clinic and service owners want peace — and more clients.",
+      "cards": [
+        {
+          "title": "More clients, more revenue",
+          "description": "A missed call no longer means a lost deal. Even one–two new bookings per week means thousands of crowns extra monthly. Kleedo fills your calendar without you lifting a finger."
+        },
+        {
+          "title": "Fewer calls, more time for work",
+          "description": "Routine calls (bookings, reschedules, inquiries) eat up entrepreneurs' time by an average of 5 hours per week. Kleedo handles them for you – and you can finally do the work that pays."
+        },
+        {
+          "title": "You set the rules",
+          "description": "Kleedo plays by your rules. You set when to transfer calls directly to you, what it can offer and what language it speaks. No chaos, just your own rules."
+        }
+      ]
+    },
+    "industries": {
+      "title": "Who Kleedo is for",
+      "subtitle": "Kleedo works across multiple industries. Click on your field and find out how AI receptionist can help you.",
+      "salons": {
+        "title": "For Salons",
+        "description": "No running away from the chair. AI receptionist picks up the phone, books appointments and sends confirmations."
+      },
+      "dentists": {
+        "title": "For Dentists",
+        "description": "Patients will never hear busy again. AI receptionist can handle multiple calls simultaneously."
+      },
+      "businesses": {
+        "title": "For Businesses",
+        "description": "No missed opportunities. AI receptionist picks up the phone, schedules meetings and sends confirmations."
+      },
+      "learn_more": "Learn more",
+      "headline": "Who Kleedo is for",
+      "subline": "Kleedo works across multiple industries. Click on your field and find out how AI receptionist can help you.",
+      "dentist": {
+        "title": "For Dentists",
+        "description": "Patients will never hear busy again. AI receptionist can handle multiple calls simultaneously.",
+        "cta": "Learn more"
+      },
+      "salon": {
+        "title": "For Salons",
+        "description": "No running away from the chair. AI receptionist picks up the phone, books appointments and sends confirmations.",
+        "cta": "Learn more"
+      },
+      "business": {
+        "title": "For Businesses",
+        "description": "No missed opportunities. AI receptionist picks up the phone, schedules meetings and sends confirmations.",
+        "cta": "Learn more"
+      }
+    },
+    "testimonials": {
+      "badge": "Join us",
+      "headline": "First companies are already testing Kleedo.",
+      "headline2": "Join them!",
+      "cards": [
+        {
+          "quote": "I don't have to keep running to the phone. Clients feel we're always available, and I have peace to work.",
+          "author": "Hair salon owner"
+        },
+        {
+          "quote": "Clients appreciate being able to reach us outside business hours. And I have confidence that bookings will only show from times I set myself.",
+          "author": "Yoga instructor"
+        },
+        {
+          "quote": "Patients appreciate being able to reach us immediately. I'm relieved of the burden of routine calls and can focus on treatment.",
+          "author": "Medical practice doctor"
+        },
+        {
+          "quote": "The phone is finally a tool that works for me. No more missed calls and lost deals.",
+          "author": "Auto service owner"
+        },
+        {
+          "quote": "Foreigners call us too. The assistant switches to English and handles bookings just as easily as in Czech.",
+          "author": "Cosmetic salon owner"
+        },
+        {
+          "quote": "I used to have chaos in my calendar. Now the system only offers available slots that make sense, and the day is more organized.",
+          "author": "Physiotherapist"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Join the first to get AI receptionist",
+      "subtitle": "Pilot operation is running with limited capacity. Secure your spot in time.",
+      "button": "Order demo",
+      "preheadline": "AI Receptionist on Phone",
+      "headline": "Join the first to get AI receptionist",
+      "description": "Pilot operation is running with limited capacity. Secure your spot in time."
+    },
+    "finalCta": {
+      "badge": "AI Receptionist on Phone",
+      "headline": "No more missed clients.",
+      "description": "AI receptionist with human voice picks up the phone and takes care of clients according to your rules. No unnecessary waiting, no voicemails.",
+      "button": "Order demo"
+    },
+    "faq": {
+      "headline": "Frequently asked",
+      "headline2": "questions",
+      "items": [
+        {
+          "question": "Can AI make mistakes in booking?",
+          "answer": "AI is designed to behave like a professional receptionist. It has access to your calendar and learns from every conversation. You can set rules for transferring calls to you in case of uncertainties."
+        },
+        {
+          "question": "Can AI recognize different client requests?",
+          "answer": "Yes, AI can recognize different types of services and requests. You can set rules for how AI should respond to different situations and client types."
+        },
+        {
+          "question": "How much does it cost?",
+          "answer": "Prices are indicative and being fine-tuned during the pilot. We have three levels: Starter (990 CZK), Pro (2,490 CZK) and Business (4,990 CZK). Each plan contains different features based on your company size."
+        },
+        {
+          "question": "What about data protection?",
+          "answer": "Data protection is our priority. All data is encrypted, stored in the EU and fully GDPR compliant. You have full data subject rights according to our Privacy Policy."
+        },
+        {
+          "question": "Can I set how AI talks to my clients?",
+          "answer": "Yes, you have full control over how AI communicates. You can set communication tone, phrases it should use, and even what services it can offer."
+        },
+        {
+          "question": "What if I don't have Google Calendar?",
+          "answer": "Kleedo will connect to more calendar systems in the future - Google, Outlook, Apple iCal or others. We're continuously adding more calendar and booking systems. You can also use our own calendar solution."
+        },
+        {
+          "question": "How many calls can it handle simultaneously?",
+          "answer": "AI receptionist can handle multiple calls simultaneously. You can set rules for transferring calls to you according to your needs."
+        },
+        {
+          "question": "Can Kleedo work 24/7?",
+          "answer": "Kleedo is available according to your settings. You can set business hours when AI should take calls, and when it should redirect to you."
+        },
+        {
+          "question": "What if AI doesn't understand the client?",
+          "answer": "AI is designed to understand natural speech. If it's not sure, it will ask for clarification or transfer the call to you according to your settings."
+        },
+        {
+          "question": "Do I need to install anything?",
+          "answer": "No, Kleedo works over internet connection. You don't need any installation or special equipment. Just register and start using."
+        }
+      ]
+    }
+  },
+  "pricing": {
+    "hero": {
+      "headline": "Peace of mind costs less than a {highlight} lost deal",
+      "highlight": "lost deal",
+      "subline": "Choose a plan that fits you. We offer trial access during the pilot — no commitments."
+    },
+    "plans": [
+      {
+        "name": "Starter",
+        "description": "For small businesses and starting entrepreneurs",
+        "price": "990",
+        "period": "month",
+        "popular": false,
+        "features": [
+          "1 line, basic AI receptionist",
+          "Instant call response",
+          "Google Calendar integration",
+          "SMS notifications",
+          "GDPR compliant"
+        ],
+        "cta": "I want to try it"
+      },
+      {
+        "name": "Pro",
+        "description": "For medium and larger businesses",
+        "price": "1,990",
+        "period": "month",
+        "popular": true,
+        "features": [
+          "Everything from Starter",
+          "Multiple lines simultaneously",
+          "WhatsApp messages & reminders",
+          "Gap-free scheduling",
+          "Multi-language support (CZ + EN)",
+          "Statistics & reports",
+          "Custom rules and automation"
+        ],
+        "cta": "I want to be Pro"
+      },
+      {
+        "name": "Business",
+        "description": "For large businesses and corporations",
+        "price": "2,990",
+        "period": "month",
+        "popular": false,
+        "features": [
+          "Everything from Pro +",
+          "Waitlist & dropout management",
+          "Advanced integrations (other booking systems)",
+          "Priority support",
+          "Custom voice and brand settings"
+        ],
+        "cta": "I want Business"
+      }
+    ],
+    "creed": {
+      "text": "Trial access during pilot — no commitments",
+      "features": [
+        "No commitments",
+        "Quick setup (based on configuration)"
+      ]
+    },
+    "faq": {
+      "headline": "Frequently asked",
+      "headline2": "questions",
+      "items": [
+        {
+          "question": "Can AI reject calls/customers?",
+          "answer": "AI can only reject calls according to rules you set. For example, you can set that AI rejects calls outside business hours or from unknown numbers."
+        },
+        {
+          "question": "Do I need a SIM card/physical phone?",
+          "answer": "No, we handle calls online. No SIM card or special hardware needed."
+        },
+        {
+          "question": "How much does it cost?",
+          "answer": "Approximately from 990 CZK monthly based on plan and call volume. We're fine-tuning pricing during the pilot — we'll prepare an offer based on your operation size."
+        },
+        {
+          "question": "What about protection?",
+          "answer": "Data protection is a priority. We encrypt data, process in the EU and follow GDPR. In settings you have control over stored data and can request deletion. Details are in our Privacy Policy."
+        },
+        {
+          "question": "Can I set how Kleedo talks to my clients?",
+          "answer": "Yes. You set tone, phrases and what it can offer. You can adjust rules anytime or have calls transferred to you."
+        },
+        {
+          "question": "What if I have multiple businesses? Do I need one?",
+          "answer": "We support multiple operations within one account. We'll fine-tune settings with you during the pilot."
+        },
+        {
+          "question": "Can Kleedo work 24/7?",
+          "answer": "Yes, if you set it that way. Outside business hours it can take calls, collect bookings and send confirmations according to your rules."
+        },
+        {
+          "question": "Can AI book meetings?",
+          "answer": "Yes, AI can automatically find free slots in your calendar and book them for you. It can also send reminders to clients."
+        },
+        {
+          "question": "Can I try Kleedo?",
+          "answer": "Yes, we offer trial access during the pilot. Sign up and we'll arrange details based on your operation."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Try Free",
+      "subtitle": "14-day trial version with no commitments."
+    }
+  },
+  "demo": {
+    "title": "Try Free",
+    "subtitle": "14-day trial version with no commitments."
+  },
+  "footer": {
+    "description": "AI receptionist that always answers the phone and never has a bad mood. Perfect for salons, clinics and services.",
+    "product": "Product",
+    "legal": "Legal Information",
+    "copyright": "© 2025 Kleedo. All rights reserved.",
+    "cookieSettings": "Cookie settings",
+    "proFirmy": "For Businesses",
+    "proSalony": "For Salons",
+    "proZubare": "For Dentists",
+    "cenik": "Pricing",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "forms": {
+    "leadCapture": {
+      "title": "Start free today",
+      "subtitle": "Fill out the form and we'll contact you within 24 hours with access to the trial version."
+    }
+  },
+  "cookies": {
+    "banner": {
+      "text": "We use cookies for measuring traffic and advertising (Google, Meta) and Leadinfo service. By continuing you agree, or choose the option below. More in {privacyLink}.",
+      "privacyLink": "Privacy Policy",
+      "deny": "Reject",
+      "accept": "Allow all"
+    }
+  },
+  "metadata": {
+    "title": "Kleedo - AI Receptionist That Never Misses a Client",
+    "description": "AI receptionist that always answers the phone and never has a bad mood. Perfect for salons, clinics and services.",
+    "keywords": "AI receptionist, virtual assistant, automatic phone, salon, clinic",
+    "ogTitle": "Kleedo - AI Receptionist for Your Business",
+    "ogDescription": "Never miss a client again. AI receptionist available 24/7."
+  }
+}

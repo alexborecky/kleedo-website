@@ -457,6 +457,28 @@ h2 {
     width: 480px;
   }
 
+  .benefit-card {
+    display: flex;
+    height: 240px;
+    padding: 24px;
+    align-items: flex-end;
+    align-self: stretch;
+    border-radius: 16px;
+    background: rgba(36, 36, 36, 0.24);
+    width: 100%;
+  }
+
+  .industry-card {
+    display: flex;
+    height: 240px;
+    padding: 24px;
+    align-items: flex-end;
+    align-self: stretch;
+    border-radius: 16px;
+    background: rgba(36, 36, 36, 0.24);
+    width: 100%;
+  }
+
 @layer components {
   .btn-primary {
     background: #d7f7a8;
