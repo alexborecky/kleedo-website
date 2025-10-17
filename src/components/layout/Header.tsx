@@ -52,9 +52,12 @@ export function Header() {
             </Link>
           </div>
 
+          {/* Language Switcher - Desktop Only */}
+          <div className="hidden md:block">
+            <LanguageSwitch />
+          </div>
+
           {/* CTA Button - Desktop */}
-          {/* Language Switcher */}
-          <LanguageSwitch />
           <Link href="/demo" className="cta button btn btn-primary circular circular-primary desktop-nav-cta" tabIndex={-1}>
             <span>{t(currentLocale, 'navigation.vyzkousetZdarma')}</span>
             <span className="btn-fill"></span>
