@@ -7,6 +7,7 @@ import { z } from 'zod'
 import { motion } from 'framer-motion'
 import { CheckCircle, Loader2, Check } from 'lucide-react'
 import { trackFormSubmit, trackFormStart, trackLeadGeneration } from '@/lib/analytics'
+import { useUTMParams } from '@/lib/useUTMParams'
 
 const leadFormSchema = z.object({
   businessType: z.string().min(1, 'Vyberte typ podniku'),
@@ -36,6 +37,7 @@ export function LeadCaptureForm({
   const [isSubmitted, setIsSubmitted] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
   const formStartedRef = useRef(false)
+  const utmParams = useUTMParams()
 
   const {
     register,
@@ -114,7 +116,9 @@ export function LeadCaptureForm({
         // Only include message if it has a value
         ...(data.message && data.message.trim() !== '' ? { message: data.message.trim() } : {}),
         source,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        // Include UTM parameters
+        ...utmParams
       }
       
       console.log('Sending cleaned data:', cleanedData)
@@ -139,10 +143,11 @@ export function LeadCaptureForm({
           source
         })
         
-        // Track lead generation
+        // Track lead generation with UTM parameters
         trackLeadGeneration({
           businessType: data.businessType,
-          source
+          source,
+          ...utmParams
         })
       } else {
         throw new Error('Failed to submit form')

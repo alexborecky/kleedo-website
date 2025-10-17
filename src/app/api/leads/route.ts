@@ -21,6 +21,11 @@ interface LeadData {
   message?: string
   source: string
   timestamp: string
+  utm_source?: string
+  utm_medium?: string
+  utm_campaign?: string
+  utm_term?: string
+  utm_content?: string
 }
 
 export async function POST(request: NextRequest) {
@@ -57,6 +62,17 @@ export async function POST(request: NextRequest) {
       ${data.message ? `
       <h3>Dodatečné informace:</h3>
       <p>${data.message}</p>
+      ` : ''}
+      
+      ${(data.utm_source || data.utm_medium || data.utm_campaign) ? `
+      <h3>UTM parametry (kampaně):</h3>
+      <ul>
+        ${data.utm_source ? `<li><strong>Zdroj:</strong> ${data.utm_source}</li>` : ''}
+        ${data.utm_medium ? `<li><strong>Médium:</strong> ${data.utm_medium}</li>` : ''}
+        ${data.utm_campaign ? `<li><strong>Kampaň:</strong> ${data.utm_campaign}</li>` : ''}
+        ${data.utm_term ? `<li><strong>Klíčové slovo:</strong> ${data.utm_term}</li>` : ''}
+        ${data.utm_content ? `<li><strong>Obsah:</strong> ${data.utm_content}</li>` : ''}
+      </ul>
       ` : ''}
       
       <hr>
@@ -100,10 +116,17 @@ export async function POST(request: NextRequest) {
       html: confirmationHtml,
     })
 
-    // Log lead data (you might want to save to database here)
+    // Log lead data with UTM parameters (you might want to save to database here)
     console.log('New lead received:', {
       ...data,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      utm_params: {
+        utm_source: data.utm_source,
+        utm_medium: data.utm_medium,
+        utm_campaign: data.utm_campaign,
+        utm_term: data.utm_term,
+        utm_content: data.utm_content
+      }
     })
 
     return NextResponse.json({ success: true })

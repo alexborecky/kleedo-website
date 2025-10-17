@@ -114,6 +114,11 @@ export const trackLeadGeneration = (leadData: {
   businessType: string;
   source: string;
   companySize?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
 }) => {
   trackEvent('generate_lead', {
     ...leadData,
@@ -139,6 +144,39 @@ export const trackScrollDepth = (depth: number, page: string) => {
   trackEvent('scroll_depth', {
     depth_percentage: depth,
     page_location: page,
+    timestamp: new Date().toISOString(),
+  });
+};
+
+/**
+ * Track UTM parameter capture
+ */
+export const trackUTMCapture = (utmParams: {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+}) => {
+  trackEvent('utm_capture', {
+    ...utmParams,
+    timestamp: new Date().toISOString(),
+  });
+};
+
+/**
+ * Track campaign attribution
+ */
+export const trackCampaignAttribution = (campaignData: {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+  page_location: string;
+}) => {
+  trackEvent('campaign_attribution', {
+    ...campaignData,
     timestamp: new Date().toISOString(),
   });
 };
