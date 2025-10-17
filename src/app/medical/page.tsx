@@ -31,7 +31,7 @@ export default function MedicalPage() {
               <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-8">
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                  GDPR compliant
+                  Ochrana osobních údajů
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -167,7 +167,7 @@ export default function MedicalPage() {
               <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-6 w-6 text-primary-500" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">GDPR compliant</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Ochrana osobních údajů</h3>
               <p className="text-gray-400 text-sm">
                 Plně v souladu s GDPR a ochranou osobních údajů.
               </p>

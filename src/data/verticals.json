@@ -58,7 +58,7 @@
         {"question": "Můžu si přizpůsobit styl komunikace?", "answer": "Jasně. Tón, fráze i slovník si nastavíte tak, aby odpovídal vaší značce."},
         {"question": "Co když si nebude jisté?", "answer": "Raději se doptá. A když je to potřeba, přesměruje hovor na člověka."},
         {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro firmy doporučujeme plán Pro (2 490 Kč) se vším, co budete potřebovat."},
-        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí (GDPR)."}
+        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí."}
       ]
     },
     "cta": {
@@ -128,7 +128,7 @@
         {"question": "Můžu si nastavit styl mluvy?", "answer": "Ano. Vyberete tón i slovník, aby to sedělo vaší značce."},
         {"question": "Co když si nebude rozumět s klientkou?", "answer": "Doptá se nebo hovor předá vám. Raději bezpečně než špatně."},
         {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Start od 990 Kč/měs. Pro salony doporučujeme plán Pro (2 490 Kč)."},
-        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí (GDPR)."}
+        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí."}
       ]
     },
     "cta": {
@@ -197,7 +197,7 @@
         {"question": "Kolik to stojí?", "answer": "Ceny jsou orientační a laděné během pilotu. Základ od 990 Kč/měs. Pro ordinace doporučujeme plán Pro (2 490 Kč)."},
         {"question": "Jak je to s ochranou dat?", "answer": "Data jsou šifrovaná, uložená v EU a v souladu s GDPR. Nad svými daty máte plnou kontrolu. Nikdy je nesdílíme s třetími stranami."},
         {"question": "Můžu upravit styl komunikace?", "answer": "Ano. Tón i používané fráze si přizpůsobíte značce ordinace."},
-        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí (GDPR)."}
+        {"question": "Kde se mohu dozvědět víc o ochraně dat?", "answer": "Podrobnosti najdete v našich Zásadách ochrany soukromí."}
       ]
     },
     "cta": {

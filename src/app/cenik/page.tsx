@@ -133,7 +133,7 @@ function CookieBanner() {
           <p className="text-gray-200 text-sm md:text-base leading-relaxed">
             Používáme soubory cookie pro měření návštěvnosti a reklamu (Google, Meta) a službu Leadinfo.
             Pokračováním souhlasíte, nebo si zvolte možnost níže. Více v&nbsp;
-            <a href="/gdpr" className="underline">Zásadách ochrany soukromí</a>.
+            <a href="/ochrana-osobnich-udaju" className="underline">Zásadách ochrany soukromí</a>.
           </p>
           <div className="flex gap-2 shrink-0">
             <button onClick={() => updateConsent('denied')} className="btn btn-secondary button circular circular-secondary px-4 py-2 text-sm">Odmítnout</button>

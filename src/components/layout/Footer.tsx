@@ -56,19 +56,24 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Právní informace</h3>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <Link href="/ochrana-osobnich-udaju" className="text-gray-400 hover:text-white transition-colors">
                   Ochrana údajů
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/obchodni-podminky" className="text-gray-400 hover:text-white transition-colors">
                   Obchodní podmínky
                 </Link>
               </li>
               <li>
-                <Link href="/gdpr" className="text-gray-400 hover:text-white transition-colors">
-                  GDPR
+                <Link href="/ochrana-osobnich-udaju" className="text-gray-400 hover:text-white transition-colors">
+                  Ochrana osobních údajů
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies?manage=true" className="text-gray-400 hover:text-white transition-colors">
+                  Nastavení cookies
                 </Link>
               </li>
             </ul>

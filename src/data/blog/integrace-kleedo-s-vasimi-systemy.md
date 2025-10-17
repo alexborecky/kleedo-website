@@ -1,7 +1,7 @@
 ---
 title: "Jak Kleedo funguje s kalendáři a dalšími aplikacemi"
 excerpt: "Přehled všech integrací a propojení Kleedo s kalendáři a dalšími nástroji, které už používáte."
-date: "2024-07-30"
+date: "2025-07-30"
 tags: ["integrace", "technologie", "kalendář", "CRM"]
 image: "/images/apps.jpg"
 imageAlt: "Kleedo integrace s kalendáři"
@@ -79,7 +79,7 @@ V rámci pilotu nabízíme jednoduchý přehled:
 
 ## Bezpečnost a ochrana dat
 
-### GDPR  
+### Ochrana osobních údajů  
 - Data zpracováváme v EU  
 - Šifrovaná komunikace (TLS)  
 - Pravidelné zálohy  

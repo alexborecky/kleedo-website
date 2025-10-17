@@ -1,7 +1,7 @@
 ---
 title: "5 důvodů, proč potřebujete AI recepční"
 excerpt: "Objevte hlavní výhody AI recepční a jak může transformovat váš podnik. Od úspory času po zvýšení tržeb."
-date: "2025-05-10"
+date: "2025-09-14"
 tags: ["AI", "automatizace", "podnikání", "efektivita"]
 image: "/images/five-reasons.jpg"
 imageAlt: "AI recepční v akci - moderní technologie pro váš podnik"
@@ -48,4 +48,9 @@ Pilotní provoz běží – přidejte se, než se zaplní.
 AI recepční není sci-fi, je to zdravý rozum.  
 Kleedo pomáhá firmám zůstat dostupné, aniž by musely trávit život na telefonu.
 
-**Chcete se zapojit do pilotu?** [Napište nám](mailto:info@kleedo.app) a my se ozveme zpět – tentokrát opravdu.
+---
+
+> ⚠️ **Poznámka:**  
+> Kleedo je aktuálně ve fázi **pilotního provozu** s omezenou kapacitou.  
+> Funkce a integrace se mohou v průběhu testování měnit.  
+> Pokud se chcete zapojit, vyplňte [následující formulář](../../demo) – ozveme se vám, jakmile se uvolní místo.

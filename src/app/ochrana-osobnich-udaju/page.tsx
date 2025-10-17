@@ -23,11 +23,12 @@ export default function PrivacyPage() {
               Správcem vašich osobních údajů je:
             </p>
             <p className="mb-4">
-              <strong>Kleedo s.r.o.</strong><br />
-              IČO: [IČO společnosti]<br />
-              Sídlo: [Adresa]<br />
-              E-mail: info@kleedo.app<br />
-              Telefon: [Telefonní číslo]
+              <strong>Alexandr Borecký — Kleedo</strong><br />
+              IČO: 04362365<br />
+              Sídlo: Slezská 883/26, 120 00 Praha 2<br />
+              Zapsáno v živnostenském rejstříku České republiky<br />
+              E-mail: <a href="mailto:info@kleedo.app" className="text-primary-500 hover:underline">info@kleedo.app</a><br />
+              Telefon: +420 702 031 717
             </p>
 
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">2. Jaké osobní údaje zpracováváme</h2>
@@ -100,6 +101,14 @@ export default function PrivacyPage() {
               <strong>Právní základ:</strong> Souhlas (čl. 6 odst. 1 písm. a) GDPR) - můžete kdykoliv odvolat
             </p>
 
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">3.5 Pilotní provoz</h3>
+            <p className="mb-4">
+              V rámci pilotního provozu služby Kleedo mohou být vybraná data z hovorů, přepisů a dalších interakcí
+              použita pro testování, ladění a zlepšování systému. Účast v pilotním provozu je dobrovolná a uživatelé
+              jsou o této skutečnosti informováni při zapojení do testování. Všechna data jsou zpracována v souladu s GDPR
+              a uchovávána pouze po dobu nezbytnou pro tento účel.
+            </p>
+
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">4. Doba uchování osobních údajů</h2>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li><strong>Smluvní údaje:</strong> Po dobu trvání smlouvy a 3 roky po jejím ukončení (promlčecí lhůta)</li>
@@ -114,12 +123,11 @@ export default function PrivacyPage() {
               Vaše osobní údaje můžeme sdílet s následujícími kategoriemi příjemců:
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Poskytovatelé AI služeb:</strong> OpenAI, Anthropic a další poskytovatelé AI technologií pro zpracování hovorů</li>
-              <li><strong>Hostingové služby:</strong> AWS, Google Cloud nebo jiné cloudové platformy pro ukládání dat</li>
-              <li><strong>Platební brány:</strong> Stripe, GoPay nebo jiné platební procesory</li>
-              <li><strong>Telekomunikační poskytovatelé:</strong> Pro zprostředkování telefonních hovorů</li>
-              <li><strong>Účetní a právní poradci:</strong> Pro plnění právních povinností</li>
-              <li><strong>Analytické nástroje:</strong> Google Analytics, Mixpanel (s anonymizací IP)</li>
+              <li><strong>Poskytovatelé AI služeb:</strong> např. OpenAI, Anthropic (zpracování hovorů a přepisů)</li>
+              <li><strong>Cloudový hosting a infrastruktura:</strong> např. Vercel, AWS nebo Google Cloud</li>
+              <li><strong>Telekomunikační poskytovatelé:</strong> pro zprostředkování telefonních hovorů</li>
+              <li><strong>Analytické a marketingové nástroje:</strong> Google Analytics, Leadinfo (po souhlasu s cookies)</li>
+              <li><strong>Účetní a právní poradci:</strong> pro plnění právních povinností</li>
             </ul>
             <p className="mb-4">
               Všichni zpracovatelé jsou s námi vázáni smlouvou a jsou povinni chránit vaše údaje v souladu s GDPR.
@@ -127,7 +135,7 @@ export default function PrivacyPage() {
 
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">6. Přenos osobních údajů do třetích zemí</h2>
             <p className="mb-4">
-              Některé služby, které používáme (např. OpenAI), mohou přenášet data mimo EU/EHP. 
+              Některé námi využívané služby mohou zahrnovat přenos dat mimo EU/EHP (např. při použití vybraných AI poskytovatelů).
               V takovém případě zajišťujeme přiměřené záruky ochrany vašich údajů prostřednictvím:
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
@@ -206,7 +214,36 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">9. Cookies</h2>
             <p className="mb-4">
               Naše webové stránky používají cookies. Podrobné informace o používání cookies 
-              naleznete v našich <a href="/gdpr#cookies" className="text-primary-500 hover:underline">Zásadách používání cookies</a>.
+              naleznete v našich <a href="/ochrana-osobnich-udaju#cookies" className="text-primary-500 hover:underline">Zásadách používání cookies</a>.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">9.1 Typy cookies a souhlasy</h3>
+            <p className="mb-4">
+              Cookies používáme pouze na základě vašeho souhlasu, s výjimkou technicky nezbytných cookies. 
+              V rámci souhlasu rozlišujeme kategorie: (a) analytické/statistické, (b) marketingové/reklamní. 
+              Svůj souhlas můžete kdykoliv odvolat v nastavení cookies (banner se znovu zobrazí při smazání cookies nebo v odkazu v patičce webu).
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">9.2 Marketingové technologie (Google Ads, Meta Pixel, Leadinfo)</h3>
+            <p className="mb-4">
+              Tyto technologie spouštíme pouze po udělení souhlasu s marketingovými cookies a v režimu Google Consent Mode. 
+              Slouží k měření výkonu kampaní a k lepšímu cílení reklamy.
+            </p>
+            <p className="mb-4">
+              Podrobné informace o konkrétních cookies naleznete v tabulce níže nebo v samostatných{' '}
+              <a href="/cookies" className="text-primary-500 hover:underline">Zásadách používání cookies</a>.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>Google Ads / Google Analytics:</strong> používáme k měření návštěvnosti a konverzí. 
+                Zpracování probíhá dle zásad společnosti Google a je podmíněno vaším souhlasem s cookies.</li>
+              <li><strong>Meta Pixel (Facebook/Instagram):</strong> používáme pro měření a optimalizaci kampaní na platformách Meta. 
+                Spouštíme pouze po udělení souhlasu; na zpracování se vztahují Podmínky nástrojů pro firmy společnosti Meta.</li>
+              <li><strong>Leadinfo:</strong> nástroj pro identifikaci návštěv firem na základě IP adresy a souvisejících technických údajů. 
+                Leadinfo používáme pouze po udělení souhlasu s marketingovými cookies. Více informací naleznete v zásadách poskytovatele.</li>
+            </ul>
+            <p className="mb-4">
+              Uvedené technologie mohou používat cookies a obdobné identifikátory. 
+              Pokud nesouhlasíte s marketingovými cookies, tyto technologie nebudou spuštěny.
             </p>
 
             <h2 className="text-2xl font-semibold text-white mt-8 mb-4">10. Automatizované rozhodování</h2>
@@ -237,13 +274,13 @@ export default function PrivacyPage() {
               Pro uplatnění vašich práv nebo dotazy týkající se zpracování osobních údajů nás kontaktujte:
             </p>
             <p className="mb-4">
-              E-mail: <a href="mailto:privacy@kleedo.app" className="text-primary-500 hover:underline">privacy@kleedo.app</a><br />
-              Telefon: [Telefonní číslo]<br />
-              Poštovní adresa: Kleedo s.r.o., [Adresa]
+              E-mail: <a href="mailto:info@kleedo.app" className="text-primary-500 hover:underline">info@kleedo.app</a><br />
+              Telefon: +420 702 031 717<br />
+              Poštovní adresa: Alexandr Borecký — Kleedo, Slezská 883/26, 120 00 Praha 2
             </p>
 
             <p className="mt-8 text-sm text-gray-400">
-              Poslední aktualizace: 7. října 2025
+              Poslední aktualizace: 17. října 2025
             </p>
           </section>
         </div>

@@ -1,7 +1,7 @@
 ---
 title: "Jak AI recepční zvládá obtížné situace a náročné klienty"
 excerpt: "Naučte se, jak AI recepční dokáže profesionálně zvládat konfliktní situace, nespokojené klienty a nestandartní požadavky."
-date: "2025-09-20"
+date: "2025-08-12"
 tags: ["AI", "zákaznický servis", "komunikace", "profesionalita"]
 image: "/images/klient.jpg"
 imageAlt: "AI recepční zvládá obtížné situace s profesionalitou"

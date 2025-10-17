@@ -289,7 +289,7 @@ export default function ProductPage() {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 feature-card-icon">
                   <Shield className="h-6 w-6 text-primary-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Bezpečnost a GDPR</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Bezpečnost a ochrana údajů</h3>
                 <p className="text-gray-400 text-sm">
                   Plně v souladu s GDPR a ochranou osobních údajů. Všechna data jsou šifrována a bezpečně uložena.
                 </p>

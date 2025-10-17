@@ -1,7 +1,7 @@
 ---
 title: "Jak AI recepční pomůže vašemu salonu růst"
 excerpt: "Méně zmeškaných hovorů, více rezervací a klidnější den. Podívejte se, jak AI recepční zjednoduší provoz salonu."
-date: "2025-04-22"
+date: "2025-08-22"
 tags: ["salony", "AI", "automatizace", "růst"]
 image: "/images/grow.jpg"
 imageAlt: "Moderní salon s AI recepční - efektivní rezervace a komunikace"
