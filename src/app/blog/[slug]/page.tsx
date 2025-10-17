@@ -8,10 +8,62 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 interface BlogPostPageProps {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const post = await getPostBySlug(params.slug)
+  
+  if (!post) {
+    return {
+      title: 'Článek nenalezen - Kleedo',
+      description: 'Požadovaný článek nebyl nalezen.',
+    }
+  }
+
+  return {
+    title: `${post.title} - Kleedo Blog`,
+    description: post.excerpt,
+    keywords: post.tags?.join(', ') || 'AI recepční, automatizace, business',
+    authors: [{ name: 'Kleedo' }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      locale: 'cs_CZ',
+      url: `https://kleedo.cz/blog/${post.slug}`,
+      siteName: 'Kleedo',
+      publishedTime: post.date,
+      images: post.image ? [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.imageAlt || post.title,
+        },
+      ] : [
+        {
+          url: '/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: post.image ? [post.image] : ['/images/og-blog.jpg'],
+    },
+    alternates: {
+      canonical: `https://kleedo.cz/blog/${post.slug}`,
+    },
   }
 }
 

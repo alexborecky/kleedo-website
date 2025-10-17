@@ -8,8 +8,35 @@ import { CookieBanner } from '@/components/layout/CookieBanner'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Blog - Kleedo',
-  description: 'Blog o AI recepční a automatizaci pro salony, ordinace a služby.',
+  metadataBase: new URL('https://kleedo.app'),
+  title: 'Blog - Kleedo | Tipy a triky pro váš business',
+  description: 'Blog o AI recepční a automatizaci pro salony, ordinace a služby. Tipy, triky a novinky o růstu vašeho podniku.',
+  keywords: 'AI recepční blog, automatizace, business tipy, salon marketing, ordinace management',
+  openGraph: {
+    title: 'Blog - Kleedo | Tipy a triky pro váš business',
+    description: 'Blog o AI recepční a automatizaci pro salony, ordinace a služby. Tipy, triky a novinky o růstu vašeho podniku.',
+    type: 'website',
+    locale: 'cs_CZ',
+    url: 'https://kleedo.cz/blog',
+    siteName: 'Kleedo',
+    images: [
+      {
+        url: '/images/og-blog.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Kleedo Blog - Tipy a triky pro váš business',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - Kleedo | Tipy a triky pro váš business',
+    description: 'Blog o AI recepční a automatizaci pro salony, ordinace a služby.',
+    images: ['/images/og-blog.jpg'],
+  },
+  alternates: {
+    canonical: 'https://kleedo.cz/blog',
+  },
 }
 
 export default function BlogLayout({
