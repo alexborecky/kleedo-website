@@ -191,14 +191,9 @@ export default function MedicalPage() {
               a my máme více času na léčbu. Navíc je to plně GDPR compliant."
             </blockquote>
             
-            <div className="flex items-center justify-center">
-              <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mr-4">
-                <span className="text-white font-bold">PS</span>
-              </div>
-              <div className="text-left">
-                <p className="font-semibold text-white">Dr. Petr Svoboda</p>
-                <p className="text-primary-500">Zubní ordinace, Brno</p>
-              </div>
+            <div className="text-center">
+              <p className="text-primary-500 font-medium">Zdravotnictví</p>
+              <p className="text-gray-500 text-sm mt-1">Pilotní testování</p>
             </div>
           </div>
         </div>

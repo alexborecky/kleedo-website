@@ -8,7 +8,7 @@ import { CookieBanner } from '@/components/layout/CookieBanner'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kleedo.app'),
+  metadataBase: new URL('https://kleedo.vercel.app'),
   title: 'Blog - Kleedo | Tipy a triky pro váš business',
   description: 'Blog o AI recepční a automatizaci pro salony, ordinace a služby. Tipy, triky a novinky o růstu vašeho podniku.',
   keywords: 'AI recepční blog, automatizace, business tipy, salon marketing, ordinace management',

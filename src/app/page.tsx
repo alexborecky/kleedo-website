@@ -460,12 +460,11 @@ export default function HomePage() {
           <div className="inline-flex items-center bg-primary-500/20 text-primary-500 px-4 py-2 rounded-full text-sm font-medium mb-6 chip">
             {t(currentLocale, 'home.testimonials.badge')}
           </div>
-          <div className="testimonials-title">
+          <div className="testimonials-title text-center">
             <h2>
-              {t(currentLocale, 'home.testimonials.headline')}
-              <br />
-              {t(currentLocale, 'home.testimonials.headline2')}
+              Zpětná vazba z pilotního provozu
             </h2>
+            <p className="text-gray-300 text-lg mt-3">Anonymizované citace od prvních uživatelů — bez jmen, zato upřímně.</p>
           </div>
 
           <div className="testimonials-grid">
@@ -473,42 +472,36 @@ export default function HomePage() {
               <div className="stroke"></div>
               <div className="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
               <p className="testimonial-quote">{t(currentLocale, 'home.testimonials.cards.0.quote')}</p>
-              <div className="testimonial-meta">{t(currentLocale, 'home.testimonials.cards.0.author')}</div>
             </div>
 
             <div className="glass testimonial-card">
               <div className="stroke"></div>
               <div className="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
               <p className="testimonial-quote">{t(currentLocale, 'home.testimonials.cards.1.quote')}</p>
-              <div className="testimonial-meta">{t(currentLocale, 'home.testimonials.cards.1.author')}</div>
             </div>
 
             <div className="glass testimonial-card">
               <div className="stroke"></div>
               <div className="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
               <p className="testimonial-quote">{t(currentLocale, 'home.testimonials.cards.2.quote')}</p>
-              <div className="testimonial-meta">{t(currentLocale, 'home.testimonials.cards.2.author')}</div>
             </div>
 
             <div className="glass testimonial-card">
               <div className="stroke"></div>
               <div className="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
               <p className="testimonial-quote">{t(currentLocale, 'home.testimonials.cards.3.quote')}</p>
-              <div className="testimonial-meta">{t(currentLocale, 'home.testimonials.cards.3.author')}</div>
             </div>
 
             <div className="glass testimonial-card">
               <div className="stroke"></div>
               <div className="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
               <p className="testimonial-quote">{t(currentLocale, 'home.testimonials.cards.4.quote')}</p>
-              <div className="testimonial-meta">{t(currentLocale, 'home.testimonials.cards.4.author')}</div>
             </div>
 
             <div className="glass testimonial-card">
               <div className="stroke"></div>
               <div className="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
               <p className="testimonial-quote">{t(currentLocale, 'home.testimonials.cards.5.quote')}</p>
-              <div className="testimonial-meta">{t(currentLocale, 'home.testimonials.cards.5.author')}</div>
             </div>
           </div>
         </div>

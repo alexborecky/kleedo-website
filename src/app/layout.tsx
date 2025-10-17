@@ -9,7 +9,7 @@ import { LocaleProvider } from '@/components/LocaleProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kleedo.app'),
+  metadataBase: new URL('https://kleedo.vercel.app'),
   title: 'Kleedo - AI Recepční, která nezmešká klienta',
   description: 'AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu. Ideální pro salony, ordinace a služby.',
   keywords: 'AI recepční, virtuální asistent, automatický telefon, salon, ordinace, zubař, kadeřnictví, fyzioterapeut',

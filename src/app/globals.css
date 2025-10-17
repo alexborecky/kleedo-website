@@ -655,7 +655,7 @@ h2 {
 .testimonial-card{
   position: relative;
   text-align:left;
-  padding: 28px; border-radius:16px; min-height: 220px;
+  padding: 28px; border-radius:16px; 
   display:flex; flex-direction:column; justify-content:flex-start; gap:16px;
   overflow:hidden; /* keep quote glyph and strokes tidy */
 }
@@ -1940,7 +1940,7 @@ footer, footer .border-t {
   }
   
   .testimonial-card {
-    min-height: auto !important;
+    /* min-height: auto !important; */
     padding: 24px !important;
   }
 

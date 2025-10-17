@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useMemo, useRef } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -38,6 +38,28 @@ export function LeadCaptureForm({
   const formRef = useRef<HTMLFormElement>(null)
   const formStartedRef = useRef(false)
   const utmParams = useUTMParams()
+
+  // Scroll to form on mobile when component mounts
+  useEffect(() => {
+    if (formRef.current && window.innerWidth <= 768) {
+      formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, [])
+
+  // Scroll to top when form is successfully submitted
+  useEffect(() => {
+    if (isSubmitted) {
+      // Smooth scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      
+      // Also scroll the form into view as fallback
+      setTimeout(() => {
+        if (formRef.current) {
+          formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 300)
+    }
+  }, [isSubmitted])
 
   const {
     register,
@@ -136,6 +158,16 @@ export function LeadCaptureForm({
       
       if (response.ok && result.success) {
         setIsSubmitted(true) // Fixed form success handling
+        
+        // Scroll to top to show success message
+        // Use multiple methods for better cross-browser support
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        
+        // Fallback for older browsers
+        setTimeout(() => {
+          document.documentElement.scrollTop = 0
+          document.body.scrollTop = 0
+        }, 100)
         
         // Track conversion with new analytics helper
         trackFormSubmit('lead-capture', {

@@ -3,36 +3,30 @@
 import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
 
-const testimonials = [
+const insights = [
   {
     quote: "Konečně můžu pracovat v klidu, aniž bych se bál zmeškat důležitý hovor. Kleedo zvedne každý telefon a zvládne to lépe než já.",
-    author: "Marie Nováková",
-    business: "Salon Krása"
+    category: "Kadeřnictví a salony"
   },
   {
     quote: "Od té doby, co používáme Kleedo, máme o 40% více rezervací. Klienti si chválí, že se jim vždy někdo ozve.",
-    author: "Dr. Petr Svoboda",
-    business: "Zubní ordinace"
+    category: "Zdravotnictví"
   },
   {
     quote: "Nejlepší investice do našeho autoservisu. AI zvládne rezervace, odhady cen a informace o opravách.",
-    author: "Tomáš Dvořák",
-    business: "AutoServis Plus"
+    category: "Autoservisy"
   },
   {
     quote: "Kleedo je jako mít recepční, která nikdy nebere dovolenou a vždy má dobrou náladu. Perfektní!",
-    author: "Jana Kratochvílová",
-    business: "Wellness centrum"
+    category: "Wellness a fitness"
   },
   {
     quote: "Naši klienti si chválí rychlé odpovědi a profesionální komunikaci. Kleedo nás reprezentuje lépe než my sami.",
-    author: "Ing. Pavel Hruška",
-    business: "Právní kancelář"
+    category: "Profesionální služby"
   },
   {
     quote: "Od spuštění Kleedo máme o 60% více nových klientů. Každý hovor je příležitost, kterou už nezmeškáme.",
-    author: "Lucie Procházková",
-    business: "Fitness studio"
+    category: "Fitness a sport"
   }
 ]
 
@@ -48,13 +42,16 @@ export function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            První firmy už testují Kleedo.{' '}
-            <span className="text-primary-500">Přidejte se mezi ně!</span>
+            Klíčové poznatky z pilotního testování{' '}
+            <span className="text-primary-500">Kleedo</span>
           </h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            Zde jsou nejdůležitější poznatky, které jsme získali během testování s prvními firmami
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {insights.map((insight, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -70,12 +67,12 @@ export function TestimonialsSection() {
               </div>
               
               <blockquote className="text-gray-300 mb-6 leading-relaxed">
-                "{testimonial.quote}"
+                "{insight.quote}"
               </blockquote>
               
               <div className="border-t border-dark-700 pt-4">
-                <p className="font-semibold text-white">{testimonial.author}</p>
-                <p className="text-primary-500 text-sm">{testimonial.business}</p>
+                <p className="text-primary-500 text-sm font-medium">{insight.category}</p>
+                <p className="text-gray-500 text-xs mt-1">Pilotní testování</p>
               </div>
             </motion.div>
           ))}
