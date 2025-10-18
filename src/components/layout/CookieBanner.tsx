@@ -22,7 +22,7 @@ export function CookieBanner() {
   const [showSettings, setShowSettings] = useState(false)
   const [preferences, setPreferences] = useState<ConsentPreferences>({
     necessary: true, // Always true, cannot be disabled
-    analytics: false,
+    analytics: true, // Default to true for better tracking
     marketing: false
   })
 
