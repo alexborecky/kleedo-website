@@ -211,7 +211,6 @@ const handleSubmit = async (data) => {
 - Verify SMTP credentials are correct
 - Check spam folder
 - Review server logs for errors
-- Test with: `curl -X POST http://localhost:3000/api/leads -H "Content-Type: application/json" -d '{"name":"Test","email":"test@test.com","phone":"123","company":"Test Co","businessType":"Salon"}'`
 
 ## 📞 Support
 
