@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
+import { FacebookPixel } from '@/components/analytics/FacebookPixel'
 import { Leadinfo } from '@/components/analytics/Leadinfo'
 import { CookieBanner } from '@/components/layout/CookieBanner'
 import { LocaleProvider } from '@/components/LocaleProvider'
@@ -114,6 +115,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <FacebookPixel />
         <Leadinfo />
         {/* Google Tag Manager (noscript) */}
         <noscript>

@@ -4,6 +4,7 @@ declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
+    fbq?: (...args: any[]) => void;
   }
 }
 
@@ -120,10 +121,16 @@ export const trackLeadGeneration = (leadData: {
   utm_term?: string;
   utm_content?: string;
 }) => {
+  // Track in Google Analytics
   trackEvent('generate_lead', {
     ...leadData,
     timestamp: new Date().toISOString(),
   });
+  
+  // Track in Facebook Pixel
+  if (typeof window !== 'undefined' && window.fbq) {
+    window.fbq('track', 'Lead');
+  }
 };
 
 /**
