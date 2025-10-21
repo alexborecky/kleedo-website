@@ -120,7 +120,7 @@ export default function PricingPage() {
           </div>
 
           {/* Hero Blobs - Full width containers */}
-        <div className="absolute inset-0 w-full h-full -z-50">
+        <div className="absolute inset-0 w-full -z-50">
             <InteractiveBlob 
               className="absolute bottom-0 left-0" 
               widthPercent={120} 
@@ -179,8 +179,9 @@ export default function PricingPage() {
               >
                 <div className="stroke"></div>
                 
+                
                 {/* InteractiveBlob for each card */}
-                <div className="absolute inset-0 w-full h-full -z-50">
+                <div className="absolute inset-0 w-full -z-50 blob-container">
                   <InteractiveBlob 
                     className="absolute"
                     widthPercent={120} 
@@ -212,17 +213,24 @@ export default function PricingPage() {
                 )}
 
                 <div className="feature-card-content relative z-10">
-                  <div className="mb-8">
+                  <div className="main-information">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4 text-small">{plan.description}</p>
-                    
+                    <p className="text-gray-400 mb-4 text-small">{plan.description}</p> 
                     <div className="mb-6 price-amount">
-                      <span>od {plan.price} Kč</span>
-                      <span>/ {plan.period}</span>
+                      <div className="mb-2">
+                        <span className="text-green-400 font-medium">V pilotním provozu zdarma.</span>
+                      </div>
+                      <div>
+                        <span>od {plan.price} Kč</span>
+                        <span>/ {plan.period} po oficiálním spuštění.</span>
+                      </div>
+                      <div className="callout p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                        <p className="text-blue-400 text-sm text-center">
+                          Pilot zatím nemá stanovený termín ukončení.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-
-                  <ul className="space-y-4 mb-8">
+                    <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <Check className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -230,6 +238,7 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
+                  </div>
 
                   <Link
                     href={plan.ctaLink}
@@ -239,7 +248,7 @@ export default function PricingPage() {
                         : 'border border-white text-white'
                     }`}
                   >
-                    <span>{plan.cta}</span>
+                    <span>Chci do pilotu {plan.name}</span>
                     <span className="btn-fill"></span>
                     {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
                   </Link>

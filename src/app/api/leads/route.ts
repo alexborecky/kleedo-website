@@ -94,25 +94,25 @@ export async function POST(request: NextRequest) {
         <img src="https://kleedo-website.vercel.app/images/email-thumbnail.jpg" alt="Kleedo - AI Recepční" style="max-width: 400px; height: auto; border-radius: 8px;">
       </div>
       
-      <p>Vážený/á ${data.name},</p>
+      // <p>Vážený/á ${data.name},</p>
       
-      <p>děkujeme za vyplnění formuláře. Váš požadavek byl úspěšně odeslán a náš tým vás bude kontaktovat do 24 hodin.</p>
+      <p>Váš formulář s informacemi o firmě už je u našeho týmu, který vás bude brzy kontaktovat ohledně pilotu Kleedo 🥳💚!</p>
       
-      <h3>Shrnutí vašeho požadavku:</h3>
+      <h3>Jen pro shrnutí:</h3>
       <ul>
-        <li><strong>Firma:</strong> ${data.company || 'Neuvedeno'}</li>
-        <li><strong>Typ podniku:</strong> ${data.businessType}</li>
+        <li><strong>Název Vaší firmy:</strong> ${data.company || 'Neuvedeno'}</li>
+        <li><strong>V jakém odvětví podnikáte:</strong> ${data.businessType}</li>
       </ul>
       
-      <p>Mezitím si můžete prohlédnout naše ceny nebo se podívat na často kladené otázky.</p>
+      <p>Pokud byste měli jakékoliv další otázky, rádi vám pomůžeme! Stačí napsat na info@kleedo.app 💬</p>
       
-      <p>S pozdravem,<br>Tým Kleedo</p>
+      <p>S pozdravem,<br>Tým Kleedo 💚</p>
     `
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: data.email,
-      subject: 'Potvrzení vašeho požadavku do pilotu - Kleedo',
+      subject: 'Potvrzení přijetí vašeho požadavku do pilotu - Kleedo 💚',
       html: confirmationHtml,
     })
 

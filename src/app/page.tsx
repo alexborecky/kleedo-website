@@ -617,42 +617,46 @@ export default function HomePage() {
           </a>
           <div className="absolute inset-0 w-full h-full -z-50">
             <InteractiveBlob 
-              className="absolute top-0 right-0" 
-              width={800} 
-              height={600}
+              className="absolute" 
+              widthPercent={100} 
+              heightPercent={120}
+              leftPercent={-40}
+              bottomPercent={-20}
               fill="#D1EE9E0D"
-              baseRadius={180}
-              noiseAmplitude={20}
+              baseRadius={120}
+              noiseAmplitude={120}
               noiseSpeed={0.11}
               mouseStrength={32}
-              mouseRadius={160}
+              mouseRadius={60}
               relax={0.05}
-              pointsCount={36}
-              gradientStart="#667eea"
-              gradientEnd="#764ba2"
+              pointsCount={46}
+              gradientStart="#C5FFF2"
+              gradientEnd="#717377"
               gradientDirection="to bottom right"
-              gradientStartOpacity={0.12}
+              gradientStartOpacity={0.42}
               gradientEndOpacity={0.12}
-              blurAmount={200}
+              blurAmount={60}
             />
             <InteractiveBlob 
-              className="absolute bottom-0 left-0" 
-              width={650} 
-              height={500}
+              className="absolute" 
+              widthPercent={80} 
+              heightPercent={80}
+              rightPercent={-30}
+              topPercent={-20}
               fill="#D1EE9E0D"
-              baseRadius={130}
-              noiseAmplitude={16}
-              noiseSpeed={0.15}
+              baseRadius={160}
+              noiseAmplitude={80}
+              noiseSpeed={0.05}
               mouseStrength={24}
               mouseRadius={120}
               relax={0.07}
-              pointsCount={30}
-              gradientStart="#F093FB"
-              gradientEnd="#F5576C"
+              pointsCount={36}
+              gradientStart="#C5FFF2"
+              gradientEnd="#7F8960"
               gradientDirection="to top left"
-              gradientStartOpacity={0.28}
-              gradientEndOpacity={0.28}
-              blurAmount={200}
+              gradientStartOpacity={0.6}
+              gradientEndOpacity={0.2}
+              blurAmount={80}
             />
           </div>
         </div>

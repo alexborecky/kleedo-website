@@ -1346,7 +1346,7 @@ canvas[class*="InteractiveBlob"] {
 /* ========= Pricing Plans ========= */
 
 .pricing-plans .feature-card {
-  height: 100%;
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1355,14 +1355,23 @@ canvas[class*="InteractiveBlob"] {
   padding: 24px;
 }
 
+.pricing-plans .blob-container {
+  overflow: hidden;
+  height: auto;
+}
+
 .pricing-plans .feature-card:nth-child(2) {
   text-align: left;
-  border: 1px solid #D1EE9E !important;
+  border: 2px solid #D1EE9E !important;
+}
+
+.pricing-plans .feature-card:nth-child(1), .pricing-plans .feature-card:nth-child(3) {
+  max-height: 100%;
 }
 
 .pricing-plans .feature-card a {
-  border: 1px solid #E3F0D3;
-  max-width: 200px;
+  border: 2px solid #E3F0D3;
+  max-width: 240px;
 }
 
 .pricing-plans .feature-card:nth-child(2) a:hover .btn-fill {
@@ -1372,6 +1381,10 @@ canvas[class*="InteractiveBlob"] {
 .pricing-plans .feature-card-content {
   text-align: left;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .pricing-plans .feature-card-content h3 {
@@ -1383,11 +1396,15 @@ canvas[class*="InteractiveBlob"] {
   line-height: 40px; /* 125% */
 }
 
+.pricing-plans .feature-card-content ul {
+  margin-top: 20px;
+}
+
 .pricing-plans .feature-card-content ul li {
   font-size: 14px;
   line-height: 20px;
   color: #FFF;
-  opacity: 0.64;
+  opacity: 0.8;
 }
 
 .pricing-plans .feature-card-content ul li svg {
@@ -1400,11 +1417,27 @@ canvas[class*="InteractiveBlob"] {
 .pricing-plans .feature-card-content .price-amount {
   color: #E3F0D3;
   font-family: "DM Sans";
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 22px; /* 137.5% */
   margin: 40px 0
+}
+
+.pricing-plans .feature-card-content .price-amount .mb-2 {
+  font-size: 20px;
+  font-weight: 900 !important;
+}
+
+.pricing-plans .feature-card-content .price-amount .mb-8{
+  margin-bottom: 20px;
+}
+
+.pricing-plans .feature-card-content .callout {
+  margin-top: 20px;
+  font-weight: 500;
+  padding: 12px;
+  margin-top: 20px;
 }
 
 /* ================== Footer ================== */
