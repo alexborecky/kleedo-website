@@ -90,13 +90,11 @@ export async function POST(request: NextRequest) {
     const confirmationHtml = `
       <h2>Děkujeme za váš zájem o Kleedo!</h2>
       
-      <div style="text-align: center; margin: 20px 0;">
+      <div style="text-align: left; margin: 20px 0;">
         <img src="https://kleedo-website.vercel.app/images/email-thumbnail.jpg" alt="Kleedo - AI Recepční" style="max-width: 400px; height: auto; border-radius: 8px;">
       </div>
       
-      // <p>Vážený/á ${data.name},</p>
-      
-      <p>Váš formulář s informacemi o firmě už je u našeho týmu, který vás bude brzy kontaktovat ohledně pilotu Kleedo 🥳💚!</p>
+      <p>Formulář s informacemi o Vašá firmě už je u našeho týmu, který vás bude brzy kontaktovat ohledně pilotu Kleedo 🥳💚!</p>
       
       <h3>Jen pro shrnutí:</h3>
       <ul>
