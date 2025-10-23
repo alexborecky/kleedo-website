@@ -88,6 +88,21 @@ h2 {
   }
 }
 
+.header .right-side-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  .language-switch {
+    position: absolute;
+    left: -100px;
+    z-index: 100;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .chip {
   background: linear-gradient(67deg, rgba(236, 243, 250, 0.80) 2.26%, rgba(229, 220, 223, 0.80) 85.48%), #E3F0D3;
   color: #131313;
@@ -585,6 +600,11 @@ h2 {
     color: #e7f3c5;
     font-weight: 600;
     letter-spacing: 0.2px;
+    @media (max-width: 375px) {
+      img {
+        height: 16px !important;
+      }
+    }
   }
 
   .nav .cta {
@@ -1433,7 +1453,7 @@ canvas[class*="InteractiveBlob"] {
   margin-bottom: 20px;
 }
 
-.pricing-plans .feature-card-content .callout {
+.callout {
   margin-top: 20px;
   font-weight: 500;
   padding: 12px;
@@ -1498,7 +1518,44 @@ footer, footer .border-t {
 /* ========= Demo Page ========= */
 
 .demo .page-section {
-  padding-top: 112px;
+  margin-top: 112px;
+  @media (max-width: 768px) {
+    margin-top: 80px;
+  }
+}
+
+.demo .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo .hero-content h1, .demo .hero-content p {
+  text-align: center;
+}
+
+.demo .hero a {
+  transform: scale(1);
+  svg {
+    stroke-width: 2.5px;
+  }
+}
+
+.demo-cta-buttons {
+  display: flex;
+  gap: 16px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.demo .callout {
+  position: relative;
+  p {
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
 }
 
 /* ========= Text Page ========= */
@@ -1592,7 +1649,7 @@ footer, footer .border-t {
 /* ========= MOBILE RESPONSIVE STYLES ========= */
 
 /* ===== TABLET BREAKPOINT (769px - 1024px) ===== */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   /* Container padding */
   .container {
     padding-left: 24px !important;
@@ -1636,9 +1693,9 @@ footer, footer .border-t {
 }
 
 /* ===== Mobile Navigation & Header ===== */
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   /* Hide desktop navigation elements on mobile */
-  .nav .links {
+  .nav .links, .right-side-actions {
     display: none;
   }
   
@@ -1646,12 +1703,18 @@ footer, footer .border-t {
     display: none;
   }
   
+  .nav {
+    padding: 0 16px 0 20px!important;
+  }
+
   /* Show mobile CTA button */
   .mobile-cta {
     display: flex !important;
-    padding: 8px 12px !important;
-    font-size: 12px !important;
+    padding: 8px !important;
     height: 36px !important;
+    span {
+      font-size: 12px !important;
+    }
   }
   
   /* Hamburger menu button */
@@ -1730,7 +1793,7 @@ footer, footer .border-t {
 }
 
 /* Hide mobile elements on desktop */
-@media (min-width: 769px) {
+@media (min-width: 990px) {
   .mobile-cta {
     display: none !important;
   }
@@ -1742,10 +1805,14 @@ footer, footer .border-t {
   .mobile-menu {
     display: none;
   }
+
+  .language-switch {
+    display: block !important;
+  }
 }
 
 /* ===== Mobile Typography Scales ===== */
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   h1 {
     font-size: 32px !important;
     line-height: 38px !important;
@@ -1961,7 +2028,10 @@ footer, footer .border-t {
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    align-items: flex-start !important;
+    align-items: center !important;
+    h2 {
+      text-align: center !important;
+    }
   }
 
   .testimonials-title h2 {
@@ -2027,7 +2097,7 @@ footer, footer .border-t {
   }
   
   .cta-section p {
-    font-size: 16px !important;
+    font-size: 14px !important;
     line-height: 22px !important;
     margin-bottom: 24px !important;
   }
@@ -2250,7 +2320,7 @@ footer, footer .border-t {
 
 /* ===== Nav ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .nav {
     .mobile-cta {
       color: #131313 !important;
@@ -2334,5 +2404,44 @@ footer, footer .border-t {
 @media screen and (max-width: 768px) {
   .pricing-plans .creed-section {
     margin-top: 24px !important;
+  }
+}
+
+/* ===== About Page ===== */
+
+.about-page {
+  .hero .rounded-full {
+    overflow: hidden !important;
+    border-radius: 100% !important;
+    img {
+      width: 100% !important;
+      height: auto !important;
+      margin-top: 0 !important;
+    }
+  }
+  .statement-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 40%;
+    p {
+      font-size: 32px !important;
+      line-height: 40px !important;
+      opacity: 1 !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .statement-section {
+      width: 100% !important;
+      p {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+    }
+    .hero .rounded-full {
+      height: 40px;
+      width: 40px;
+    }
   }
 }

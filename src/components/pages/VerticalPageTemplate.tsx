@@ -123,10 +123,22 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
             </p>
 
             <div className="vertical-hero-section-buttons flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="/demo" className="btn btn-primary inline-flex items-center justify-center group button circular circular-primary">
-                <span>Chci Kleedo na svém telefonu</span>
-                <span className="btn-fill"></span>
-              </a>
+            <div className="demo-cta-buttons">
+            <a href="/demo" className="btn btn-primary button circular circular-primary">
+              <span className="flex items-center">
+                {/* <Phone className="h-4 w-4 mr-2" /> */}
+                Přihlásit se do pilotu
+              </span>
+              <span className="btn-fill"></span>
+            </a>
+            <a href="tel:+420910927821" className="btn btn-secondary button circular circular-secondary">
+              <span className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                Zavolat Kleedu zdarma
+              </span>
+              <span className="btn-fill"></span>
+            </a>
+          </div>
               {/* <a href="/test" className="btn btn-secondary inline-flex items-center justify-center group button circular circular-secondary">
                 <span>Chci se přidat do pilotu</span>
                 <span className="btn-fill"></span>
@@ -358,10 +370,22 @@ export default function VerticalPageTemplate({ content }: VerticalPageTemplatePr
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             {content.cta.description}
           </p>
-          <a href="/demo" className="btn btn-primary text-lg px-8 py-4 button circular circular-primary">
-            <span>{content.cta.button}</span>
-            <span className="btn-fill"></span>
-          </a>
+          <div className="demo-cta-buttons">
+            <a href="/demo" className="btn btn-primary button circular circular-primary">
+              <span className="flex items-center">
+                {/* <Phone className="h-4 w-4 mr-2" /> */}
+                Přihlásit se do pilotu
+              </span>
+              <span className="btn-fill"></span>
+            </a>
+            <a href="tel:+420910927821" className="btn btn-secondary button circular circular-secondary">
+              <span className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                Zavolat Kleedu zdarma
+              </span>
+              <span className="btn-fill"></span>
+            </a>
+          </div>
           <div className="absolute inset-0 w-full h-full -z-50">
           <InteractiveBlob 
               className="absolute" 

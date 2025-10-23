@@ -2,12 +2,15 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
-import { CheckCircle, Star, ArrowRight, Play } from 'lucide-react'
+import { CheckCircle, Star, ArrowRight, Play, Phone } from 'lucide-react'
 
 export default function DemoPage() {
   return (
     <main className="min-h-screen demo">
       <Header />
+
+       {/* Hero Section */}
+       
 
       <LeadCaptureSection 
         title="Vyzkoušet zdarma"

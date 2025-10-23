@@ -131,6 +131,20 @@ export const trackLeadGeneration = (leadData: {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'Lead');
   }
+  
+  // Track Google Ads conversion
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'conversion_event_submit_lead_form', {
+      business_type: leadData.businessType,
+      source: leadData.source,
+      utm_source: leadData.utm_source,
+      utm_medium: leadData.utm_medium,
+      utm_campaign: leadData.utm_campaign,
+      utm_term: leadData.utm_term,
+      utm_content: leadData.utm_content,
+      timestamp: new Date().toISOString(),
+    });
+  }
 };
 
 /**

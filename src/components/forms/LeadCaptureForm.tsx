@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion } from 'framer-motion'
-import { CheckCircle, Loader2, Check } from 'lucide-react'
+import { CheckCircle, Loader2, Check, Phone } from 'lucide-react'
 import { trackFormSubmit, trackFormStart, trackLeadGeneration } from '@/lib/analytics'
 import { useUTMParams } from '@/lib/useUTMParams'
 
@@ -313,6 +313,12 @@ export function LeadCaptureForm({
               <a href="/ochrana-osobnich-udaju" className="underline hover:no-underline">Zásad ochrany osobních údajů</a>.
             </p>
 
+            <div className="callout p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+          <p className="text-blue-400 text-sm text-center">
+            Produkt je v pilotním provozu. Odeslání formuláře je nezávazné a neslouží jako závazek k účasti v pilotu ani k používání služby.
+          </p>
+        </div>
+
             {/* Submit Button */}
             <div className="pt-2">
               <button
@@ -321,7 +327,7 @@ export function LeadCaptureForm({
                 tabIndex={6}
                 className="btn-primary h-12 rounded-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed circular-primary circular"
               >
-                <span>{isSubmitting ? (<><Loader2 className="h-5 w-5 animate-spin" /> Odesílám...</>) : ('Objednat si demo')}</span>
+                <span>{isSubmitting ? (<><Loader2 className="h-5 w-5 animate-spin" /> Odesílám...</>) : ('Vyzkoušet Kleedo zdarma')}</span>
                 <span className="btn-fill"></span>
                 
               </button>

@@ -28,8 +28,8 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Asistent na telefonu, který nezmešká klienta a{' '}
-              <span className="text-primary-500">{t(currentLocale, 'home.hero.highlight')}</span>
+              {t(currentLocale, 'home.hero.headline')}
+              {/* <span className="text-primary-500">{t(currentLocale, 'home.hero.highlight')}</span> */}
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
@@ -37,10 +37,22 @@ export default function HomePage() {
             </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/demo" className="btn btn-primary inline-flex items-center justify-center button circular circular-primary" tabIndex={-1}>
-                <span>{t(currentLocale, 'home.hero.cta')}</span>
-              <span className="btn-fill"></span>
-              </Link>
+            <div className="demo-cta-buttons">
+              <a href="/demo" className="btn btn-primary button circular circular-primary">
+                <span className="flex items-center">
+                  {/* <Phone className="h-4 w-4 mr-2" /> */}
+                  Přihlásit se do pilotu
+                </span>
+                <span className="btn-fill"></span>
+              </a>
+              <a href="tel:+420910927821" className="btn btn-secondary button circular circular-secondary">
+                <span className="flex items-center">
+                  <Phone className="h-4 w-4 mr-2" />
+                  Zavolat Kleedu zdarma
+                </span>
+                <span className="btn-fill"></span>
+              </a>
+            </div>
           </div>
           </div>
             <img
@@ -559,10 +571,22 @@ export default function HomePage() {
             <p className="text-xl text-gray-300 mb-8">
               {t(currentLocale, 'home.cta.subtitle')}
             </p>
-            <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary" tabIndex={-1}>
-              <span>{t(currentLocale, 'home.cta.button')}</span>
-              <span className="btn-fill"></span>
-            </a>
+            <div className="demo-cta-buttons">
+              <a href="/demo" className="btn btn-primary button circular circular-primary">
+                <span className="flex items-center">
+                  {/* <Phone className="h-4 w-4 mr-2" /> */}
+                  Přihlásit se do pilotu
+                </span>
+                <span className="btn-fill"></span>
+              </a>
+              <a href="tel:+420910927821" className="btn btn-secondary button circular circular-secondary">
+                <span className="flex items-center">
+                  <Phone className="h-4 w-4 mr-2" />
+                  Zavolat Kleedu zdarma
+                </span>
+                <span className="btn-fill"></span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -611,10 +635,22 @@ export default function HomePage() {
             {t(currentLocale, 'home.finalCta.description')}
           </p>
 
-          <a href="/demo" className="btn-primary text-lg px-8 py-4 button circular circular-primary" tabIndex={-1}>
-            <span>{t(currentLocale, 'home.finalCta.button')}</span>
-            <span className="btn-fill"></span>
-          </a>
+          <div className="demo-cta-buttons">
+            <a href="/demo" className="btn btn-primary button circular circular-primary">
+              <span className="flex items-center">
+                {/* <Phone className="h-4 w-4 mr-2" /> */}
+                Přihlásit se do pilotu
+              </span>
+              <span className="btn-fill"></span>
+            </a>
+            <a href="tel:+420910927821" className="btn btn-secondary button circular circular-secondary">
+              <span className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                Zavolat Kleedu zdarma
+              </span>
+              <span className="btn-fill"></span>
+            </a>
+          </div>
           <div className="absolute inset-0 w-full h-full -z-50">
             <InteractiveBlob 
               className="absolute" 

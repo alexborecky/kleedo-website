@@ -50,18 +50,22 @@ export function Header() {
             <Link href={currentLocale === 'en' ? '/en/blog' : '/blog'} className="hover:text-white transition-colors" tabIndex={-1}>
               {t(currentLocale, 'navigation.blog')}
             </Link>
+            <Link href={currentLocale === 'en' ? '/en/about' : '/o-nas'} className="hover:text-white transition-colors" tabIndex={-1}>
+              {t(currentLocale, 'navigation.oNas')}
+            </Link>
           </div>
 
-          {/* Language Switcher - Desktop Only */}
-          <div className="hidden md:block">
-            <LanguageSwitch />
+          <div className="right-side-actions">
+            {/* Language Switcher - Desktop Only */}
+            <div className="hidden language-switch">
+              <LanguageSwitch />
+            </div>
+            {/* CTA Button - Desktop */}
+            <Link href="/demo" className="cta button btn btn-primary circular circular-primary desktop-nav-cta" tabIndex={-1}>
+              <span>{t(currentLocale, 'navigation.vyzkousetZdarma')}</span>
+              <span className="btn-fill"></span>
+            </Link>
           </div>
-
-          {/* CTA Button - Desktop */}
-          <Link href="/demo" className="cta button btn btn-primary circular circular-primary desktop-nav-cta" tabIndex={-1}>
-            <span>{t(currentLocale, 'navigation.vyzkousetZdarma')}</span>
-            <span className="btn-fill"></span>
-          </Link>
 
           <div className="mobile-cta-container">
             {/* Mobile CTA Button */}
@@ -129,6 +133,14 @@ export function Header() {
                   tabIndex={-1}
                 >
                   {t(currentLocale, 'navigation.blog')}
+                </Link>
+                <Link 
+                  href={currentLocale === 'en' ? '/en/about' : '/o-nas'} 
+                  className="mobile-menu-link"
+                  onClick={() => setMobileMenuOpen(false)}
+                  tabIndex={-1}
+                >
+                  {t(currentLocale, 'navigation.oNas')}
                 </Link>
                 <div className="mobile-menu-link">
                   <LanguageSwitch />

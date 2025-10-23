@@ -5,27 +5,28 @@
     "proFirmy": "Pro firmy",
     "cenik": "Ceník",
     "blog": "Blog",
-    "vyzkousetZdarma": "Vyzkoušet zdarma",
-    "demo": "Demo"
+    "oNas": "O nás",
+    "vyzkousetZdarma": "Přihlásit se do pilotu",
+    "demo": "Přihlásit se do pilotu"
   },
   "home": {
     "hero": {
       "badge": "AI recepční na telefonu",
-      "headline": "Asistent na telefonu, který nezmešká klienta a {highlight} nemá blbou náladu.",
+      "headline": "Asistent na telefonu, který zvedne každý hovor a plní váš kalendář.",
       "highlight": "nemá blbou náladu",
-      "subline": "Žádná hudba na čekání. Žádné „zmáčkněte 1 pro rezervaci, 2 pro info\". Jen plynulý rozhovor, který vám vydělává.",
-      "cta": "Chci Kleedo na svém telefonu"
+      "subline": "Žádná hudba na čekání. Žádné tlačítko 1 pro rezervaci. Jen plynulý rozhovor, který vám přináší nové klienty, i když zrovna nemáte čas.",
+      "cta": "Chci vyzkoušet Kleedo zdarma"
     },
     "features": {
       "title": "Když někdo volá, vždycky to někdo zvedne.",
       "subtitle": "AI recepční, která vždy zvedne telefon a nikdy nemá špatnou náladu.",
       "phone": {
         "title": "Každý hovor přijme do pár vteřin",
-        "description": "AI recepční zvedne telefon okamžitě, i když jste zrovna v jednání nebo u klienta."
+        "description": "Žádné obsazené linky. Každý klient se dovolá hned, i když jste v práci nebo offline."
       },
       "scheduling": {
         "title": "Plynulý den, bez mezer",
-        "description": "Inteligentně plánuje termíny tak, aby mezi schůzkami nebyly mezery. Maximální využití času a více zakázek."
+        "description": "Kleedo plánuje chytře, aby váš kalendář byl efektivní a bez prázdných oken."
       },
       "communication": {
         "title": "WhatsApp komunikace & automatické potvrzení",
@@ -43,19 +44,19 @@
         },
         {
           "title": "Záchrana termínu",
-          "description": "Když někdo zruší, automaticky kontaktuje čekající na waitlistě a zaplní uvolněný termín. Žádné mezery v kalendáři."
+          "description": "Když klient zruší, Kleedo okamžitě nabídne volné místo dalším. Váš kalendář zůstane plný."
         },
         {
           "title": "WhatsApp komunikace & automatické potvrzení",
-          "description": "Všechny rezervace, potvrzení a připomínky fungují automaticky přes WhatsApp i SMS. Klienti dostanou potvrzení okamžitě."
+          "description": "Rezervace, potvrzení i připomínky běží automaticky přes WhatsApp nebo SMS."
         }
       ]
     },
     "problem": {
-      "title": "Když nezvednete vy, váš konkurent ano.",
-      "subtitle": "Nezvednutý telefon je první důvod, proč klienti odcházejí ke konkurenci.",
+      "title": "Když nezvednete vy, konkurence ano.",
+      "subtitle": "Každý zmeškaný hovor = ztracená objednávka.",
       "missed": {
-        "title": "Zmeškané hovory = ztracené peníze",
+        "title": "Každý zmeškaný hovor = ztracená objednávka.",
         "description": "Každý zmeškaný hovor je ztracená příležitost. Váš klient volá konkurenci, která má čas a zvedne telefon."
       },
       "lost": {
@@ -67,8 +68,8 @@
         "description": "Ruční volání zpět, domlouvání termínů a připomínání schůzek zabírá čas, který byste mohli věnovat práci s klienty."
       },
       "headline": "Když nezvednete vy, <br /> váš konkurent ano.",
-      "subline": "Nezvednutý telefon je první důvod, proč klienti odcházejí ke konkurenci.",
-      "description": "Každý zmeškaný hovor je ztracená příležitost. Váš klient volá konkurenci, která má čas a zvedne telefon. Zatímco vy ztrácíte peníze, oni vydělávají."
+      "subline": "Každý zmeškaný hovor = ztracená objednávka.",
+      "description": "Nezvednutý telefon je první důvod, proč klienti odcházejí ke konkurenci."
     },
     "benefits": {
       "title": "Majitelé salonů, ordinací a služeb chtějí klid — a víc klientů.",
@@ -89,7 +90,7 @@
       "cards": [
         {
           "title": "Více klientů, více tržeb",
-          "description": "Zmeškaný hovor už neznamená ztracenou zakázku. I jedna–dvě nové rezervace týdně znamenají tisíce korun navíc měsíčně. Kleedo plní váš kalendář, aniž byste hnuli prstem."
+          "description": "I jedna–dvě nové rezervace týdně znamenají tisíce korun navíc měsíčně. Každý zmeškaný hovor je ztracená objednávka. Kleedo je zvedne za vás a naplní kalendář."
         },
         {
           "title": "Méně telefonátů, více prostoru na práci",
@@ -97,7 +98,7 @@
         },
         {
           "title": "Firma, která je vždy k dispozici",
-          "description": "Klienti se dovolají okamžitě. V češtině, angličtině a další jazyky přidáváme postupně. Vypadejte jako profi hráč, co má vždy čas a rozumí více jazykům i když jste zrovna offline."
+          "description": "Klienti se dovolají okamžitě. V češtině, angličtině a další jazyky přidáváme postupně. Váš klient se dovolá kdykoli – i po pracovní době."
         },
         {
           "title": "Vy určujete pravidla hry",
@@ -188,18 +189,18 @@
       ]
     },
     "cta": {
-      "title": "Přidejte se mezi první, kteří získají AI recepční",
-      "subtitle": "Probíhá pilotní provoz s omezenou kapacitou. Zajistěte si místo včas.",
-      "button": "Objednat demo",
+      "title": "Buďte mezi prvními, kdo mají recepční, která nikdy nezmešká hovor.",
+      "subtitle": "Pilotní provoz běží – kapacita je omezená.",
+      "button": "Chci místo v pilotu",
       "preheadline": "AI recepční na telefonu",
-      "headline": "Přidejte se mezi první, kteří získají AI recepční",
-      "description": "Probíhá pilotní provoz s omezenou kapacitou. Zajistěte si místo včas."
+      "headline": "Buďte mezi prvními, kdo mají recepční, která nikdy nezmešká hovor.",
+      "description": "Pilotní provoz běží – kapacita je omezená."
     },
     "finalCta": {
-      "badge": "AI recepční na telefonu",
+      "badge": "Pilotní verze AI recepční",
       "headline": "Už žádný zmeškaný klient.",
       "description": "AI recepční s lidským hlasem zvedne telefon a postará se o klienta podle vašich pravidel. Žádné zbytečné čekání, žádné záznamníky.",
-      "button": "Objednat demo"
+      "button": "Vyzkoušet Kleedo"
     },
     "faq": {
       "title": "Často kladené otázky",

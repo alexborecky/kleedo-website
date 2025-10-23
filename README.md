@@ -22,10 +22,11 @@ AI recepční pro české podniky - lead collection website s targeted landing p
 - 📰 **Články** - SEO optimalizované blog posty
 - 🔍 **SEO-friendly URLs** pro všechny stránky
 - 🏷️ **Tag support** pro kategorizaci
+- 👥 **About us page** (`/o-nas`) s informacemi o týmu
 
 ### 💰 **Pricing & Demo**
 - 💰 **Pricing page** (`/cenik`) s třemi plány
-- 🎬 **Demo page** (`/demo`) pro zkušební verzi
+- 🎬 **Demo page** (`/demo`) pro zkušební verzi s demo call linkem
 - 📊 **Produkt page** (`/produkt`) s detailními informacemi
 
 ### 📧 **Lead Management**
@@ -49,6 +50,7 @@ AI recepční pro české podniky - lead collection website s targeted landing p
 - 🌈 **Interactive blobs** pro vizuální efekty
 - ❓ **FAQ sections** s expandable otázkami
 - 🎨 **Modern glassmorphism design**
+- 📱 **Mobile-optimized forms** s vylepšeným UX
 
 ### 🔧 **Technical Features**
 - ⚡ **Next.js 14** s App Router
@@ -115,8 +117,9 @@ src/
 │   ├── pro-firmy/         # Czech business targeted page
 │   ├── medical/           # Medical/healthcare page
 │   ├── cenik/             # Czech pricing page
-│   ├── demo/              # Demo page
+│   ├── demo/              # Demo page s demo call linkem
 │   ├── produkt/           # Product details page
+│   ├── o-nas/             # About us page
 │   ├── blog/              # Czech blog system
 │   │   ├── [slug]/        # Dynamic blog posts
 │   │   └── page.tsx       # Blog listing
@@ -322,6 +325,22 @@ Pro testování UTM parameter capture:
 - **LeadInfo**: Verify lead tracking
 - **Console logs**: Debug UTM parameter capture
 - **Email notifications**: Verify UTM data in emails
+
+## Recent Updates
+
+### Latest Changes
+- ✅ **About us page added** (`/o-nas`) - Informace o týmu a společnosti
+- ✅ **Demo call link** - Přidán odkaz na demo call v demo sekci
+- ✅ **Mobile form fixes** - Vylepšené formuláře pro mobilní zařízení
+- ✅ **Updated copy** - Aktualizovaný obsah napříč webem
+- ✅ **Testimonials update** - Změna z fake testimonials na "insights from pilot testing"
+- ✅ **Blog layout improvements** - Nový layout s featured posts a clickable cards
+
+### Content Updates
+- 📝 **5 new blog articles** - Nové články o AI recepčních
+- 🎯 **Improved lead qualification** - Lepší targeting a qualification
+- 📱 **Mobile UX improvements** - Vylepšené mobilní formuláře
+- 🎨 **UI/UX enhancements** - Modernější design a interakce
 
 ## Kontakt
 

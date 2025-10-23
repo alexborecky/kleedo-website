@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
 
@@ -16,10 +17,35 @@ export function LeadCaptureSection({
   businessType,
   className = ""
 }: LeadCaptureSectionProps) {
+  useEffect(() => {
+    // Handle smooth scroll with offset for anchor links
+    const handleSmoothScroll = (e: Event) => {
+      const target = e.target as HTMLAnchorElement
+      if (target.hash === '#form') {
+        e.preventDefault()
+        const element = document.getElementById('form')
+        if (element) {
+          const offset = 100 // Adjust this value as needed
+          const elementPosition = element.offsetTop - offset
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          })
+        }
+      }
+    }
+
+    // Add event listener to all anchor links
+    document.addEventListener('click', handleSmoothScroll)
+    
+    return () => {
+      document.removeEventListener('click', handleSmoothScroll)
+    }
+  }, [])
   return (
-    <section className={`py-20 page-section form-section ${className}`}>
+    <section id="form" className={`py-20 hero page-section form-section ${className}`}>
       <div className="container mask-container">
-        <div className="absolute inset-0 w-full h-full -z-50">
+        <div className="absolute">
           <InteractiveBlob 
             className="absolute bottom-0 left-0" 
             widthPercent={120} 
