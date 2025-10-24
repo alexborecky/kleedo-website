@@ -202,3 +202,54 @@ export const trackCampaignAttribution = (campaignData: {
   });
 };
 
+/**
+ * Google Ads conversion tracking with delayed navigation
+ * Helper function to delay opening a URL until a gtag event is sent
+ */
+export const gtagSendEvent = (url: string, eventParams?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    const callback = function () {
+      if (typeof url === 'string') {
+        window.location.href = url;
+      }
+    };
+    
+    window.gtag('event', 'conversion_event_submit_lead_form_1', {
+      event_callback: callback,
+      event_timeout: 2000,
+      ...eventParams
+    });
+    return false;
+  }
+  return false;
+};
+
+/**
+ * Track Google Ads conversion with navigation
+ */
+export const trackGoogleAdsConversionWithNavigation = (
+  url: string, 
+  leadData?: {
+    businessType?: string;
+    source?: string;
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+    utm_term?: string;
+    utm_content?: string;
+  }
+) => {
+  const eventParams = leadData ? {
+    business_type: leadData.businessType,
+    source: leadData.source,
+    utm_source: leadData.utm_source,
+    utm_medium: leadData.utm_medium,
+    utm_campaign: leadData.utm_campaign,
+    utm_term: leadData.utm_term,
+    utm_content: leadData.utm_content,
+    timestamp: new Date().toISOString(),
+  } : {};
+  
+  return gtagSendEvent(url, eventParams);
+};
+
