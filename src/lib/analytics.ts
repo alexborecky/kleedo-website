@@ -134,7 +134,7 @@ export const trackLeadGeneration = (leadData: {
   
   // Track Google Ads conversion
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'conversion_event_submit_lead_form', {
+    window.gtag('event', 'conversion_event_submit_lead_form_2', {
       business_type: leadData.businessType,
       source: leadData.source,
       utm_source: leadData.utm_source,
@@ -214,7 +214,7 @@ export const gtagSendEvent = (url: string, eventParams?: Record<string, any>) =>
       }
     };
     
-    window.gtag('event', 'conversion_event_submit_lead_form_1', {
+    window.gtag('event', 'conversion_event_submit_lead_form_2', {
       event_callback: callback,
       event_timeout: 2000,
       ...eventParams
@@ -251,5 +251,21 @@ export const trackGoogleAdsConversionWithNavigation = (
   } : {};
   
   return gtagSendEvent(url, eventParams);
+};
+
+/**
+ * Direct Google Ads conversion tracking for testing
+ * Use this to test if Google Ads can detect the conversion
+ */
+export const trackGoogleAdsConversionDirect = (eventParams?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'conversion_event_submit_lead_form_2', {
+      business_type: 'demo',
+      source: 'demo_page',
+      timestamp: new Date().toISOString(),
+      ...eventParams
+    });
+    console.log('Google Ads conversion event fired: conversion_event_submit_lead_form_2');
+  }
 };
 

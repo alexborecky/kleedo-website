@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer'
 import InteractiveBlob from '@/components/visuals/InteractiveBlob'
 import { LeadCaptureSection } from '@/components/sections/LeadCaptureSection'
 import { CheckCircle, Star, ArrowRight, Play, Phone } from 'lucide-react'
+import { trackGoogleAdsConversionDirect } from '@/lib/analytics'
 
 export default function DemoPage() {
   return (
@@ -16,6 +17,22 @@ export default function DemoPage() {
         title="Vyzkoušet zdarma"
         subtitle="14denní zkušební verze bez závazků."
       />
+      
+      {/* Test Google Ads Conversion - Remove this after testing */}
+      <section className="py-8 bg-dark-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-xl font-bold text-white mb-4">Test Google Ads Conversion</h3>
+          <button 
+            onClick={() => trackGoogleAdsConversionDirect()}
+            className="btn btn-primary button circular circular-primary px-6 py-3"
+          >
+            Test Conversion Event
+          </button>
+          <p className="text-gray-400 text-sm mt-2">
+            Click this button to test if Google Ads can detect the conversion event
+          </p>
+        </div>
+      </section>
       
       {/* Hero Section */}
       {/* <section className="gradient-bg py-20">
